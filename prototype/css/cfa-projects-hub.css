@@ -1,0 +1,414 @@
+/* CSS for Code for America Projects Hub */
+/* utility styles */
+body {
+	min-width:640px;
+	background:#444;
+}
+a {
+	cursor:pointer;
+}
+a.disabled {
+	color: #777;
+  	cursor: default;
+}
+a.disabled:hover {
+	color: #777;	
+	text-decoration:none;
+}
+.badge, .OK-tag {
+	cursor:default;
+}
+.OK-tag, 
+.OK-tag-wide {
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+}
+.OK-tag {
+  display: inline-block;
+}
+.OK-tag-wide {
+  display: block;
+}
+.OK-filter-help-subcategory  {
+	margin-left:8px;
+	color: #FC6;
+	background-color:#777;
+}
+.bg-gray {
+	color: #fff;
+	background-color:#777;
+}
+.bg-white {
+	background-color:#fff;
+}
+.bg-darkyellow {
+	color:#FFF;
+	background:#F90;
+}
+.bg-yellow {
+	background: #FC6;
+}
+/* checkbox and radio label placement for small font */
+.small .radio,
+.small .checkbox {
+  	position: relative;
+  	display: block;
+  	margin-top: 6px;
+  	margin-bottom: 6px;
+}
+.small .radio input[type="radio"],
+.small .radio-inline input[type="radio"],
+.small .checkbox input[type="checkbox"],
+.small .checkbox-inline input[type="checkbox"] {
+  	position: absolute;
+  	margin-top: 2px;
+  	margin-left: -20px;
+}
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: -5px;
+}
+/* lighten the hover */
+.btn-primary:hover {
+	background-color:#4689c3;
+}
+/* content --------------------------- */
+header {
+	background:rgba(0,0,0,0.8);
+}
+/* page title */
+.OK-logo {
+	margin-top:19px;
+}
+h1 {
+	padding:0;
+	font-weight:bold;
+	letter-spacing:.03em;
+	line-height:.74em;
+	color:#CCC;
+}
+h1 small {
+	letter-spacing:.01em;	
+}
+OK-filter-btn {
+	padding-left:152px;
+}
+header div.btn-toolbar {
+	padding-left:152px;
+}
+/* filter panel */
+.OK-filter-panel {
+	padding:8px;
+	font-size:-1;
+	color:#e4e4e4;
+	background:#2e2e2e;
+}
+.OK-filter-panel .glyphicon-remove {
+	cursor:pointer;
+}
+/*filter panel title */
+h3 {
+	margin:8px 0 0 15px;
+	padding:0;
+	font-size:16px;
+	font-weight:normal;
+	letter-spacing:.05em;
+	color:#999;
+}
+/*filter panel section title */
+h5 {
+	font-weight:bold;
+}
+/*filter panel inputs */
+.OK-filter-panel input[type="checkbox"] {
+	background:#CCC;
+}
+.OK-filter-panel .checkbox {
+	padding-left:15px;	
+}
+.OK-form-control-indented {
+	padding-left:5px;
+}
+.OK-filter-panel .badge  {
+	font-size:10px;
+}
+.OK-filter-panel .OK-badge-light {
+	color:#999;	
+	background:#444;
+}
+.OK-filter-panel li {
+	margin-left:15px;
+}
+.OK-filter-panel a {
+	color:#F90;
+}
+.OK-filter-panel a:hover {
+	text-decoration:none;
+	color:#ffc774;
+}
+.OK-filter-project-activity a {
+	color:#e4e4e4;
+}
+.OK-filter-project-activity a:hover {
+	color:#fff;
+}
+/* filter results banner */
+.OK-search-results-display {
+	padding: 15px;
+	margin-top:15px;
+  	margin-bottom: 20px;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+  	background-color: #e4e4e4;
+}  
+.OK-search-results-number {
+	font-size:36px;
+}
+/* filter breadcrumbs */
+.OK-filter-breadcrumbs {
+	width:60%;
+	padding-left:15px;
+}
+.OK-filter-breadcrumbs li {
+	padding:0;
+}
+.OK-filter-breadcrumbs li:first-child {
+	padding:0 8px;
+	color:#fff;
+	font-weight:bold;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+	background-color:#777;
+}
+.OK-filter-breadcrumbs li:before {
+  content: "> ";
+}
+.OK-filter-breadcrumbs li:first-child:before,
+.OK-filter-breadcrumbs li:last-child:before {
+  content: "";
+}
+.OK-filter-breadcrumbs .glyphicon {
+	display:none;
+}
+.OK-filter-breadcrumbs:hover .glyphicon {
+	display:inline-block;
+	cursor:default;
+}
+.OK-search-results-display .form-group {
+	margin-bottom:0;
+}  
+/* Add Idea button  */
+.OK-btn-add-idea {
+	padding:2em;
+	font-weight:bold;
+}
+.OK-btn-add-idea .glyphicon {
+	padding-right:1em;
+}
+/* project card  */
+.OK-project-card {
+	position:relative;
+	width:100%;
+	padding:15px;
+	margin-bottom:20px;
+	background:#e4e4e4;
+	border-radius:6px;
+    -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.OK-project-card:hover {
+	background:#fff;
+}
+/* project card for projects active this week */
+.OK-project-card-active {
+	background:#f3f3f3;
+}
+/* idea card */
+.OK-project-card-idea {
+	text-align:center;
+	background:#d1d1d1;
+    -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.OK-project-card-idea:hover {
+	background:#f3f3f3;
+}
+.OK-project-card-idea .OK-project-goals {
+	text-align:left;
+}
+/* project card head */
+.OK-project-card-head {
+	position:relative;
+	height:100px;
+	padding:8px;
+	background:url('../images/OK_CfA_hub_img.png') center center no-repeat; 
+}
+/* project card prototype placeholder image (remove in production) */
+.OK-project-card-prototype .OK-project-card-head {
+	background:url('../images/OK_placeholder_project_image.png') center center no-repeat; 
+}
+/* idea card head image */
+.OK-project-card-idea .OK-project-card-head {
+	background:url('../images/OK_lightbulb.png') center center no-repeat; 
+}
+/* project cities */
+.OK-project-card-head ul {
+	position:absolute;
+	bottom:-14px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.OK-project-card-head ul li {
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+ 	background:#777;
+}
+/* project title  */
+h4 {
+	padding:6px 8px 0;
+	line-height:1.3em;
+	text-transform:uppercase;
+	color:#222;
+}
+/* project category */
+.OK-project-category {
+	margin-left:8px;
+}
+.bg-CfA {
+	color:#fff;
+	background:#ce263f;
+}
+.bg-civic {
+	color:#fff;
+	background:#3a9ed7;
+}
+/* project goals description */
+.OK-project-goals {
+	display:block;
+	max-height:75px;
+	overflow:hidden;
+	margin-bottom:0;
+	padding:0 8px;
+	line-height:1.2em;
+}
+/* view project details link */
+.OK-project-card .OK-link-view-project {
+	padding:0 8px;	
+}
+.OK-project-card .OK-link-view-project a {
+  	display: inline-block;	
+	padding: 3px 0;
+	line-height: 1;
+  	vertical-align: baseline;
+ 	-webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.OK-project-card:hover .OK-link-view-project a {
+  	display: inline-block;	
+  	padding: 3px 7px;
+  	line-height: 1;
+  	text-align: center;
+  	text-decoration:none;
+  	white-space: nowrap;
+  	vertical-align: baseline;
+  	border-radius: 10px;
+	color: #fff;
+	background-color:#337ab7;	
+}
+/* project badges */
+.OK-project-badges {
+	padding:4px 8px 0;
+	border-radius:6px 6px 0 0;	
+	font-weight:bold;
+	color: #F3F3F3;
+	background:#777;
+} 
+.OK-project-badges .badge {
+	font-size:10px;
+	color:#777;
+	background:#F3F3F3;	
+}
+.OK-project-badges .glyphicon {
+	padding:3px 3px 0 10px;
+	vertical-align:text-top;
+	cursor:default;
+}
+.OK-project-badges .glyphicon:first-child {
+	padding-left:4px;
+}
+.OK-project-badges .glyphicon-ok, .OK-project-badges .glyphicon-hand-up {
+	padding-left:5px;
+}
+.OK-star-gold {
+	color: #F90;
+}
+.OK-project-badges .glyphicon-comment {
+	cursor:pointer;
+}
+/* project code, help and progress */
+.OK-project-data {
+	padding:8px;
+	background:#ccc;
+}
+.OK-project-data + .OK-project-data {
+	border-top:1px dotted #b5b5b5;
+	border-radius:0 0 6px 6px;	
+	background:#bdbdbd;
+}
+.OK-project-progress {
+	line-height:1.8em;	
+}
+.OK-project-data p:last-child {
+	margin-bottom:0;
+}
+.OK-project-progress-title {
+	font-weight:bold;
+	color:#777;
+}
+.OK-project-onhold-message {
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	color:#fff;
+	background:#777;
+}
+/* project contributors */
+.OK-project-contributors-thumbs {
+	position:relative;
+	padding:4px 0 0 6px;
+	width:85%;
+	height:44px;
+	overflow:hidden;
+}
+.OK-project-contributors-thumbs .OK-project-leader-badge {
+	position:absolute;
+	top:29px;
+	left:31px;
+	padding:3px 2px 3px 4px;
+	border-radius:10px;
+	font-size:9px;
+	color:#fff;
+	background:#ce263f;
+	cursor:default;
+}
+/* number of contributors */
+.OK-project-contributors .badge {
+	margin-top:15px;
+}
+
+
+
+
+
