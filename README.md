@@ -5,7 +5,7 @@ Goals: To help brigade members to find projects to work on. To promote multi-bri
 
 https://docs.google.com/forms/d/1e1Ne69Dw7Pooicb9dTOEH49KvjQv1_x2F9q8tr27loI/viewform
 
-###A form to submit civic project ideas
+###A form to submit civic project Ideas
 
 https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform
 
