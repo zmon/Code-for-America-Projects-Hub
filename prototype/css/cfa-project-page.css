@@ -1,0 +1,59 @@
+/* CSS for Code for America Project Page */
+/* most of the styles are specified in bootstrap.css and cfa-projects-hub.css */
+body {
+	background:#e4e4e4;
+}
+/* cover image for project page */
+.OK-project-page-cover-img {
+	position:relative;
+	width:100%;
+	height:400px;
+	background:url(../images/OK_CfA_hub_img.png);
+	background-size: cover;
+}
+/* project city */
+.OK-project-page-cover-img ul {
+	position:absolute;
+	bottom:0px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.OK-project-page-cover-img ul li {
+	padding:.3em 1em;
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+ 	background: rgba(0,0,0,.8)
+}
+.OK-project-page-cover-img ul li:first-child {
+ 	background: rgba(0,0,0,.5)
+}
+/* project badges */
+.OK-project-badges {
+	padding:8px 8px 0;
+	border-radius:0;
+} 
+.OK-project-badges .badge {
+	font-size:12px;
+}
+.OK-project-badges .glyphicon {
+	vertical-align: baseline;
+}
+/* project contributors */
+.OK-project-contributors {
+	margin-top:20px;
+}
+
+/* project definition cards */
+.OK-project-definition-card {
+	height:300px;
+	overflow-y:auto;
+	background:#fff;
+}
+@media (min-width: 992px) {
+	.OK-project-definition-card-tall {
+		height:600px;
+	}
+}
