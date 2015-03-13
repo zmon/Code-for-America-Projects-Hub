@@ -24,7 +24,7 @@
 
 <body>
 <header>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-3 col-lg-2"> 
         <img class="OK-logo" src="images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
@@ -47,7 +47,7 @@
     </div>
   </div>
 </header>
-<div class="container"> 
+<div class="container-fluid"> 
 <!-- sidebar positioning  -->
   <div class="row row-offcanvas row-offcanvas-left"> 
 <!-- sidebar display (display works with main content below) -->
@@ -204,7 +204,7 @@
       <div class="row"> 
 <!-- suggest an idea button -->
         <div class="col-xs-6 col-lg-4">
-          <button class="btn btn-primary btn-block OK-btn-add-idea"><span class="glyphicon glyphicon-plus-sign"></span> Add your idea to hack</button>
+          <button type="button" onClick="location.href='https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform'" class="btn btn-primary btn-block OK-btn-add-idea"><span class="glyphicon glyphicon-plus-sign"></span> Add your idea to hack</button> 
           <br>
 <!-- list of projects -->         
           <article class="OK-project-card OK-project-card-active clearfix">
@@ -238,7 +238,7 @@
               <p class="OK-tag bg-gray" title="Platform">Web App</p>
               <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> HTML/CSS, Bootstrap, Leaflet Map, JavaScript, </p>
               <p title="Help needed"><span class="OK-tag bg-darkyellow">Help:</span> Taxonomy of projects, Javascript, Geolocation filter, Usability</p>
-            </section>            
+            </section>          
 <!-- project progress -->
             <section class="OK-project-data small">
               <p class="OK-project-progress" title="Project progress"> 
@@ -353,9 +353,9 @@ Reason: ...</p>  -->
 <!-- project's civic category .bg-civic or .bg-CfA -->
             <p class="OK-project-category OK-tag bg-civic">Civic category</p>
 <!-- project goals -->
-            <p class="OK-project-goals"><em>Why:</em> Project goals.
+            <p class="OK-project-goals">Project goals.
             </p>
-            <p class="OK-link-view-project"><a href="#">view project's details</a></p>
+            <p class="OK-link-view-project"><a href="#">view idea details</a></p>
 <!-- project progress -->
             <section class="OK-project-data small">
               <p class="OK-project-progress text-left" title="Project progress"> 

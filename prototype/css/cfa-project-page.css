@@ -1,15 +1,46 @@
 /* CSS for Code for America Project Page */
 /* most of the styles are specified in bootstrap.css and cfa-projects-hub.css */
+/* utility styles */
+.OK-rotate-270-clockwise {
+    transform: rotate(270deg);
+	-ms-transform: rotate(270deg); 
+    -webkit-transform: rotate(270deg); 
+}
+h2 {
+	margin:0;
+	padding:20px 20px;
+	letter-spacing:.05em;
+	font-weight:bold;
+	color:#fff;
+	background:#777; 
+}
 body {
 	background:#e4e4e4;
+}
+/* header */
+header {
+	padding:100px 0 50px;
+}
+header .OK-tag {
+	margin:8px 8px 0 0;
+  	padding: 4px 15px;
+  	font-size: 14px;
+  	border-radius: 20px;
+}
+header button.btn {
+	font-size: 14px;
+	font-weight:bold;
 }
 /* cover image for project page */
 .OK-project-page-cover-img {
 	position:relative;
 	width:100%;
 	height:400px;
-	background:url(../images/OK_CfA_hub_img.png);
+	border:solid 12px #fff;
+	background:url(../images/OK_CfA_page_main_img.png);
 	background-size: cover;
+	background-position:top center;
+	box-shadow: 0 1px 15px #000;
 }
 /* project city */
 .OK-project-page-cover-img ul {
@@ -34,6 +65,7 @@ body {
 .OK-project-badges {
 	padding:8px 8px 0;
 	border-radius:0;
+	background: rgba(0,0,0,.8)
 } 
 .OK-project-badges .badge {
 	font-size:12px;
@@ -43,17 +75,87 @@ body {
 }
 /* project contributors */
 .OK-project-contributors {
-	margin-top:20px;
+	padding:20px 20px;
+	background:#777;
 }
 
-/* project definition cards */
+/* grid for project definition cards */
 .OK-project-definition-card {
-	height:300px;
-	overflow-y:auto;
-	background:#fff;
+	color:rgba(255,255,255,.85);
+}
+@media (min-width: 768px) {
+	.OK-project-definition-card {
+		height:350px;
+		overflow-y:auto;
+}
 }
 @media (min-width: 992px) {
 	.OK-project-definition-card-tall {
-		height:600px;
+		height:700px;
 	}
+}
+/* project definition card bkg */
+.OK-pdc-goals {
+	background:#cf1b41;
+}
+.OK-pdc-audience {
+	background:#399fd3;
+}
+.OK-pdc-story {
+	background:#e87d2b;
+}
+.OK-pdc-maintenance {
+	background:#69579C;
+}
+.OK-pdc-blockers {
+	background:#aa1c3a;
+}
+.OK-pdc-code {
+	background:#444;
+}
+.OK-pdc-help {
+	color:#000;
+	background:#fedd44;
+}
+.OK-pdc-progress {
+	background:#6D6E71;
+}
+/* project definition card icon */
+.OK-pdcard-glyphicon {
+	display:block;
+	text-align:center;
+	width:80px;
+	margin:0 auto 20px;
+	padding:20px 20px;
+	font-size:36px;
+	color: #F3F3F3;
+	background:rgba(0,0,0,.7);
+}
+.OK-pdc-goals .OK-pdcard-glyphicon {
+	color:#cf1b41;
+}
+.OK-pdc-audience .OK-pdcard-glyphicon {
+	color:#399fd3;
+}
+.OK-pdc-story .OK-pdcard-glyphicon {
+	color:#e87d2b;
+}
+.OK-pdc-maintenance .OK-pdcard-glyphicon {
+	color:#69579C;
+}
+.OK-pdc-blockers .OK-pdcard-glyphicon {
+	color:#aa1c3a;
+}
+/* project definition card title */
+.OK-project-definition-card h3 {
+	padding-top:20px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:rgba(255,255,255,.9);
+}
+/* project definition card text */
+.OK-project-definition-card p {
+	padding:20px 15px 0;
+	font-size:1.2em;
 }
