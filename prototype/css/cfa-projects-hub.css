@@ -249,7 +249,7 @@ h5 {
 	position:relative;
 	height:100px;
 	padding:8px;
-	background:url('../images/OK_CfA_hub_img.png') center center no-repeat; 
+	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png') center center no-repeat; 
 }
 /* project card prototype placeholder image (remove in production) */
 .OK-project-card-prototype .OK-project-card-head {
