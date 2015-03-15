@@ -207,6 +207,7 @@ h5 {
 .OK-btn-add-idea {
 	padding:2em;
 	font-weight:bold;
+	border-radius:12px;
 }
 .OK-btn-add-idea .glyphicon {
 	padding-right:1em;
@@ -215,7 +216,7 @@ h5 {
 .OK-project-card {
 	position:relative;
 	width:100%;
-	padding:15px;
+	padding:0;
 	margin-bottom:20px;
 	background:#e4e4e4;
 	border-radius:6px;
@@ -232,7 +233,6 @@ h5 {
 }
 /* idea card */
 .OK-project-card-idea {
-	text-align:center;
 	background:#d1d1d1;
     -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
@@ -247,13 +247,17 @@ h5 {
 /* project card head */
 .OK-project-card-head {
 	position:relative;
-	height:100px;
+	height:150px;
 	padding:8px;
-	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png') center center no-repeat; 
+	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png'); 
+	background-size: cover;
+	background-position:top center;
 }
 /* project card prototype placeholder image (remove in production) */
 .OK-project-card-prototype .OK-project-card-head {
-	background:url('../images/OK_placeholder_project_image.png') center center no-repeat; 
+	background:url('../images/OK_placeholder_project_image.png'); 
+	background-size: cover;
+	background-position:top center;
 }
 /* idea card head image */
 .OK-project-card-idea .OK-project-card-head {
@@ -276,10 +280,11 @@ h5 {
 }
 /* project title  */
 h4 {
-	padding:6px 8px 0;
+	padding:15px 8px 0;
 	line-height:1.3em;
-	text-transform:uppercase;
-	color:#222;
+	text-align:center;
+	font-weight:bold;
+	color:#444;
 }
 /* project category */
 .OK-project-category {
@@ -371,7 +376,7 @@ h4 {
 	line-height:1.8em;	
 }
 .OK-help-wanted {
-	padding:0 8px;
+	padding:0 8px;  
 }
 .OK-project-data p:last-child {
 	margin-bottom:0;
