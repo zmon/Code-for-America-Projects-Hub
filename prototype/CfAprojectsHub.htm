@@ -70,19 +70,25 @@
       <label><input type="checkbox" value="">Community <span class="badge OK-badge-light">17</span></label>
     </div>
     <div class="checkbox">
+      <label><input type="checkbox" value="">Culture  <span class="badge OK-badge-light">#</span></label>
+    </div>
+    <div class="checkbox">
       <label><input type="checkbox" value="">Education  <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
       <label><input type="checkbox" value="">Health  <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
+      <label><input type="checkbox" value="">History  <span class="badge OK-badge-light">#</span></label>
+    </div>
+    <div class="checkbox">
       <label><input type="checkbox" value="">Housing  <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" value="">Politics  <span class="badge OK-badge-light">#</span></label>
+      <label><input type="checkbox" value="">Politics (participation) <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" value="">Policing  <span class="badge OK-badge-light">#</span></label>
+      <label><input type="checkbox" value="">Policing and Safety <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
       <label><input type="checkbox" value="">Recreation  <span class="badge OK-badge-light">#</span></label>
@@ -222,7 +228,7 @@
 <!-- project goals -->
             <p class="OK-project-goals"><em>Why:</em> To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma.
             </p>
-            <p class="OK-link-view-project"><a href="CfAprojectPage.htm">view project's details</a></p>              
+            <p class="OK-link-view-project"><a href="CfAprojectPage.htm">view project details</a></p>              
 <!-- project's social badges -->
             <section class="OK-project-badges small clearfix">
               <ul class="list-inline list-unstyled clearfix">
@@ -236,8 +242,18 @@
 <!-- project technics and where help is needed -->
             <section class="OK-project-data small"> <a class="pull-right btn-link disabled">Not online yet</a>
               <p class="OK-tag bg-gray" title="Platform">Web App</p>
-              <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> HTML/CSS, Bootstrap, Leaflet Map, JavaScript, </p>
-              <p title="Help needed"><span class="OK-tag bg-darkyellow">Help:</span> Taxonomy of projects, Javascript, Geolocation filter, Usability</p>
+              <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> HTML/CSS, Bootstrap, JavaScript </p>
+              <span title="Help wanted" class="OK-tag bg-darkyellow">Help:</span>
+              	<section class="OK-help-wanted">
+                <p>Projects Hub filter.</p> 
+                <p>Where does the data come from?</p>
+                <p>Script to display entered project data from Google spreadsheet in Google form to edit the data</p>
+                <p>Add infinite scroll to the hub</p>
+                <p>Usability evaluation</p>
+                <p>Project card data. Where does the data come from?</p>
+                <p>Coding projects filter</p>
+                <p>Map geolocation filter</p>
+                </section>
             </section>          
 <!-- project progress -->
             <section class="OK-project-data small">
@@ -263,9 +279,9 @@ Reason: ...</p>  -->
 <!-- project contributors -->
             <section class="OK-project-contributors clearfix"> 
               <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left"
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars2.githubusercontent.com/u/10410203?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
+              <li><img src="https://avatars1.githubusercontent.com/u/447024?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars1.githubusercontent.com/u/212227?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
@@ -291,7 +307,7 @@ Reason: ...</p>  -->
 <!-- project goals -->
             <p class="OK-project-goals"><em>Why:</em> Project goals. One paragraph of text describing why people need to use this app/website. The first four lines of text are displayed in the card view. The rest is available in details. <br>
             </p>
-            <p class="OK-link-view-project"><a href="#">view project's details</a></p>
+            <p class="OK-link-view-project"><a href="#">view project details</a></p>
 <!-- project's social badges -->
             <section class="OK-project-badges small clearfix">
               <ul class="list-inline list-unstyled clearfix">
@@ -307,7 +323,10 @@ Reason: ...</p>  -->
             <section class="OK-project-data small"> <a class="pull-right btn-link">link to live product</a>
               <p class="OK-tag bg-gray">platform</p>
               <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> what is used in the build </p>
-              <p title="Help needed"><span class="OK-tag bg-darkyellow">Help:</span> where help is needed </p>
+              <span title="Help needed" class="OK-tag bg-darkyellow">Help:</span> 
+              <section class="OK-help-wanted">
+              <p>where the help is needed </p>
+              </section>
             </section>
             
 <!-- project progress -->
@@ -371,11 +390,6 @@ Reason: ...</p>  -->
 <!--/.col-xs-12.col-sm-9--> 
   </div>
 <!--/row-->
-  
-  <hr>
-  <footer>
-    <p>footer</p>
-  </footer>
 </div>
 <!--/.container--> 
 

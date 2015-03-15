@@ -79,7 +79,7 @@ a.disabled:hover {
 	background-color:#4689c3;
 }
 /* content --------------------------- */
-header {
+header, footer {
 	background:rgba(0,0,0,0.8);
 }
 /* page title */
@@ -369,6 +369,9 @@ h4 {
 }
 .OK-project-progress {
 	line-height:1.8em;	
+}
+.OK-help-wanted {
+	padding:0 8px;
 }
 .OK-project-data p:last-child {
 	margin-bottom:0;

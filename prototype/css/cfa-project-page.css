@@ -6,30 +6,35 @@
 	-ms-transform: rotate(270deg); 
     -webkit-transform: rotate(270deg); 
 }
+.OK-rotate-180-clockwise {
+    transform: rotate(180deg);
+	-ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg); 
+}
 h2 {
 	margin:0;
-	padding:20px 20px;
+	padding:32px 20px;
 	letter-spacing:.05em;
 	font-weight:bold;
 	color:#fff;
-	background:#777; 
+	background: rgba(0,0,0,.8)
 }
 body {
 	background:#e4e4e4;
 }
-/* header */
-header {
+/* header and footer */
+header, footer {
 	padding:100px 0 50px;
+}
+header button.btn, footer button.btn {
+	font-size: 14px;
+	font-weight:bold;
 }
 header .OK-tag {
 	margin:8px 8px 0 0;
   	padding: 4px 15px;
   	font-size: 14px;
   	border-radius: 20px;
-}
-header button.btn {
-	font-size: 14px;
-	font-weight:bold;
 }
 /* cover image for project page */
 .OK-project-page-cover-img {
@@ -83,6 +88,7 @@ header button.btn {
 .OK-project-definition-card {
 	color:rgba(255,255,255,.85);
 }
+
 @media (min-width: 768px) {
 	.OK-project-definition-card {
 		height:350px;
@@ -90,9 +96,24 @@ header button.btn {
 }
 }
 @media (min-width: 992px) {
-	.OK-project-definition-card-tall {
+	.OK-project-definition-card-tall, .OK-pdc-progress, .OK-pdc-help, .OK-pdc-code {
 		height:700px;
 	}
+}
+/* links in the pd card */
+.OK-project-definition-card a {
+	text-decoration:underline;
+	color:rgba(255,255,255,.9);
+}
+.OK-project-definition-card a:hover {
+	color:rgba(255,255,255,1);
+}
+.OK-pdc-help a {
+	text-decoration:underline;
+	color:rgba(0,0,0,.8);
+}
+.OK-pdc-help a:hover {
+	color:rgba(0,0,0,1);
 }
 /* project definition card bkg */
 .OK-pdc-goals {
@@ -110,15 +131,16 @@ header button.btn {
 .OK-pdc-blockers {
 	background:#aa1c3a;
 }
-.OK-pdc-code {
-	background:#444;
+.OK-pdc-progress {
+	color:rgba(0,0,0,.8);
+	background:#6D6E71;
 }
 .OK-pdc-help {
-	color:#000;
-	background:#fedd44;
+	color:rgba(0,0,0,.8);
+	background:#FC6;
 }
-.OK-pdc-progress {
-	background:#6D6E71;
+.OK-pdc-code {
+	background:#444;
 }
 /* project definition card icon */
 .OK-pdcard-glyphicon {
@@ -130,6 +152,9 @@ header button.btn {
 	font-size:36px;
 	color: #F3F3F3;
 	background:rgba(0,0,0,.7);
+}
+.OK-pdc-help .OK-pdcard-glyphicon {
+	background:rgba(0,0,0,.77);
 }
 .OK-pdc-goals .OK-pdcard-glyphicon {
 	color:#cf1b41;
@@ -146,6 +171,15 @@ header button.btn {
 .OK-pdc-blockers .OK-pdcard-glyphicon {
 	color:#aa1c3a;
 }
+.OK-pdc-progress  .OK-pdcard-glyphicon {
+	color:#6D6E71;
+}
+.OK-pdc-help .OK-pdcard-glyphicon {
+	color:#ff2352;
+}
+.OK-pdc-code  .OK-pdcard-glyphicon {
+	color:#444;
+}
 /* project definition card title */
 .OK-project-definition-card h3 {
 	padding-top:20px;
@@ -154,8 +188,21 @@ header button.btn {
 	font-weight:bold;
 	color:rgba(255,255,255,.9);
 }
+.OK-pdc-help h3 {
+	color:rgba(0,0,0,.7);
+}
 /* project definition card text */
+.OK-project-definition-card h3 + p {
+	padding-top:20px;
+}
 .OK-project-definition-card p {
-	padding:20px 15px 0;
+	padding:8px 15px 0;
 	font-size:1.2em;
+}
+.OK-pdc-progress .OK-tag {
+	font-size:1em;	
+	background:#444;
+}
+.OK-pdc-progress p span {
+	white-space:nowrap;
 }
