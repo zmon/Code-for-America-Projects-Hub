@@ -64,7 +64,7 @@
               <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span> Starred by <span class="badge OK-badge-inverse">21</span></li>
               <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span> Watched by <span class="badge OK-badge-inverse">17</span></li>
               <li><a hrer="#" title="View project's comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</li>
-              <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a> Requested by ...</li>
+              <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a> Requested by Code for America brigade</li>
               <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span> Validated by user research</li>
            </ul>
         </section>     
@@ -98,7 +98,8 @@
     	<span class="glyphicon glyphicon-send OK-pdcard-glyphicon"></span> 
       	<h3>Goals</h3>
         <p>Help brigade members to find projects to work on. <br>
-Promote multi-brigade collaboration. New members onboarding. <br>
+Promote multi-brigade collaboration. <br>
+New members onboarding. <br>
 Let public contribute ideas. <br>
 Karma. <br>
 Code for America scope view. <br>
@@ -117,75 +118,91 @@ The list should be available nation-wide and by city. </p>
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-project-definition-card-tall OK-pdc-story pull-right"> 
     	<span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
      	<h3>User Stories</h3>
-        <p>Dave is a busy person. As a member of brigade, Dave needs to be up to date on the latest developments in the brigade, so that he can choose where he can apply his skills on hack night. </p>
-        <p>As a civic-minded person, Jane needs to be able to contribute a society-improving idea for greater good. 
-		</p>
+        <p>Dave is a member of brigade living in Kansas City. He does not have time to follow the latest developments in the brigade on a daily basis. He would like to choose where he can apply his skills for a few hours during Monday hack night. Dave does not need to see project details, rather where the help is needed. He opens Projects Hub and chooses an active project with relevant Help Wanted issues, where he can contribute.</p>
+        <p>Ashley has a great idea about building up community spaces in Kansas City. She does not know how to build an app for it, and thinks Code for America might help. Ashley opens the Projects Hub, filters Community projects and sees that similar, but not quite the same project is under development in Munich, Germany. She presses the big blue button on the Projects Hub and adds the idea for KC brigade to develop.</p>
+        <p>Kevin, DB admin at MicroBucks, Inc., has found out about Code for America on a date with Ashley. He is curious about Ashley and the idea behind civic coding, and would like to learn more about both. He also would like to improve his JavaScript skills. Kevin opens the ProjectsHub, finds all the projects in Kansas City, where Javascript help is wanted. One of them has Ashley as a contributor. Kevin chooses to work on this project.</p>
+        <p>Jim, is geomapping guru, has been out of work for a few months. He is looking for a challenging project to showcase his skills and to build up his portfolio. He finds one under development in Buenos Aires brigade.</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-maintenance"> 
     	<span class="glyphicon glyphicon-wrench OK-pdcard-glyphicon"></span>     
       	<h3>Maintenance Plan</h3> 
         <p>Project leaders for active projects will be able to keep the the data updated on GitHub, using the usual GitHub tools. Additional requirement for GitHub is making custom set of GitHub repo labels (see <a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/8">Custom Labels for Repos</a> on GitHub).  </p>
         <p>
-Project Definition information can be updated either via Google form, when the project is created, via Google miniforms, once project is established, or by editing Google spreasheet directly.</p>        
+Project Definition information can be updated either via Google form, when the project is created, or via Google miniforms, once project is established, or by editing Google spreasheet directly.</p>        
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-blockers"> 
     	<span class="glyphicon glyphicon-save OK-pdcard-glyphicon OK-rotate-270-clockwise"></span>     
     	<h3>Potential Blockers</h3>
         <p>Maintanence related blockers: The workflow for updating project information in Google spreadsheet is clumsy (Google form does not pull data back from the spreadsheet, if data exists already).</p>
 <p>The initial effort of creating custom repo labels and then applying them to repo issue, when the issue is created requires some discipline from project leader. </p>
-<p>The result of the effort should be immediately obvious and beneficial though.</p>
     </div>
     </div>
 <!-- code cards -->
-    <div class="row">
-    <h2>Development</h2>
-    <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-code"> 
-    	<span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
-     	<h3>Code used in development</h3>
-        <p>HTML/CSS, Javascript, Bootstrap        
-		</p>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-help"> 
-    	<span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
-     	<h3>Help Wanted</h3>
-        <p>Projects Hub filter. Where does the data come from?</p>
-        <p>Updating project data in Google spreadsheet</p>
-        <p>Add infinite scroll </p>
-        <p>Usability evaluation</p>
-        <p>Project card data. Where does the data come from?</p>
-        <p>Coding projects filter </p>
-        <p>Map geolocation filter</p>
-    </div>
+    <div class="row"> 
+    <h2>Development</h2> 
+    
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-progress"> 
-    	<span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
+    	<span class="glyphicon glyphicon-tasks OK-pdcard-glyphicon OK-rotate-180-clockwise"></span>        
      	<h3>Progress</h3>
-<!-- project progress -->
-            <section class="OK-project-data">
-              <p><span class="OK-tag bg-gray">Definition</span> <br>
+
+              <p><span class="OK-tag bg-gray">Definition</span> 
                   <span class="bg-white">research</span> 
+                  <span class="bg-white">workflow</span>
+                  <span class="bg-white">information architecture</span>
                   <span class="bg-white">wireframes</span> 
                   <span class="bg-white">visual design</span> 
                   <span class="bg-white">prototype</span> 
                </p>
-               <p><span class="OK-tag bg-gray">Code</span> <br>
-                  <span class="bg-yellow">HTML/CSS</span> 
+               <p><span class="OK-tag bg-gray">Code</span> 
+                  <span class="bg-yellow">HTML/CSS</span>
+                  <span class="bg-yellow">Javascript</span>  
                </p>
-               <p><span class="OK-tag bg-gray">Data</span> <br>
+               <p><span class="OK-tag bg-gray">Data</span> 
                   <span class="bg-yellow">data entry</span> 
                </p>
-               <p><span class="OK-tag bg-gray">Analysis</span> <br>
+               <p><span class="OK-tag bg-gray">Analysis</span> 
                   <span class="bg-yellow">Usability</span> 
               </p>
-<!-- project on hold banner (hidden for active projects --> 
-<!--  <p class="OK-project-onhold-message">On Hold<br>
-Reason: ...</p>  --> 
-            </section> 
-
+              <hr />
+              <p><span class="bg-white">done</span> <span class="bg-yellow">in the works</span></p>
+<!-- project on hold banner (hidden for active projects
+		<p class="OK-project-onhold-message">On Hold<br>
+		Reason: to demonstrate On Hold banner</p> 
+ --> 
+    </div>    
+    
+    <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-help"> 
+    	<span class="glyphicon glyphicon-fire OK-pdcard-glyphicon"></span>        
+     	<h3>Help Wanted</h3>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/17">Projects Hub filter. Where does the data come from?</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/16">Script to display entered project data from Google spreadsheet in Google form to edit the data</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/11">Add infinite scroll to the hub</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/7">Usability evaluation</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/9">Project card data. Where does the data come from?</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/6">Coding projects filter</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/4">Map geolocation filter</a></p>
     </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-code"> 
+    	<span class="glyphicon  OK-pdcard-glyphicon">&lt;/&gt;</span>        
+     	<h3>Code used so far</h3>
+        <p>HTML/CSS, Javascript, Bootstrap        
+		</p>
+    </div>    
+    
 	</div>
 </div>
 
-
+<footer class="container">
+    <div class="row">
+      <div class="col-xs-3 col-lg-2"> 
+        <img class="OK-logo" src="images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
+        <br><br>
+        <button type="button" onClick="location.href='CfAprojectsHub.htm'" class="btn btn-primary btn-xs">Back to Projects Hub</button>
+      </div>
+      
+	</div>
+</footer>
 
 
 
