@@ -1,7 +1,7 @@
 # Code for America Projects Hub
 ## And how you can help
 
-To help brigade members to find projects to work on. To promote multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope. Nation-wide and by city. Filtered and sorted card view of the projects. 
+To help brigade members to find projects to work on. To promote multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
 
 ###HTML/CSS (and some Javascript) prototype
 
