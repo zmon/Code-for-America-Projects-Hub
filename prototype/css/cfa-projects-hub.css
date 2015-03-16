@@ -2,10 +2,13 @@
 /* utility styles */
 body {
 	min-width:640px;
-	background:#444;
+	background:#444; 
 }
 a {
 	cursor:pointer;
+	-webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+       transition: all .2s ease-in-out;
 }
 a.disabled {
 	color: #777;
@@ -43,6 +46,9 @@ a.disabled:hover {
 .bg-gray {
 	color: #fff;
 	background-color:#777;
+}
+.bg-lightgray {
+	background-color:#ccc;
 }
 .bg-white {
 	background-color:#fff;
@@ -219,9 +225,9 @@ h5 {
 	padding:0;
 	margin-bottom:20px;
 	background:#e4e4e4;
-    -webkit-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 .OK-project-card:hover {
 	background:#fff;
@@ -233,9 +239,9 @@ h5 {
 /* idea card */
 .OK-project-card-idea {
 	background:#d1d1d1;
-    -webkit-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 .OK-project-card-idea:hover {
 	background:#f3f3f3;
@@ -396,7 +402,7 @@ h4 {
 	position:relative;
 	padding:10px 0 0 10px;
 	width:90%;
-	height:50px;
+	height:50px; 
 	overflow:hidden;
 }
 .OK-project-contributors-thumbs .OK-project-leader-badge {
