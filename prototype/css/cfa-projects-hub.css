@@ -207,6 +207,7 @@ h5 {
 .OK-btn-add-idea {
 	padding:2em;
 	font-weight:bold;
+	border-radius:12px;
 }
 .OK-btn-add-idea .glyphicon {
 	padding-right:1em;
@@ -215,10 +216,9 @@ h5 {
 .OK-project-card {
 	position:relative;
 	width:100%;
-	padding:15px;
+	padding:0;
 	margin-bottom:20px;
 	background:#e4e4e4;
-	border-radius:6px;
     -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
@@ -232,7 +232,6 @@ h5 {
 }
 /* idea card */
 .OK-project-card-idea {
-	text-align:center;
 	background:#d1d1d1;
     -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
@@ -247,13 +246,17 @@ h5 {
 /* project card head */
 .OK-project-card-head {
 	position:relative;
-	height:100px;
+	height:150px;
 	padding:8px;
-	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png') center center no-repeat; 
+	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png'); 
+	background-size: cover;
+	background-position:top center;
 }
 /* project card prototype placeholder image (remove in production) */
 .OK-project-card-prototype .OK-project-card-head {
-	background:url('../images/OK_placeholder_project_image.png') center center no-repeat; 
+	background:url('../images/OK_placeholder_project_image.png'); 
+	background-size: cover;
+	background-position:top center;
 }
 /* idea card head image */
 .OK-project-card-idea .OK-project-card-head {
@@ -274,12 +277,17 @@ h5 {
 	color:#fff;
  	background:#777;
 }
+/* project description section  */
+.OK-project-description {
+	padding:15px 25px;
+	text-align:center;
+}
 /* project title  */
 h4 {
-	padding:6px 8px 0;
+	padding:15px 8px 0;
 	line-height:1.3em;
-	text-transform:uppercase;
-	color:#222;
+	font-weight:bold;
+	color:#444;
 }
 /* project category */
 .OK-project-category {
@@ -296,10 +304,11 @@ h4 {
 /* project goals description */
 .OK-project-goals {
 	display:block;
-	max-height:75px;
+	max-height:78px;
 	overflow:hidden;
 	margin-bottom:0;
 	padding:0 8px;
+	text-align:left;
 	line-height:1.2em;
 }
 /* view project details link */
@@ -329,9 +338,9 @@ h4 {
 }
 /* project badges */
 .OK-project-badges {
-	padding:4px 8px 0;
-	border-radius:6px 6px 0 0;	
+	padding:4px 25px 0;
 	font-weight:bold;
+	text-align:center;
 	color: #F3F3F3;
 	background:#777;
 } 
@@ -341,7 +350,7 @@ h4 {
 	background:#F3F3F3;	
 }
 .OK-project-badges .glyphicon {
-	padding:3px 3px 0 10px;
+	padding:3px 3px 0 15px !important;
 	vertical-align:text-top;
 	cursor:default;
 }
@@ -359,26 +368,18 @@ h4 {
 }
 /* project code, help and progress */
 .OK-project-data {
-	padding:8px;
+	padding:25px 25px 15px;
 	background:#ccc;
 }
-.OK-project-data + .OK-project-data {
-	border-top:1px dotted #b5b5b5;
-	border-radius:0 0 6px 6px;	
-	background:#bdbdbd;
-}
-.OK-project-progress {
-	line-height:1.8em;	
-}
 .OK-help-wanted {
-	padding:0 8px;  
+	padding:0 0 0 8px;  
+}
+.OK-help-wanted p {
+	margin:5px 0 0;
+	line-height:1.2em;
 }
 .OK-project-data p:last-child {
 	margin-bottom:0;
-}
-.OK-project-progress-title {
-	font-weight:bold;
-	color:#777;
 }
 .OK-project-onhold-message {
 	display:block;
@@ -388,17 +389,20 @@ h4 {
 	background:#777;
 }
 /* project contributors */
+.OK-project-contributors {
+	background:#ce263f;
+}
 .OK-project-contributors-thumbs {
 	position:relative;
-	padding:4px 0 0 6px;
-	width:85%;
-	height:44px;
+	padding:10px 0 0 10px;
+	width:90%;
+	height:50px; 
 	overflow:hidden;
 }
 .OK-project-contributors-thumbs .OK-project-leader-badge {
 	position:absolute;
-	top:29px;
-	left:31px;
+	top:35px;
+	left:40px;
 	padding:3px 2px 3px 4px;
 	border-radius:10px;
 	font-size:9px;
@@ -408,7 +412,7 @@ h4 {
 }
 /* number of contributors */
 .OK-project-contributors .badge {
-	margin-top:15px;
+	margin-top:20px;
 }
 
 

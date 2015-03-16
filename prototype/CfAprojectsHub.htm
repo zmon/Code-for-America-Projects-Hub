@@ -85,6 +85,9 @@
       <label><input type="checkbox" value="">Housing  <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
+      <label><input type="checkbox" value="">Infractructure  <span class="badge OK-badge-light">#</span></label>
+    </div> 
+    <div class="checkbox">
       <label><input type="checkbox" value="">Politics (participation) <span class="badge OK-badge-light">#</span></label>
     </div>
     <div class="checkbox">
@@ -209,7 +212,7 @@
       </div>
       <div class="row"> 
 <!-- suggest an idea button -->
-        <div class="col-xs-6 col-lg-4">
+        <div class="col-xs-12 col-md-6">
           <button type="button" onClick="location.href='https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform'" class="btn btn-primary btn-block OK-btn-add-idea"><span class="glyphicon glyphicon-plus-sign"></span> Add your idea to hack</button> 
           <br>
 <!-- list of projects -->         
@@ -221,63 +224,66 @@
                 <li>Kansas City</li>
               </ul>
             </section>
+<!-- project description -->           
+            <section class="OK-project-description">
 <!-- project title -->
-            <h4>CfA Projects Hub. And how you can help. </h4>
-<!-- project's civic category .bg-civic or .bg-CfA -->
+            <h4>Code for America Projects Hub. <br>
+			<small>And how you can help.</small></h4>
+<!-- project civic category .bg-civic or .bg-CfA -->
             <p class="OK-project-category OK-tag bg-CfA">Code for America Brigade Tool</p>
 <!-- project goals -->
-            <p class="OK-project-goals"><em>Why:</em> To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. 
+            <p class="OK-project-goals"><em>Why:</em> To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city. 
             </p>
-            <p class="OK-link-view-project"><a href="CfAprojectPage.htm">view project details</a></p>              
-<!-- project's social badges -->
+            <p class="OK-link-view-project"><a href="CfAprojectPage.htm">view project details</a></p>    
+            </section>
+<!-- project social badges -->
             <section class="OK-project-badges small clearfix">
               <ul class="list-inline list-unstyled clearfix">
-                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">21</span></li>
-                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">17</span></li>
-                <li><a hrer="#" title="View project's comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</li>
+                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">2</span></li>
+                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">8</span></li>
+                <li><a hrer="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/21" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</li>
                 <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a></li>
                 <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
               </ul>
             </section>          
 <!-- project technics and where help is needed -->
-            <section class="OK-project-data small"> <a class="pull-right btn-link disabled">Not online yet</a>
+            <section class="OK-project-data small"> <a class="pull-right btn-link" href="http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm">Prototype</a>
               <p class="OK-tag bg-gray" title="Platform">Web App</p>
               <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> HTML/CSS, Bootstrap, JavaScript </p>
-              <span title="Help wanted" class="OK-tag bg-darkyellow">Help:</span>
-              	<section class="OK-help-wanted">
-                <p>Projects Hub filter.</p> 
-                <p>Where does the data come from?</p>
-                <p>Script to display entered project data from Google spreadsheet in Google form to edit the data</p>
-                <p>Add infinite scroll to the hub</p>
-                <p>Usability evaluation</p>
-                <p>Project card data. Where does the data come from?</p>
-                <p>Coding projects filter</p>
-                <p>Map geolocation filter</p>
-                </section>
+              <span title="Help wanted" class="OK-tag bg-darkyellow">Help Wanted:</span>
+              <section class="OK-help-wanted">
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/17">Projects Hub filter. Where does the data come from?</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/16">Script to display entered project data from Google spreadsheet in Google form to edit the data</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/11">Add infinite scroll to the hub</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/7">Usability evaluation</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/8">Custom labels for repo issues</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/9">Project card data. Where does the data come from?</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/6">Coding projects filter</a></p>
+        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/4">Map geolocation filter</a></p>              
+               </section>
             </section>          
-<!-- project progress -->
-            <section class="OK-project-data small">
-<!-- project on hold banner (hidden for active projects --> 
-<!--  <p class="OK-project-onhold-message">On Hold<br>
+
+<!-- project on hold banner (hidden for active projects 
+<p class="OK-project-onhold-message">On Hold<br>
 Reason: ...</p>  --> 
-            </section>            
+           
 <!-- project contributors -->
             <section class="OK-project-contributors clearfix"> 
-              <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left"
+              <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
               <li><img src="https://avatars2.githubusercontent.com/u/10410203?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
               <li><img src="https://avatars1.githubusercontent.com/u/447024?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               <li><img src="https://avatars1.githubusercontent.com/u/212227?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars3.githubusercontent.com/u/3280502?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars0.githubusercontent.com/u/2244915?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
-              <span class="badge pull-left">12</span> </section>
+              <span class="badge pull-left">5</span> 
+            </section>
           </article>
         </div>
 <!--/.col-xs-6.col-lg-4--> 
         
 <!-- project cards  -->
-        <div class="col-xs-6 col-lg-4">
+        <div class="col-xs-12 col-md-6">
           <article class="OK-project-card OK-project-card-prototype clearfix">
             <section class="OK-project-card-head"> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
@@ -285,45 +291,44 @@ Reason: ...</p>  -->
                 <li>project city</li>
               </ul>
             </section>
-<!-- project title -->
-            <h4>Project Title</h4>
-<!-- project's civic category .bg-civic or .bg-CfA -->
+<!-- project description -->           
+            <section class="OK-project-description">
+<!-- project title and subtitle-->
+            <h4>Project Title<br>
+			<small>Project Subtitle</small>
+            </h4>
+<!-- project civic category .bg-civic or .bg-CfA -->
             <p class="OK-project-category OK-tag bg-civic">Civic category</p>
 <!-- project goals -->
-            <p class="OK-project-goals"><em>Why:</em> Project goals. One paragraph of text describing why people need to use this app/website. The first four lines of text are displayed in the card view. The rest is available in details. <br>
+            <p class="OK-project-goals">The first paragraph from GitHb readme. Project goals. One paragraph of text describing why people need to use this app/website. The first four lines of text are displayed in the card view. The rest is available in details. <br>
             </p>
             <p class="OK-link-view-project"><a href="#">view project details</a></p>
-<!-- project's social badges -->
+            </section>
+<!-- project social badges -->
             <section class="OK-project-badges small clearfix">
               <ul class="list-inline list-unstyled clearfix">
                 <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">#</span></li>
                 <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">#</span></li>
-                <li><a hrer="#" title="View project's comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</li>
+                <li><a hrer="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</li>
                 <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a></li>
                 <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
               </ul>
             </section>
             
 <!-- project technology and where help is needed -->
-            <section class="OK-project-data small"> <a class="pull-right btn-link">link to live product</a>
+            <section class="OK-project-data small"> <a class="pull-right btn-link disabled">Not online yet</a>
               <p class="OK-tag bg-gray">platform</p>
               <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> what is used in the build </p>
-              <span title="Help needed" class="OK-tag bg-darkyellow">Help:</span> 
+              <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
               <section class="OK-help-wanted">
-              <p>where the help is needed </p>
+                <p>where the help is needed </p>
               </section>
-            </section>
-            
-<!-- project progress -->
-            <section class="OK-project-data small">
+            </section>            
 <!-- project on hold banner (hidden for active projects -->
-              <p class="OK-project-onhold-message">On Hold<br>
+            <p class="OK-project-onhold-message">On Hold<br>
                 Reason: to demonstrate On Hold message</p>
-            </section>
-            
 <!-- project contributors -->
-            <section class="OK-project-contributors clearfix"> <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left"
-
+            <section class="OK-project-contributors clearfix"> <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
@@ -332,7 +337,7 @@ Reason: ...</p>  -->
         </div>
 <!--/.col-xs-6.col-lg-4-->
         
-        <div class="col-xs-6 col-lg-4">
+        <div class="col-xs-12 col-md-6">
           <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
             <section class="OK-project-card-head"> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
@@ -340,22 +345,17 @@ Reason: ...</p>  -->
                 <li>project city</li>
               </ul>
             </section>        
-<!-- project title -->
-            <h4>Project Idea</h4>
-<!-- project's civic category .bg-civic or .bg-CfA -->
-            <p class="OK-project-category OK-tag bg-civic">Civic category</p>
+<!-- project description -->           
+            <section class="OK-project-description">
+<!-- idea title -->
+             <h4>Project Idea Title</h4>
+<!-- idea civic category .bg-civic or .bg-CfA -->
+             <p class="OK-project-category OK-tag bg-civic">Civic category</p>
 <!-- project goals -->
-            <p class="OK-project-goals">Project goals.
-            </p>
-            <p class="OK-link-view-project"><a href="#">view idea details</a></p>
-<!-- project progress -->
-            <section class="OK-project-data small">
-              <p class="OK-project-progress text-left" title="Project progress"> 
-              <span class="OK-project-progress-title">Progress:</span> 
-                <span class="OK-tag bg-gray">Idea</span> 
-              </p>
-            </section>  
-            <p class="small">Suggested by Jane Doe</p>                      
+             <p class="OK-project-goals">Project goals.</p>
+             <p class="OK-link-view-project"><a href="#">view idea details</a></p>
+             <p class="small">Suggested by Jane Doe</p>   
+            </section>                    
           </article>
       </div>
 <!--/row--> 
