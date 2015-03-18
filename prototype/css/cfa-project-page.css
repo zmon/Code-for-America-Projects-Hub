@@ -18,14 +18,14 @@ h2 {
 	font-weight:bold;
 	color:#fff;
 	background: rgba(0,0,0,.8)
-}
+} 
 /* header and footer */
 header, footer {
 	padding:100px 0 50px;
 }
 .OK-btn-edit-project {
 	position:fixed;
-	top:20px;
+	bottom:20px;
 	right:10px; 
 	z-index:10;
 }
