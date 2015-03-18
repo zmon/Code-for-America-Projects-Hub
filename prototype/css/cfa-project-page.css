@@ -25,7 +25,7 @@ header, footer {
 }
 .OK-btn-edit-project {
 	position:fixed;
-	top:20px;
+	bottom:20px;
 	right:10px; 
 	z-index:10;
 }
@@ -94,6 +94,9 @@ header .OK-tag {
 }
 /* project contributors */
 .OK-project-contributors {
+	color:rgba(255,255,255,1);
+	font-size:14px;
+	font-weight:bold;
 	padding:20px 20px;
 	background:#777;
 }
@@ -119,17 +122,23 @@ header .OK-tag {
 }
 /* links in the pd card */
 .OK-project-definition-card a {
-	text-decoration:underline;
+	text-decoration:none;
+	border-bottom:1px dotted rgba(255,255,255,.9);
 	color:rgba(255,255,255,.9);
 }
 .OK-project-definition-card a:hover {
+	text-decoration:none;
+	border-bottom:1px dotted rgba(255,255,255,1);
 	color:rgba(255,255,255,1);
 }
 .OK-pdc-help a {
-	text-decoration:underline;
+	text-decoration:none;
+	border-bottom:1px dotted rgba(0,0,0,.5);
 	color:rgba(0,0,0,.8);
 }
 .OK-pdc-help a:hover {
+	text-decoration:none;
+	border-bottom:1px solid rgba(0,0,0,.4);
 	color:rgba(0,0,0,1);
 }
 /* project definition card bkg */
