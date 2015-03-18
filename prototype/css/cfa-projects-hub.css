@@ -2,7 +2,7 @@
 /* utility styles */
 body {
 	min-width:640px;
-	background:#444; 
+	background: #D2D6E3; 
 }
 a {
 	cursor:pointer;
@@ -17,6 +17,9 @@ a.disabled {
 a.disabled:hover {
 	color: #777;	
 	text-decoration:none;
+}
+label {
+	font-weight:normal; /* bold in Bootstrap */
 }
 .badge, .OK-tag {
 	cursor:default;
@@ -60,6 +63,10 @@ a.disabled:hover {
 .bg-yellow {
 	background: #FC6;
 }
+.bg-semitransp {
+	color:rgba(255,255,255,.7);
+	background:rgba(0,0,0,.1);
+}
 /* checkbox and radio label placement for small font */
 .small .radio,
 .small .checkbox {
@@ -102,76 +109,109 @@ h1 {
 h1 small {
 	letter-spacing:.01em;	
 }
-OK-filter-btn {
-	padding-left:152px;
-}
-header div.btn-toolbar {
-	padding-left:152px;
+/* select project */
+.OK-banner {
+	padding:7px;
+	text-align:center;
+	font-size:18px;
+	font-weihgt:bold;
+	letter-spacing:.1em;
+	color:#ccc;
+	background:#777;
 }
 /* filter panel */
 .OK-filter-panel {
-	padding:8px;
-	font-size:-1;
-	color:#e4e4e4;
-	background:#2e2e2e;
+	
 }
-.OK-filter-panel .glyphicon-remove {
-	cursor:pointer;
-}
-/*filter panel title */
+/*filters title */
 h3 {
 	margin:8px 0 0 15px;
 	padding:0;
 	font-size:16px;
-	font-weight:normal;
+	font-weight:bold;
 	letter-spacing:.05em;
 	color:#999;
 }
-/*filter panel section title */
+/*filter section title */
 h5 {
 	font-weight:bold;
 }
-/*filter panel inputs */
-.OK-filter-panel input[type="checkbox"] {
-	background:#CCC;
-}
-.OK-filter-panel .checkbox {
-	padding-left:15px;	
-}
-.OK-form-control-indented {
-	padding-left:5px;
-}
-.OK-filter-panel .badge  {
-	font-size:10px;
-}
-.OK-filter-panel .OK-badge-light {
-	color:#999;	
-	background:#444;
-}
-.OK-filter-panel li {
-	margin-left:15px;
-}
-.OK-filter-panel a {
-	color:#F90;
-}
-.OK-filter-panel a:hover {
-	text-decoration:none;
-	color:#ffc774;
-}
-.OK-filter-project-activity a {
-	color:#e4e4e4;
-}
-.OK-filter-project-activity a:hover {
+/*filter sections */
+.OK-filter-civic, .OK-filter-CfA, .OK-filter-help {
+	margin:0;
+	padding:10px;
 	color:#fff;
+}
+.OK-filter-civic {
+	background:#3a9ed7;	
+}
+.OK-filter-CfA {
+	background:#ce263f;
+}
+.OK-filter-help {
+	color:rgba(0,0,0,.8);
+	background:#FC6;
+}
+.OK-filter-section-title, .OK-filter-help-section-title {
+	display:inline-block;
+	margin:0;
+	padding:6px;	
+	border:solid 1px rgba(255,255,255,.3);
+	text-transform:uppercase;
+	background: rgba(255,255,255,.9);
+}
+.OK-filter-civic .OK-filter-section-title {
+	color:#3a9ed7;	
+}
+.OK-filter-CfA .OK-filter-section-title {
+	color:#ce263f;	
+}
+.OK-filter-help .OK-filter-section-title {
+	font-weight:bold;
+	color:#FC6;
+	background:#777;	
+}
+.OK-filter-help-section-title {
+	color:#777;
+}
+div.checkbox-inline {
+	margin:1px 0;
+	padding:4px 7px 0px 27px;
+	border:solid 1px rgba(255,255,255,.3);
+}
+div.checkbox-inline:hover {
+	background:rgba(255,255,255,.1);
+}
+.checkbox-inline + .checkbox-inline {
+  margin-left: 0;
+}
+.OK-filter-help ul {
+	padding:0 5px;
+}
+.OK-filter-help ul li {
+	margin:1px 0 0;
+	padding:6px;	
+	border:solid 1px rgba(0,0,0,.2);
+}
+.OK-filter-help ul li:hover {
+	background:rgba(255,255,255,.2);
+}
+.OK-filter-help ul li:first-child:hover {
+	background:#777;
+}
+.OK-filter-help ul li a {
+ 	text-decoration: none;
+	color:rgba(0,0,0,.7);
+}
+.OK-filter-help ul li a:hover {
+ 	text-decoration: none;
 }
 /* filter results banner */
 .OK-search-results-display {
 	padding: 15px;
-	margin-top:15px;
-  	margin-bottom: 20px;
+	margin:0;
   	border: 1px solid transparent;
-  	border-radius: 4px;
-  	background-color: #e4e4e4;
+  	background-color: #fff;
 }  
 .OK-search-results-number {
 	font-size:36px;
