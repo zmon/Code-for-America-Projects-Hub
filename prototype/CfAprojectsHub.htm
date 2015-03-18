@@ -11,8 +11,6 @@
 <title>Projects Hub. Code for America.</title>
 <!-- Bootstrap relase 3 core CSS -->
 <link href="css/bootstrap.css" rel="stylesheet">
-<!-- Custom styles for side panel -->
-<link href="css/offcanvas.css" rel="stylesheet">
 <!-- Project Hub custom styles -->
 <link href="css/cfa-projects-hub.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,159 +27,148 @@
       <div class="col-xs-3 col-lg-2"> 
         <img class="OK-logo" src="images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
       </div>
-      <div class="col-xs-5 col-lg-6"> 
+      <div class="col-xs-9 col-lg-6"> 
         <h1>Projects Hub <br />
         <small>and how you can help</small> 
       </h1>    
-        <p class="visible-xs OK-filter-btn"><button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Filter Projects</button>
-        </p>
-      </div>
-      <div class="col-xs-4">
-	    <div class="form-group pull-right">
-    <form role-"form">
-     <label class="sr-only" for="search">Search:</label>
-      <input type="search" class="form-control-lg" placeholder="search projects"/>
-    </form>
-        </div>
-      </div>
+      </div> 
     </div>
   </div>
 </header>
 <div class="container-fluid"> 
-<!-- sidebar positioning  -->
-  <div class="row row-offcanvas row-offcanvas-left"> 
-<!-- sidebar display (display works with main content below) -->
-    <div class="col-xs-6 col-sm-3 col-lg-2 sidebar-offcanvas" id="sidebar"> 
-<!-- sidebar content  -->
-      <aside class="form-group OK-filter-panel small"> 
-      <form role="form">
-<!-- close filter panel control -->      
-<p class="visible-xs pull-right"><span class="glyphicon glyphicon-remove" data-toggle="offcanvas" title="Close filter panel"></span>
-</p>
-<h3>Filter Projects</h3>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Include project ideas <span class="badge OK-badge-light">#</span></label>
-    </div>
-<h5 class="OK-tag-wide bg-civic">Civic Need</h5>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Budget <span class="badge OK-badge-light">1</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Community <span class="badge OK-badge-light">17</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Culture  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Education  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Health  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">History  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Housing  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Infractructure  <span class="badge OK-badge-light">#</span></label>
-    </div> 
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Politics (participation) <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Policing and Safety <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Recreation  <span class="badge OK-badge-light">#</span></label>
-    </div>
-        <div class="checkbox">
-      <label><input type="checkbox" value="">Sustainability   <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Transparency   <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Transportation  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Other <span class="badge OK-badge-light">#</span></label>  
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value=""> <span class="glyphicon glyphicon-hand-up"></span> Civic request <span class="badge OK-badge-light">#</span></label>  
-    </div>	
-<h5 class="OK-tag-wide bg-CfA">Code for America tools</h5>
-    <div class="checkbox OK-form-control-indented">
-      <label><input type="checkbox" value="">Code for America  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Brigade tool <span class="badge OK-badge-light">#</span></label> 
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Fellowship tool  <span class="badge OK-badge-light">#</span></label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Code for All <span class="badge OK-badge-light">#</span></label>  
-    </div>
-
-<span class="OK-tag-wide bg-darkyellow">Help Needed</span>
-<br>
-<span class="OK-tag OK-filter-help-subcategory">Definition</span>
-<ul class="list-unstyled">
- <li><a>research</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>story</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>requirements</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>workflow</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>info architecture</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>mockup</a> <span class="badge OK-badge-light">#</span></li> 
- <li><a>visual design</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>prototype</a> <span class="badge OK-badge-light">#</span></li>
-</ul>
-<span class="OK-tag OK-filter-help-subcategory">&lt;/&gt; Code</span> 
-<ul class="list-unstyled">
- <li><a>AppML</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>ASP</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>HTML/CSS</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Google Maps</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Java</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Javascript</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Jquery</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>PHP</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Python</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Ruby</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>SQL</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Other</a> <span class="badge OK-badge-light">#</span></li>
-</ul>
-<span class="OK-tag OK-filter-help-subcategory">Data</span>
-<ul class="list-unstyled">
- <li><a>data entry</a> <span class="badge OK-badge-light">#</span></li>
-</ul>
-<span class="OK-tag OK-filter-help-subcategory">Analysis</span> 
-<ul class="list-unstyled">
- <li><a>usability</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>data analytics</a> <span class="badge OK-badge-light">#</span></li>
-</ul>
-<h5 class="OK-tag-wide bg-gray">Project Activity</h5>
-<ul class="list-unstyled OK-filter-project-activity">
- <li><a>Active this week</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>Online</a> <span class="badge OK-badge-light">#</span></li>
- <li><a>On hold</a> <span class="badge OK-badge-light">#</span></li>
-</ul>
-      </form>
-      </aside>
-    </div>
-<!--/.sidebar-offcanvas-->   
-<!-- main content (display works with sidebar above, horizontal scrolling is prevented on xs sm devices in offcanvas.css) -->
-    <div class="col-xs-12 col-sm-9 col-lg-10"> 
-<!-- Google map -->
-      <div class="row">
-        <div class="col-xs-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" width="100%" height="250" frameborder="0" style="border:0"></iframe>
+	<div class="row">   
+    	<div class="col-xs-12 OK-banner">
+        select civic project to code
         </div>
-      </div>
-<!-- info: how many filtered projects found and sort-by selection -->
-      <div class="row">
+    </div>
+</div>
+<!-- map and filters container  -->
+<div class="container-fluid"> 
+	<div class="row">
+<!-- map container  -->    
+    	<div class="col-xs-12 col-md-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" width="100%" height="400" frameborder="0" style="border:0"></iframe>
+</div>
+
+<!-- civic category filter container  -->    
+    	<div class="col-xs-12 col-md-4">
+      		<aside class="OK-filter-panel"> 
+<section class="OK-filter-civic">
+	<h5 class="OK-filter-section-title">Civic Need</h5>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Budget <span class="badge bg-semitransp">1</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Community <span class="badge bg-semitransp">17</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Culture  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Education  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Health  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">History  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Housing  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Infractructure  <span class="badge bg-semitransp">#</span></label>
+    </div> 
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Politics (participation) <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Policing and Safety <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Recreation  <span class="badge bg-semitransp">#</span></label>
+    </div>
+        <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Sustainability   <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Transparency   <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Transportation  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Other <span class="badge bg-semitransp">#</span></label>  
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value=""> <span class="glyphicon glyphicon-hand-up"></span> Civic request <span class="badge bg-semitransp">#</span></label>  
+    </div>	
+</section>
+
+<section class="OK-filter-CfA">
+<h5 class="OK-filter-section-title">Code for America tools</h5>
+    <div class="checkbox-inline OK-form-control-indented">
+      <label><input type="checkbox" value="">Code for America  <span class="badge bg-semitransp">#</span></label>
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Brigade tool <span class="badge bg-semitransp">#</span></label> 
+    </div>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" value="">Code for All <span class="badge bg-semitransp">#</span></label>  
+    </div>
+</section>
+			</aside>
+        </div>                 
+<!-- help filter container  -->    
+    	<div class="col-xs-12 col-md-4">
+      		<aside class="OK-filter-panel"> 
+<section class="OK-filter-help">
+<h5 class="OK-filter-help-section-title">Help Wanted</h5>
+<ul class="list-unstyled list-inline">
+ <li class="OK-filter-section-title">Definition</li>
+ <li><a>research <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>story <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>requirements <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>workflow <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>info architecture <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>mockup <span class="badge bg-semitransp">#</span></a></li> 
+ <li><a>visual design <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>prototype <span class="badge bg-semitransp">#</span></a></li>
+</ul> 
+<ul class="list-unstyled list-inline">
+ <li class="OK-filter-section-title">&lt;/&gt; Code</li>
+ <li><a>AppML <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>ASP <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>HTML/CSS <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Geo Map <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Java <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Javascript <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Jquery <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>PHP <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Python <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Ruby <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>SQL <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>Other <span class="badge bg-semitransp">#</span></a></li>
+</ul>
+<ul class="list-unstyled list-inline">
+ <li class="OK-filter-section-title">Data</li>
+ <li><a>data entry <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>data scraping <span class="badge bg-semitransp">#</span></a></li>
+</ul>
+<ul class="list-unstyled list-inline">
+ <li class="OK-filter-section-title">Analysis</li>
+ <li><a>usability <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>data analytics <span class="badge bg-semitransp">#</span></a></li>
+</ul>
+</section>             
+            </aside>
+       </div>  
+	</div>
+</div>
+
+<div class="container-fluid"> 
+  <div class="row"> 
+<!-- filter info -->
         <div class="col-xs-12">
           <section class="OK-search-results-display clearfix">
             <form>
@@ -209,10 +196,13 @@
             </ul>            
            </section>
         </div>
-      </div>
-      <div class="row"> 
-<!-- suggest an idea button -->
-        <div class="col-xs-12 col-md-6">
+   </div>
+</div>
+<!-- main content -->    
+<div class="container-fluid"> 
+  	<div class="row"> 
+<!-- suggest an idea button and first project card -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <button type="button" onClick="location.href='https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform'" class="btn btn-primary btn-block OK-btn-add-idea"><span class="glyphicon glyphicon-plus-sign"></span> Add your idea to hack</button> 
           <br>
 <!-- list of projects -->         
@@ -269,6 +259,7 @@ Reason: ...</p>  -->
            
 <!-- project contributors -->
             <section class="OK-project-contributors clearfix"> 
+              <a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/graphs/contributors" title="Project contributors">
               <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
               <li><img src="https://avatars2.githubusercontent.com/u/10410203?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
               <li><img src="https://avatars1.githubusercontent.com/u/447024?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
@@ -276,14 +267,15 @@ Reason: ...</p>  -->
               <li><img src="https://avatars3.githubusercontent.com/u/3280502?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               <li><img src="https://avatars0.githubusercontent.com/u/2244915?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
+              </a>
               <span class="badge pull-left">5</span> 
             </section>
           </article>
         </div>
-<!--/.col-xs-6.col-lg-4--> 
+
         
 <!-- project cards  -->
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <article class="OK-project-card OK-project-card-prototype clearfix">
             <section class="OK-project-card-head"> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
@@ -335,9 +327,8 @@ Reason: ...</p>  -->
               <span class="badge pull-left">#</span> </section>
           </article>
         </div>
-<!--/.col-xs-6.col-lg-4-->
         
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
             <section class="OK-project-card-head"> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
@@ -360,7 +351,6 @@ Reason: ...</p>  -->
       </div>
 <!--/row--> 
     </div>
-<!--/.col-xs-12.col-sm-9--> 
   </div>
 <!--/row-->
 </div>
@@ -374,6 +364,5 @@ Reason: ...</p>  -->
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
 <script src="js/ie10-viewport-bug-workaround.js"></script> 
-<script src="js/offcanvas.js"></script>
 </body>
 </html>

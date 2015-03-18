@@ -18,10 +18,7 @@ h2 {
 	font-weight:bold;
 	color:#fff;
 	background: rgba(0,0,0,.8)
-}
-body {
-	background:#e4e4e4;
-}
+} 
 /* header and footer */
 header, footer {
 	padding:100px 0 50px;
@@ -29,7 +26,7 @@ header, footer {
 .OK-btn-edit-project {
 	position:fixed;
 	top:20px;
-	right:10px;
+	right:10px; 
 	z-index:10;
 }
 .OK-btn-edit-project a {
@@ -100,12 +97,15 @@ header .OK-tag {
 	padding:20px 20px;
 	background:#777;
 }
-
+.OK-project-contributors-thumbs {
+	width:100%;
+	height:50px; 
+	overflow:inherit;
+}
 /* grid for project definition cards */
 .OK-project-definition-card {
 	color:rgba(255,255,255,.85);
 }
-
 @media (min-width: 768px) {
 	.OK-project-definition-card {
 		height:350px;
