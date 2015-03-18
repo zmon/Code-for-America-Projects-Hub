@@ -123,13 +123,38 @@ h1 small {
 }
 /* select project banner */
 .OK-banner {
-	padding:7px;
+	padding:0;
+	height:40px;
 	text-align:center;
+	vertical-align:middle;
+	line-height:2;
 	font-size:18px;
-	font-weihgt:bold;
-	letter-spacing:.1em;
 	color:#ccc;
 	background:#777;
+}
+/* Add Idea link  */
+.OK-banner span.OK-banner-message {
+	display:inline-block;
+	margin:0;
+	padding:3px 15px 0px;
+	height:40px;
+	vertical-align:middle;
+	line-height:2;	
+	letter-spacing:.1em;
+}
+.OK-banner a {
+	display:inline-block;
+	margin:0;
+	padding:3px 15px 0px;
+	height:40px;
+	vertical-align:middle;
+	line-height:2;
+	color:#777;
+	background:#ccc;
+}
+.OK-banner a:hover {
+	text-decoration:none;
+	background:#fff;
 }
 /* project map iframe */
 .OK-project-map {
@@ -296,17 +321,6 @@ div.checkbox-inline:hover {
 }  
 .OK-sort-by-label {
 	font-weight:bold;
-}
-/* Add Idea button  */
-.OK-btn-add-idea {
-	display:block;
-	margin:15px auto 0;
-	padding:1em;
-	font-weight:bold;
-	border-radius:12px;
-}
-.OK-btn-add-idea .glyphicon {
-	padding-right:.2em;
 }
 /* project card  */
 .OK-project-card {
