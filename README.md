@@ -25,8 +25,8 @@ Project card data: https://github.com/codeforkansascity/Code-for-America-Project
 
 Projects Hub filter data: https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/17
 
-Hub prototype screenshot:
+Hub, Project form and Project page screenshot:
 
-![alt tag] (https://github.com/codeforkansascity/Code-for-America-Projects-Hub/blob/master/Code%20for%20America%20-%20Projects%20Hub.%20HTML%20prototype%20%5Bupdated%5D.png?raw=true)
+![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
 
 
