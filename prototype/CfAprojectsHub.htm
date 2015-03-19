@@ -48,12 +48,6 @@
 <!-- map and filters container  -->
 <div class="container-fluid"> 
 	<div class="row">
-<!-- map container  -->    
-    	<div class="col-xs-12 col-md-4 OK-no-padding">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" frameborder="0" class="OK-project-map">
-         </iframe>
-		<p class="OK-map-controls">View: <a href="#">Current City</a> | <a href="#">Nation</a> | <a href="#">All</a></p>
-		</div>
 
 <!-- civic category filter container  -->    
     	<div class="col-xs-12 col-md-4 OK-no-padding">
@@ -85,7 +79,7 @@
       <label><input type="checkbox" value="">Infractructure  <span class="badge bg-semitransp">#</span></label>
     </div> 
     <div class="checkbox-inline">
-      <label><input type="checkbox" value="">Politics (participation) <span class="badge bg-semitransp">#</span></label>
+      <label><input type="checkbox" value="">Politics <span class="badge bg-semitransp">#</span></label>
     </div>
     <div class="checkbox-inline">
       <label><input type="checkbox" value="">Policing and Safety <span class="badge bg-semitransp">#</span></label>
@@ -168,6 +162,16 @@
 </section>             
             </aside>
        </div>  
+
+<!-- map container  -->    
+    	<div class="col-xs-12 col-md-4 OK-no-padding">
+      		<aside class="OK-filter-panel"> 
+          	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" frameborder="0" class="OK-project-map">
+         	</iframe>
+			<p class="OK-map-controls">View: <a href="#">Current City</a> | <a href="#">Nation</a> | <a href="#">All</a></p> 
+            </aside>
+		</div>     
+
 	</div>
 </div>
 
@@ -206,11 +210,140 @@
 <!-- main content -->    
 <div class="container-fluid"> 
   	<div class="row"> 
-        <div class="col-xs-12 col-sm-6 col-md-4">            
-<!-- list of projects -->         
-          <article class="OK-project-card clearfix">
+
+<!-- project card template  -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="OK-project-card OK-project-card-prototype clearfix">
             <section class="OK-project-card-head"> 
-<!-- project image is in bkg --> 
+<!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
+              <ul class="list-inline list-unstyled text-center clearfix">
+                <li>project city</li>
+              </ul>
+            </section>
+<!-- project description -->           
+            <section class="OK-project-description">
+<!-- project title and subtitle-->
+            <h4>Project Title<br>
+			<small>Project Subtitle</small>
+            </h4>
+<!-- project civic category .bg-civic or .bg-CfA -->
+            <p class="OK-project-category OK-tag bg-civic">Civic category</p>
+<!-- project goals -->
+            <p class="OK-project-goals">The first paragraph from GitHb readme. Project goals. One paragraph of text describing why people need to use this app/website. The first four lines of text are displayed in the card view. The rest is available in details.
+            </p>
+            <p class="OK-link-view-project"><a href="#">view project details</a></p>
+            </section>
+<!-- project social badges -->
+            <section class="OK-project-badges small clearfix">
+              <ul class="list-inline list-unstyled clearfix">
+                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">#</span></li>
+                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">#</span></li>
+                <li><a href="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</span></li>
+                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
+                <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
+              </ul>
+            </section>
+            
+<!-- project technology and where help is needed -->
+            <section class="OK-project-data small"> <a class="pull-right btn-link disabled">Not online yet</a>
+              <p class="OK-tag bg-gray">platform</p>
+              <p title="Technology stack"><span class="OK-tag bg-gray">&lt;/&gt;</span>technology stack </p>
+              <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
+              <section class="OK-help-wanted">
+                <p><a>links to issues on GitHub where the help is wanted</a></p>
+              </section>
+            </section>            
+<!-- project on hold banner (hidden for active projects
+            <p class="OK-project-onhold-message">On Hold<br>
+                Reason: to demonstrate On Hold message</p> 
+-->
+
+<!-- project contributors -->
+            <section class="OK-project-contributors clearfix"> <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
+              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
+              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              </ul>
+<!-- number of contributors -->
+              <span class="badge pull-left bg-semitransp">#</span> </section>
+          </article>
+        </div>
+
+<!-- project card example: Community KC   -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="OK-project-card">
+            <section class="OK-project-card-head" style="background:url('https://cloud.githubusercontent.com/assets/10410203/6736267/bd3309ac-ce31-11e4-905b-aef21486975f.png'); background-size: cover; background-position:top center;"> 
+<!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
+              <ul class="list-inline list-unstyled text-center clearfix">
+                <li>Kansas City</li>
+              </ul>
+            </section>
+<!-- project description -->           
+            <section class="OK-project-description">
+<!-- project title and subtitle-->
+            <h4>Civic Project Mapping<br>
+			<small>Map of projects funded by Community Capital Fund</small>
+            </h4>
+<!-- project civic category .bg-civic or .bg-CfA -->
+            <p class="OK-project-category OK-tag bg-civic">Community</p>
+<!-- project goals -->
+            <p class="OK-project-goals">The Community Capital Fund and our partners have realized through our work that a map of existing community-based projects does not exist and that often, neighborhood associations and organizations are not aware of projects/programs occurring near them, and often do not know of other organizations doing similar work. CCF believes that neighborhoods that partner with and learn from others doing similar work will have greater capacity, opportunities, and resources to carry out their work; will have a greater impact on community development and revitalization than when working in a silo; and will have a more sustained, long-term impact.
+            </p>
+            <p class="OK-link-view-project"><a href="CfAprojectPageCommunityKC.htm">view project details</a></p>
+            </section>
+<!-- project social badges -->
+            <section class="OK-project-badges small clearfix">
+              <ul class="list-inline list-unstyled clearfix">
+                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">1</span></li>
+                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">7</span></li>
+                <li><a href="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</span></li>
+                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
+                <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
+              </ul>
+            </section>
+            
+<!-- project technology and where help is needed -->
+            <section class="OK-project-data small"> <a class="pull-right btn-link" href="http://communitykc.org/">Web App</a>
+              <p class="OK-tag bg-gray">Web App</p>
+              <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> JavaScript, HTML, CSS</p>
+              <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
+              <section class="OK-help-wanted">
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/58">Organizations with multiple locations, what is the best way to input and display.</a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/56">When there are to many pins on the map, cluster them. </a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/54">Consider BootLeaf</a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/52">Make it easier to change the Question Labels </a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/31">Test usage on phones </a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/29">Search by project name</a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/27">Usability/Interaction Design/Visual Design/Information Architecture </a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/26">Update About page</a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/24">Add neighborhood names on the map. </a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/20">satellite/earth view/street view</a></p>
+                <p><a href="https://github.com/codeforkansascity/civic-project-mapping/issues/14">Add a project detail page</a></p>
+              </section>
+            </section>            
+<!-- project on hold banner (hidden for active projects
+            <p class="OK-project-onhold-message">On Hold<br>
+                Reason: to demonstrate On Hold message</p> 
+-->
+<!-- project contributors --> 
+            <section class="OK-project-contributors clearfix"> 
+            <a href="https://github.com/codeforkansascity/civic-project-mapping/graphs/contributors" title="Project contributors">
+              <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
+              <li><img src="https://avatars1.githubusercontent.com/u/447024?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
+              <li><img src="https://avatars1.githubusercontent.com/u/4423980?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars1.githubusercontent.com/u/9424270?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              <li><img src="https://avatars2.githubusercontent.com/u/5474002?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
+              </ul>
+             </a>
+<!-- number of contributors -->
+              <span class="badge pull-left bg-semitransp">4</span> </section>
+          </article>
+        </div>
+        
+        
+<!-- project card example: Projects Hub -->     
+        <div class="col-xs-12 col-sm-6 col-md-4">            
+          <article class="OK-project-card clearfix">
+            <section class="OK-project-card-head" style="background:url('https://cloud.githubusercontent.com/assets/10410203/6722567/201f8f32-cdaa-11e4-9fc4-01b66f0d1a95.png'); background-size: cover; background-position:top center;"> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
               <ul class="list-inline list-unstyled text-center clearfix">
                 <li>Kansas City</li>
@@ -219,8 +352,8 @@
 <!-- project description -->           
             <section class="OK-project-description">
 <!-- project title -->
-            <h4>Code for America Projects Hub. <br>
-			<small>And how you can help.</small></h4>
+            <h4>Code for America Projects Hub<br>
+			<small>And how you can help</small></h4>
 <!-- project civic category .bg-civic or .bg-CfA -->
             <p class="OK-project-category OK-tag bg-CfA">Code for America Brigade Tool</p>
 <!-- project goals -->
@@ -233,7 +366,7 @@
               <ul class="list-inline list-unstyled clearfix">
                 <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">2</span></li>
                 <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">8</span></li>
-                <li><a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/21" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</span></li>
+                <li><a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/21" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">1</span></li>
                 <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
                 <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
               </ul>
@@ -270,69 +403,12 @@ Reason: ...</p>  -->
               <li><img src="https://avatars0.githubusercontent.com/u/2244915?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
               </a>
-              <span class="badge pull-left bg-semitransp">5</span> 
+              <span class="badge bg-semitransp pull-left">5</span>        
             </section>
           </article>
         </div>
 
-        
-<!-- project cards  -->
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <article class="OK-project-card OK-project-card-prototype clearfix">
-            <section class="OK-project-card-head"> 
-<!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
-              <ul class="list-inline list-unstyled text-center clearfix">
-                <li>project city</li>
-              </ul>
-            </section>
-<!-- project description -->           
-            <section class="OK-project-description">
-<!-- project title and subtitle-->
-            <h4>Project Title<br>
-			<small>Project Subtitle</small>
-            </h4>
-<!-- project civic category .bg-civic or .bg-CfA -->
-            <p class="OK-project-category OK-tag bg-civic">Civic category</p>
-<!-- project goals -->
-            <p class="OK-project-goals">The first paragraph from GitHb readme. Project goals. One paragraph of text describing why people need to use this app/website. The first four lines of text are displayed in the card view. The rest is available in details. <br>
-            </p>
-            <p class="OK-link-view-project"><a href="#">view project details</a></p>
-            </section>
-<!-- project social badges -->
-            <section class="OK-project-badges small clearfix">
-              <ul class="list-inline list-unstyled clearfix">
-                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">#</span></li>
-                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">#</span></li>
-                <li><a href="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</span></li>
-                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
-                <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
-              </ul>
-            </section>
-            
-<!-- project technology and where help is needed -->
-            <section class="OK-project-data small"> <a class="pull-right btn-link disabled">Not online yet</a>
-              <p class="OK-tag bg-gray">platform</p>
-              <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> what is used in the build </p>
-              <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
-              <section class="OK-help-wanted">
-                <p>links to issues on GitHub where the help is wanted </p>
-              </section>
-            </section>            
-<!-- project on hold banner (hidden for active projects
-            <p class="OK-project-onhold-message">On Hold<br>
-                Reason: to demonstrate On Hold message</p> 
--->
-
-<!-- project contributors -->
-            <section class="OK-project-contributors clearfix"> <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
-              <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-              </ul>
-<!-- number of contributors -->
-              <span class="badge pull-left bg-semitransp">#</span> </section>
-          </article>
-        </div>
-        
+<!-- idea card -->        
         <div class="col-xs-12 col-sm-6 col-md-4">
           <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
             <section class="OK-project-card-head"> 
