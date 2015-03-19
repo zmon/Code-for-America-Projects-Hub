@@ -23,7 +23,7 @@ label {
 }
 select { 
 	color:#000;
-}
+} 
 .OK-no-padding { /* remove padding from Bootstrap column */
 	padding:0;
 }
@@ -55,6 +55,9 @@ select {
 .bg-CfA {
 	color:#fff;
 	background:#ce263f;
+}
+.glyphicon-plus-sign {
+	color:#3a9ed7;
 }
 .bg-civic {
 	color:#fff;
