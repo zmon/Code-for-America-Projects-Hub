@@ -9,6 +9,8 @@ Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/proto
 
 Project page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm
 
+Idea page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAideaPage.htm
+
 ###A form to add project data missing on GitHub
 
 https://docs.google.com/forms/d/1e1Ne69Dw7Pooicb9dTOEH49KvjQv1_x2F9q8tr27loI/viewform
