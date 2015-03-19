@@ -141,7 +141,7 @@ h1 small {
 	vertical-align:middle;
 	line-height:2;	
 	letter-spacing:.1em;
-}
+} 
 .OK-banner a {
 	display:inline-block;
 	margin:0;
@@ -167,9 +167,12 @@ h1 small {
 @media (min-width: 992px) {
 .OK-project-map {
  	width:100%; 
-	height:400px;
+	height:370px;
 	border:0; 
 }
+}
+.OK-map-controls {
+	padding-left:5%;
 }
 /* filter panel */
 .OK-filter-panel {
@@ -354,7 +357,7 @@ div.checkbox-inline:hover {
 	position:relative;
 	height:150px;
 	padding:8px;
-	background:url('https://cloud.githubusercontent.com/assets/10410203/6648782/31477aec-c9ac-11e4-85d2-0cd04aafce22.png'); 
+	background:url('https://cloud.githubusercontent.com/assets/10410203/6722567/201f8f32-cdaa-11e4-9fc4-01b66f0d1a95.png'); 
 	background-size: cover;
 	background-position:top center;
 }

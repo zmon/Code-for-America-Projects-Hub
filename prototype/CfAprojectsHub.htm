@@ -29,7 +29,7 @@
       </div>
       <div class="col-xs-9 col-lg-6"> 
         <h1>Projects Hub <br />
-        <small>and how you can help</small> 
+        <small>and where you can help</small> 
       </h1>    
       </div> 
     </div>
@@ -38,7 +38,10 @@
 <div class="container-fluid"> 
 	<div class="row">   
     	<div class="col-xs-12 OK-banner">
-        select civic project to code
+        <span class="OK-banner-message">select project</span>
+        <span class="pull-right"><span class="OK-banner-message">or</span> 
+        <a href="https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform"><span class="glyphicon glyphicon-plus-sign"></span> add your civic idea to code</a></span>
+        </p>
         </div>
     </div>
 </div>
@@ -46,12 +49,14 @@
 <div class="container-fluid"> 
 	<div class="row">
 <!-- map container  -->    
-    	<div class="col-xs-12 col-md-4">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" width="100%" height="400" frameborder="0" style="border:0"></iframe>
-</div>
+    	<div class="col-xs-12 col-md-4 OK-no-padding">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1424987049127" frameborder="0" class="OK-project-map">
+         </iframe>
+		<p class="OK-map-controls">View: <a href="#">Current City</a> | <a href="#">Nation</a> | <a href="#">All</a></p>
+		</div>
 
 <!-- civic category filter container  -->    
-    	<div class="col-xs-12 col-md-4">
+    	<div class="col-xs-12 col-md-4 OK-no-padding">
       		<aside class="OK-filter-panel"> 
 <section class="OK-filter-civic">
 	<h5 class="OK-filter-section-title">Civic Need</h5>
@@ -120,14 +125,14 @@
 			</aside>
         </div>                 
 <!-- help filter container  -->    
-    	<div class="col-xs-12 col-md-4">
+    	<div class="col-xs-12 col-md-4 OK-no-padding">
       		<aside class="OK-filter-panel"> 
 <section class="OK-filter-help">
 <h5 class="OK-filter-help-section-title">Help Wanted</h5>
 <ul class="list-unstyled list-inline">
  <li class="OK-filter-section-title">Definition</li>
- <li><a>research <span class="badge bg-semitransp">#</span></a></li>
- <li><a>story <span class="badge bg-semitransp">#</span></a></li>
+ <li><a>research <span class="badge bg-semitransp">1</span></a></li>
+ <li><a>story <span class="badge bg-semitransp">3</span></a></li>
  <li><a>requirements <span class="badge bg-semitransp">#</span></a></li>
  <li><a>workflow <span class="badge bg-semitransp">#</span></a></li>
  <li><a>info architecture <span class="badge bg-semitransp">#</span></a></li>
@@ -169,23 +174,23 @@
 <div class="container-fluid"> 
   <div class="row"> 
 <!-- filter info -->
-        <div class="col-xs-12">
+        <div class="col-xs-12 OK-no-padding">
           <section class="OK-search-results-display clearfix">
             <form>
               <div class="form-group pull-right">
                 <label for="sort-by" class="OK-sort-by-label">Sort projects by:</label>
                 <br>
                 <select id="sort-by" name="sort-by"/>              
-                <option>Active this week</option>
-                <option>Starred</option>
-                <option>Watched</option>
-                <option>Commented</option>
-                <option>Contributors</option>
-                <option>Online</option>
+                  <option>Active this week</option>
+                  <option>Starred</option>
+                  <option>Watched</option>
+                  <option>Commented</option>
+                  <option>Contributors</option>
+                  <option>Online</option>
                 </select>
               </div>
             </form>
-            <span class="badge pull-left OK-search-results-number">25</span>
+            <span class="OK-search-results-number">25</span>
             <ul class="list-inline list-unstyled pull-left OK-filter-breadcrumbs">
               <li>projects in</li> 
               <li>Kansas City</li>
@@ -201,12 +206,9 @@
 <!-- main content -->    
 <div class="container-fluid"> 
   	<div class="row"> 
-<!-- suggest an idea button and first project card -->
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <button type="button" onClick="location.href='https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform'" class="btn btn-primary btn-block OK-btn-add-idea"><span class="glyphicon glyphicon-plus-sign"></span> Add your idea to hack</button> 
-          <br>
+        <div class="col-xs-12 col-sm-6 col-md-4">            
 <!-- list of projects -->         
-          <article class="OK-project-card OK-project-card-active clearfix">
+          <article class="OK-project-card clearfix">
             <section class="OK-project-card-head"> 
 <!-- project image is in bkg --> 
 <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
@@ -222,7 +224,7 @@
 <!-- project civic category .bg-civic or .bg-CfA -->
             <p class="OK-project-category OK-tag bg-CfA">Code for America Brigade Tool</p>
 <!-- project goals -->
-            <p class="OK-project-goals"><em>Why:</em> To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city. 
+            <p class="OK-project-goals">To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city. 
             </p>
             <p class="OK-link-view-project"><a href="CfAprojectPage.htm">view project details</a></p>    
             </section>
@@ -231,8 +233,8 @@
               <ul class="list-inline list-unstyled clearfix">
                 <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">2</span></li>
                 <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">8</span></li>
-                <li><a hrer="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/21" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</li>
-                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a></li>
+                <li><a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/21" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">32</span></li>
+                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
                 <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
               </ul>
             </section>          
@@ -268,7 +270,7 @@ Reason: ...</p>  -->
               <li><img src="https://avatars0.githubusercontent.com/u/2244915?v=3&s=460" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
               </a>
-              <span class="badge pull-left">5</span> 
+              <span class="badge pull-left bg-semitransp">5</span> 
             </section>
           </article>
         </div>
@@ -301,8 +303,8 @@ Reason: ...</p>  -->
               <ul class="list-inline list-unstyled clearfix">
                 <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">#</span></li>
                 <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">#</span></li>
-                <li><a hrer="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</li>
-                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></a></li>
+                <li><a href="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">#</span></li>
+                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
                 <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
               </ul>
             </section>
@@ -313,18 +315,21 @@ Reason: ...</p>  -->
               <p title="Build"><span class="OK-tag bg-gray">&lt;/&gt;</span> what is used in the build </p>
               <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
               <section class="OK-help-wanted">
-                <p>where the help is needed </p>
+                <p>links to issues on GitHub where the help is wanted </p>
               </section>
             </section>            
-<!-- project on hold banner (hidden for active projects -->
+<!-- project on hold banner (hidden for active projects
             <p class="OK-project-onhold-message">On Hold<br>
-                Reason: to demonstrate On Hold message</p>
+                Reason: to demonstrate On Hold message</p> 
+-->
+
 <!-- project contributors -->
             <section class="OK-project-contributors clearfix"> <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
               <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
               </ul>
-              <span class="badge pull-left">#</span> </section>
+<!-- number of contributors -->
+              <span class="badge pull-left bg-semitransp">#</span> </section>
           </article>
         </div>
         
@@ -339,12 +344,13 @@ Reason: ...</p>  -->
 <!-- project description -->           
             <section class="OK-project-description">
 <!-- idea title -->
-             <h4>Project Idea Title</h4>
+             <h4>Project Idea Title<br>
+			<small>Project idea subtitle</small></h4>
 <!-- idea civic category .bg-civic or .bg-CfA -->
              <p class="OK-project-category OK-tag bg-civic">Civic category</p>
 <!-- project goals -->
              <p class="OK-project-goals">Project goals.</p>
-             <p class="OK-link-view-project"><a href="#">view idea details</a></p>
+             <p class="OK-link-view-project"><a href="CfAideaPage.htm">view idea details</a></p>
              <p class="small">Suggested by Jane Doe</p>   
             </section>                    
           </article>
