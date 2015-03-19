@@ -21,6 +21,9 @@ a.disabled:hover {
 label {
 	font-weight:normal; /* bold in Bootstrap */
 }
+select {
+	color:#000;
+}
 .OK-no-padding { /* remove padding from Bootstrap column */
 	padding:0;
 }
@@ -333,6 +336,7 @@ div.checkbox-inline:hover {
 .OK-project-card-head {
 	position:relative;
 	height:150px;
+	margin:15px 15px 0;
 	padding:8px;
 }
 /* project card prototype placeholder image (remove in production) */
