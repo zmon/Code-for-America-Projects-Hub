@@ -1,0 +1,245 @@
+/* CSS for Code for America Project Page */
+/* most of the styles are specified in bootstrap.css and cfa-projects-hub.css */
+/* utility styles */
+.OK-rotate-270-clockwise {
+    transform: rotate(270deg);
+	-ms-transform: rotate(270deg); 
+    -webkit-transform: rotate(270deg); 
+}
+.OK-rotate-180-clockwise {
+    transform: rotate(180deg);
+	-ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg); 
+}
+h2 {
+	margin:0;
+	padding:32px 20px;
+	letter-spacing:.05em;
+	font-weight:bold;
+	color:#fff;
+	background: rgba(0,0,0,.8)
+} 
+/* header and footer */
+header, footer {
+	padding:50px 0;
+}
+.OK-btn-edit-project {
+	position:fixed;
+	bottom:20px;
+	right:10px; 
+	z-index:10;
+}
+.OK-btn-edit-project a {
+	padding:10px 15px;
+	border-radius:30px;
+	text-decoration:none;
+	color:rgba(0,0,0,.7);
+	background:rgba(255,255,255,.7);
+}
+.OK-btn-edit-project a:hover {
+	color:#000;
+	background:rgba(255,255,255,.9);
+} 
+.OK-logo {
+	margin-top:49px;
+}
+/* page title */
+.OK-project-tag {
+	display:block;
+	margin-top:4px;
+	font-size:24px;
+	letter-spacing:.05em;
+	color:#777;
+}
+h1 {
+	margin-top:.3em;
+}
+header button.btn, footer button.btn {
+	font-size: 14px;
+	font-weight:bold;
+}
+header .OK-tag {
+	margin:8px 8px 0 0;
+  	padding: 4px 15px;
+  	font-size: 14px;
+  	border-radius: 20px;
+}
+/* cover image for project page */
+.OK-project-page-cover-img {
+	position:relative;
+	width:100%;
+	height:400px;
+	border:solid 12px #fff;
+	box-shadow: 0 1px 15px #000;
+}
+/* project city */
+.OK-project-page-cover-img ul {
+	position:absolute;
+	bottom:0px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.OK-project-page-cover-img ul li {
+	padding:.3em 1em;
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+ 	background: rgba(0,0,0,.8)
+}
+.OK-project-page-cover-img ul li:first-child {
+ 	background: rgba(0,0,0,.5)
+}
+/* project badges */
+.OK-project-badges {
+	padding:8px 8px 0;
+	border-radius:0;
+	background: rgba(0,0,0,.8)
+} 
+.OK-project-badges .badge {
+	font-size:12px;
+}
+.OK-project-badges .glyphicon {
+	vertical-align: baseline;
+}
+/* project contributors */
+.OK-project-contributors {
+	color:rgba(255,255,255,1);
+	font-size:14px;
+	font-weight:bold; 
+	padding:20px 20px;
+	background:#777;
+}
+.OK-project-contributors-thumbs {
+	width:100%;
+	height:50px; 
+	overflow:inherit;
+}
+/* grid for project definition cards */
+.OK-project-definition-card {
+	color:rgba(255,255,255,.85);
+}
+@media (min-width: 768px) {
+	.OK-project-definition-card {
+		height:350px;
+		overflow-y:auto;
+}
+} 
+@media (min-width: 992px) {
+	.OK-project-definition-card-tall, .OK-pdc-progress, .OK-pdc-help, .OK-pdc-code {
+		height:700px;
+	}
+}
+/* links in the pd card */
+.OK-project-definition-card a {
+	text-decoration:none;
+	border-bottom:1px dotted rgba(255,255,255,.9);
+	color:rgba(255,255,255,.9);
+}
+.OK-project-definition-card a:hover {
+	text-decoration:none;
+	border-bottom:1px dotted rgba(255,255,255,1);
+	color:rgba(255,255,255,1);
+}
+.OK-pdc-help a {
+	text-decoration:none;
+	border-bottom:1px dotted rgba(0,0,0,.5);
+	color:rgba(0,0,0,.8);
+}
+.OK-pdc-help a:hover {
+	text-decoration:none;
+	border-bottom:1px solid rgba(0,0,0,.4);
+	color:rgba(0,0,0,1);
+}
+/* project definition card bkg */
+.OK-pdc-goals {
+	background:#cf1b41;
+}
+.OK-pdc-audience {
+	background:#399fd3;
+}
+.OK-pdc-story {
+	background:#e87d2b;
+}
+.OK-pdc-maintenance {
+	background:#69579C;
+}
+.OK-pdc-blockers {
+	background:#aa1c3a;
+}
+.OK-pdc-progress {
+	color:rgba(0,0,0,.8);
+	background:#6D6E71;
+}
+.OK-pdc-help {
+	color:rgba(0,0,0,.8);
+	background:#FC6;
+}
+.OK-pdc-code {
+	background:#444;
+}
+/* project definition card icon */
+.OK-pdcard-glyphicon {
+	display:block;
+	text-align:center;
+	width:80px;
+	margin:0 auto 20px;
+	padding:20px 20px;
+	font-size:36px;
+	color: #F3F3F3;
+	background:rgba(0,0,0,.7);
+}
+.OK-pdc-help .OK-pdcard-glyphicon {
+	background:rgba(0,0,0,.77);
+}
+.OK-pdc-goals .OK-pdcard-glyphicon {
+	color:#cf1b41;
+}
+.OK-pdc-audience .OK-pdcard-glyphicon {
+	color:#399fd3;
+}
+.OK-pdc-story .OK-pdcard-glyphicon {
+	color:#e87d2b;
+}
+.OK-pdc-maintenance .OK-pdcard-glyphicon {
+	color:#69579C;
+}
+.OK-pdc-blockers .OK-pdcard-glyphicon {
+	color:#aa1c3a;
+}
+.OK-pdc-progress  .OK-pdcard-glyphicon {
+	color:#6D6E71;
+}
+.OK-pdc-help .OK-pdcard-glyphicon {
+	color:#ff2352;
+}
+.OK-pdc-code  .OK-pdcard-glyphicon {
+	color:#444;
+}
+/* project definition card title */
+.OK-project-definition-card h3 {
+	padding-top:20px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:rgba(255,255,255,.9);
+}
+.OK-pdc-help h3 {
+	color:rgba(0,0,0,.7);
+}
+/* project definition card text */
+.OK-project-definition-card h3 + p {
+	padding-top:20px;
+}
+.OK-project-definition-card p {
+	padding:8px 15px 0;
+	font-size:1.2em;
+}
+.OK-pdc-progress .OK-tag {
+	font-size:1em;	
+	background:#444;
+}
+.OK-pdc-progress p span {
+	white-space:nowrap;
+}
