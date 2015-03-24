@@ -5,7 +5,7 @@ To help brigade members to find projects to work on. To promote multi-brigade co
 
 ###HTML/CSS (and some Javascript) prototype
 
-Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectsHub.htm
+Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/
 
 Project page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm
 
