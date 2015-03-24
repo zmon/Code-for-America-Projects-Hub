@@ -1,6 +1,7 @@
 var cfahubApp = angular.module('cfahubApp', [
   'ngRoute',
-  'cfahubControllers'
+  'cfahubControllers',
+  'leaflet-directive'
 ]);
 
 cfahubApp.config(['$routeProvider',
@@ -24,6 +25,10 @@ cfahubApp.config(['$routeProvider',
       when('/hub', {
         templateUrl: 'views/CfAprojectsHub.htm',
         controller: 'HubCtrl'
+      }).
+      when('/map', {
+        templateUrl: 'views/LeafletMap.html',
+        controller: 'MapCtrl'
       }).
       when('/wrong404', {
         templateUrl: 'views/404.html',
