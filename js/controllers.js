@@ -28,7 +28,7 @@ cfahubControllers.controller('GitCtrl', ['$scope', '$http',
         $scope.items = [];
         
         $scope.getItems = function() {
-         $http({method : 'GET',url : 'http://codeforamerica.org/api/organizations'})
+         $http({method : 'GET',url : 'http://codeforamerica.org/api/organizations/Code-for-Kansas-City/projects'})
             .success(function(data, status) {
                 $scope.items = data.objects;
              })
