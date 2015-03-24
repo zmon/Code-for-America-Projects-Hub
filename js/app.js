@@ -26,9 +26,9 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/CfAprojectsHub.htm',
         controller: 'HubCtrl'
       }).
-      when('/map', {
-        templateUrl: 'views/LeafletMap.html',
-        controller: 'MapCtrl'
+      when('/git', {
+        templateUrl: 'views/GithubData.html',
+        controller: 'GitCtrl'
       }).
       when('/wrong404', {
         templateUrl: 'views/404.html',
