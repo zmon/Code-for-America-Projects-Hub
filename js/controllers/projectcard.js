@@ -15,7 +15,8 @@ cfahubControllers.controller('projectCtrl', ['$scope',
                 "techstack":"technology stack",
                 "url":"https://github.com/codeforkansascity/civic-project-mapping",
                 "issues":[{"id":"30","descrip":"links to issues on GitHub where the help is wanted"}],
-                "contributers":[{"leader":1,"img":"images/person_thumb_40x40.png"},
+                "contributers":[
+                    {"leader":1,"img":"images/person_thumb_40x40.png"},
                     {"img":"images/person_thumb_40x40.png"},
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
@@ -44,10 +45,41 @@ cfahubControllers.controller('projectCtrl', ['$scope',
                     {"id":"24","descrip":"Add neighborhood names on the map."},
                     {"id":"20","descrip":"satellite/earth view/street view"},
                     {"id":"14","descrip":"Add a project detail page"}],
-                "contributers":[{"leader":1,"img":"https://avatars1.githubusercontent.com/u/447024?v=3&s=460"},
+                "contributers":[
+                    {"leader":1,"img":"https://avatars1.githubusercontent.com/u/447024?v=3&s=460"},
                     {"img":"https://avatars1.githubusercontent.com/u/4423980?v=3&s=460"},
                     {"img":"https://avatars1.githubusercontent.com/u/9424270?v=3&s=460"},
                     {"img":"https://avatars2.githubusercontent.com/u/5474002?v=3&s=460"}]
+        },
+    {
+                "image":"https://cloud.githubusercontent.com/assets/10410203/6722567/201f8f32-cdaa-11e4-9fc4-01b66f0d1a95.png",
+                "city":"Kansas City",
+                "title":"Code for America Projects Hub",
+                "subtitle":"<small>and where you can help</small>",
+                "category":"Code for America Brigade Tool",
+                "goals":"To help brigade members to find projects to work on. Multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.",
+                "stars":"2",
+                "followers":"8",
+                "comments":"1",
+                "active":"Prototype",
+                "platform":"Web App",
+                "techstack":"HTML, CSS",
+                "url":"https://github.com/codeforkansascity/civic-project-mapping",
+                "issues":[
+                    {"id":"17","descrip":"Projects Hub filter. Where does the data come from?"},
+                    {"id":"16","descrip":"Script to display entered project data from Google spreadsheet in Google form to edit the data"},
+                    {"id":"11","descrip":"Add infinite scroll to the hub"},
+                    {"id":"7","descrip":"Usability evaluation"},
+                    {"id":"8","descrip":"Custom labels for repo issues"},
+                    {"id":"9","descrip":"Project card data. Where does the data come from?"},
+                    {"id":"6","descrip":"Coding projects filter"},
+                    {"id":"4","descrip":"Map geolocation filter"}],
+                "contributers":[
+                    {"leader":1,"img":"https://avatars2.githubusercontent.com/u/10410203?v=3&s=460"},
+                    {"img":"https://avatars1.githubusercontent.com/u/447024?v=3&s=460"},
+                    {"img":"https://avatars1.githubusercontent.com/u/212227?v=3&s=460"},
+                    {"img":"https://avatars3.githubusercontent.com/u/3280502?v=3&s=460"},
+                    {"img":"https://avatars0.githubusercontent.com/u/2244915?v=3&s=460"}]
         }];
         $scope.card = $scope.cards[1];
 }]);

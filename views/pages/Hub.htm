@@ -38,10 +38,10 @@
 </div>
 
 <!-- main content -->    
-<div class="container-fluid"> 
+<div class="container-fluid">
     <div ng-controller="projectCtrl" class="row">
         <!-- project card template  -->
-        <div  ng-repeat="card in cards" class="col-xs-12 col-sm-6 col-md-4">
+        <div  ng-repeat="card in cards track by $index" class="col-xs-12 col-sm-6 col-md-4">
             <article class="OK-project-card clearfix"> 
                 <div ng-include="'views/project/preview.html'"></div>
                 <div ng-include="'views/project/description.html'"></div>
