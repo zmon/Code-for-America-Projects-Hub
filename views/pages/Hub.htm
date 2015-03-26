@@ -4,7 +4,7 @@
       <div class="col-xs-3 col-lg-2"> 
         <img class="OK-logo" src="images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
       </div>
-      <div class="col-xs-9 col-lg-6"> 
+      <div class="col-xs-9 col-lg-6">
         <h1>Projects Hub <br />
         <small>and where you can help</small> 
       </h1>    
@@ -13,7 +13,7 @@
   </div>
 </header>
 
-<div class="container-fluid"> 
+<div class="container-fluid">
 	<div class="row">   
     	<div class="col-xs-12 OK-banner">
         <span class="OK-banner-message">select a project to work on</span>
@@ -56,6 +56,31 @@
             </article>
         </div>
         
-        <div ng-include="'views/project/projectCard.html'"></div>
+        <!-- idea card -->        
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
+            <section class="OK-project-card-head"> 
+<!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
+              <ul class="list-inline list-unstyled text-center clearfix">
+                <li>project city</li>
+              </ul>
+            </section>        
+<!-- project description -->           
+            <section class="OK-project-description">
+<!-- idea title -->
+             <h4>Project Idea Title<br>
+			<small>Project idea subtitle</small></h4>
+<!-- idea civic category .bg-civic or .bg-CfA -->
+             <p class="OK-project-category OK-tag bg-civic">Civic category</p>
+<!-- project goals -->
+             <p class="OK-project-goals">Project goals.</p>
+             <p class="OK-link-view-project"><a href="CfAideaPage.htm">view idea details</a></p>
+             <p class="small">Suggested by Jane Doe</p>   
+            </section>                    
+          </article>
+      </div>
+        
+        
+        
     </div>
 </div>

@@ -14,7 +14,7 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/pages/Idea.htm',
         controller: 'CfAideaPageCtrl'
       }).
-      when('/project', {
+      when('/projects/:pid', {
         templateUrl: 'views/pages/Project.htm',
         controller: 'CfAprojectPageCtrl'
       }).
