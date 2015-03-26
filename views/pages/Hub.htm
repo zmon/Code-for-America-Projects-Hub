@@ -1,0 +1,61 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3 col-lg-2"> 
+        <img class="OK-logo" src="images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
+      </div>
+      <div class="col-xs-9 col-lg-6"> 
+        <h1>Projects Hub <br />
+        <small>and where you can help</small> 
+      </h1>    
+      </div> 
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid"> 
+	<div class="row">   
+    	<div class="col-xs-12 OK-banner">
+        <span class="OK-banner-message">select a project to work on</span>
+        <span class="pull-right"><span class="OK-banner-message">or</span> 
+        <a href="https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform"><span class="glyphicon glyphicon-plus-sign"></span> add your civic idea to code</a></span>
+        </div>
+    </div>
+</div>
+
+<!-- map and filters container  -->
+<div class="container-fluid"> 
+    <div class="row">
+        <div ng-include="'views/map/Filter.html'"></div>
+    </div>
+</div>
+
+<!-- map sort and breadcrumb container  -->
+<div class="container-fluid"> 
+    <div class="row"> 
+        <div ng-include="'views/map/Sort.html'"></div>
+    </div>
+</div>
+
+<!-- main content -->    
+<div class="container-fluid">
+    <div ng-controller="projectCtrl" class="row">
+        <!-- project card template  -->
+        <div  ng-repeat="card in cards track by $index" class="col-xs-12 col-sm-6 col-md-4">
+            <article class="OK-project-card clearfix"> 
+                <div ng-include="'views/project/preview.html'"></div>
+                <div ng-include="'views/project/description.html'"></div>
+                <div ng-include="'views/project/socialbadges.html'"></div>
+                <div ng-include="'views/project/techandhelp.html'"></div>
+                <!-- project on hold banner (hidden for active projects ->
+                        <p class="OK-project-onhold-message">
+                            On Hold<br>
+                            Reason: to demonstrate On Hold message
+                        </p-->
+                <div ng-include="'views/project/contributers.html'"></div>
+            </article>
+        </div>
+        
+        <div ng-include="'views/project/projectCard.html'"></div>
+    </div>
+</div>
