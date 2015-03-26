@@ -42,4 +42,5 @@ cfahubControllers.controller('projectCtrl', ['$scope',
                     {"id":"20","descrip":"satellite/earth view/street view"},
                     {"id":"14","descrip":"Add a project detail page"}]
         }];
+        $scope.card = $scope.cards[1];
 }]);

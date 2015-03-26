@@ -11,11 +11,11 @@ cfahubApp.config(['$routeProvider',
         redirectTo: '/hub'
       }).
       when('/idea', {
-        templateUrl: 'views/pages/CfAideaPage.htm',
+        templateUrl: 'views/pages/Idea.htm',
         controller: 'CfAideaPageCtrl'
       }).
       when('/project', {
-        templateUrl: 'views/pages/CfAprojectPage.htm',
+        templateUrl: 'views/pages/Project.htm',
         controller: 'CfAprojectPageCtrl'
       }).
       when('/project/kc', {
@@ -23,7 +23,7 @@ cfahubApp.config(['$routeProvider',
         controller: 'KCCtrl'
       }).
       when('/hub', {
-        templateUrl: 'views/pages/CfAprojectsHub.htm',
+        templateUrl: 'views/pages/Hub.htm',
         controller: 'HubCtrl'
       }).
       when('/git', {
