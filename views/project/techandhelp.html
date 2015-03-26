@@ -7,8 +7,8 @@
     </p>
     <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
     <section class="OK-help-wanted">
-        <p>
-            <a ng-repeat="issue in card.issues" href="{{card.url}}/issues/{{issue.id}}" title="View issue on GitHub">{{issue.descrip}}</a>
+        <p ng-repeat="issue in card.issues">
+            <a href="{{card.url}}/issues/{{issue.id}}" title="View issue on GitHub">{{issue.descrip}}</a>
         </p>
     </section>
 </section>

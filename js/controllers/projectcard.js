@@ -14,7 +14,10 @@ cfahubControllers.controller('projectCtrl', ['$scope',
                 "platform":"platform",
                 "techstack":"technology stack",
                 "url":"https://github.com/codeforkansascity/civic-project-mapping",
-                "issues":[{"id":"30","descrip":"links to issues on GitHub where the help is wanted"}]
+                "issues":[{"id":"30","descrip":"links to issues on GitHub where the help is wanted"}],
+                "contributers":[{"leader":1,"img":"images/person_thumb_40x40.png"},
+                    {"img":"images/person_thumb_40x40.png"},
+                    {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
                 "image":"https://cloud.githubusercontent.com/assets/10410203/6736267/bd3309ac-ce31-11e4-905b-aef21486975f.png",
@@ -40,7 +43,11 @@ cfahubControllers.controller('projectCtrl', ['$scope',
                     {"id":"26","descrip":"Update About page"},
                     {"id":"24","descrip":"Add neighborhood names on the map."},
                     {"id":"20","descrip":"satellite/earth view/street view"},
-                    {"id":"14","descrip":"Add a project detail page"}]
+                    {"id":"14","descrip":"Add a project detail page"}],
+                "contributers":[{"leader":1,"img":"https://avatars1.githubusercontent.com/u/447024?v=3&s=460"},
+                    {"img":"https://avatars1.githubusercontent.com/u/4423980?v=3&s=460"},
+                    {"img":"https://avatars1.githubusercontent.com/u/9424270?v=3&s=460"},
+                    {"img":"https://avatars2.githubusercontent.com/u/5474002?v=3&s=460"}]
         }];
         $scope.card = $scope.cards[1];
 }]);

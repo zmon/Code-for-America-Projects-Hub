@@ -27,7 +27,7 @@ cfahubApp.config(['$routeProvider',
         controller: 'HubCtrl'
       }).
       when('/git', {
-        templateUrl: 'views/pages/GithubData.html',
+        templateUrl: 'views/pages/Data.html',
         controller: 'GitCtrl'
       }).
       when('/wrong404', {
