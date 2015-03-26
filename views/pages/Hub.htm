@@ -39,48 +39,50 @@
 
 <!-- main content -->    
 <div class="container-fluid">
-    <div ng-controller="projectCtrl" class="row">
+    <div class="row">
         <!-- project card template  -->
-        <div  ng-repeat="card in cards track by $index" class="col-xs-12 col-sm-6 col-md-4">
-            <article class="OK-project-card clearfix"> 
-                <div ng-include="'views/project/preview.html'"></div>
-                <div ng-include="'views/project/description.html'"></div>
-                <div ng-include="'views/project/socialbadges.html'"></div>
-                <div ng-include="'views/project/techandhelp.html'"></div>
-                <!-- project on hold banner (hidden for active projects ->
-                        <p class="OK-project-onhold-message">
-                            On Hold<br>
-                            Reason: to demonstrate On Hold message
-                        </p-->
-                <div ng-include="'views/project/contributers.html'"></div>
-            </article>
-        </div>
+        <span ng-controller="projectCtrl">
+            <div ng-repeat="card in cards track by $index" class="col-xs-12 col-sm-6 col-md-4">
+                <article class="OK-project-card clearfix"> 
+                    <div ng-include="'views/project/preview.html'"></div>
+                    <div ng-include="'views/project/description.html'"></div>
+                    <div ng-include="'views/project/socialbadges.html'"></div>
+                    <div ng-include="'views/project/techandhelp.html'"></div>
+                    <!-- project on hold banner (hidden for active projects ->
+                            <p class="OK-project-onhold-message">
+                                On Hold<br>
+                                Reason: to demonstrate On Hold message
+                            </p-->
+                    <div ng-include="'views/project/contributers.html'"></div>
+                </article>
+            </div>
+        </span>
         
-        <!-- idea card -->        
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
-            <section class="OK-project-card-head"> 
-<!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
-              <ul class="list-inline list-unstyled text-center clearfix">
-                <li>project city</li>
-              </ul>
-            </section>        
-<!-- project description -->           
-            <section class="OK-project-description">
-<!-- idea title -->
-             <h4>Project Idea Title<br>
-			<small>Project idea subtitle</small></h4>
-<!-- idea civic category .bg-civic or .bg-CfA -->
-             <p class="OK-project-category OK-tag bg-civic">Civic category</p>
-<!-- project goals -->
-             <p class="OK-project-goals">Project goals.</p>
-             <p class="OK-link-view-project"><a href="CfAideaPage.htm">view idea details</a></p>
-             <p class="small">Suggested by Jane Doe</p>   
-            </section>                    
-          </article>
-      </div>
-        
-        
-        
+        <!-- idea card -->
+        <span ng-controller="ideaCtrl">
+            <div ng-repeat="card in cards track by $index" class="col-xs-12 col-sm-6 col-md-4">
+                <article class="OK-project-card OK-project-card-prototype OK-project-card-idea clearfix">
+                    <section class="OK-project-card-head"> 
+                        <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
+                        <ul class="list-inline list-unstyled text-center clearfix">
+                          <li>{{card.city}}</li>
+                        </ul>
+                    </section>        
+                    <!-- project description -->           
+                    <section class="OK-project-description">
+                        <!-- idea title -->
+                        <h4>{{card.title}}<br>
+                                <small>{{card.subtitle}}</small>
+                        </h4>
+                        <!-- idea civic category .bg-civic or .bg-CfA -->
+                        <p class="OK-project-category OK-tag bg-civic">{{card.category}}</p>
+                        <!-- project goals -->
+                        <p class="OK-project-goals">{{card.goals}}</p>
+                        <p class="OK-link-view-project"><a href="#/ideas/{{$index}}">view idea details</a></p>
+                        <p class="small">Suggested by: {{card.suggester}}</p>   
+                    </section>                    
+                </article>
+            </div>
+        </span>
     </div>
 </div>
