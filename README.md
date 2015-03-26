@@ -3,9 +3,13 @@
 
 To help brigade members to find projects to work on. To promote multi-brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
 
+###Production preview 
+
+(in progress): http://codeforkc.org/Code-for-America-Projects-Hub/
+
 ###HTML/CSS prototype
 
-Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/
+Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/
 
 Project page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm
 
