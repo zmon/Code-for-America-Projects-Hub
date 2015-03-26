@@ -1,70 +1,21 @@
 <!-- project card template  -->
 <div  ng-repeat="card in cards" class="col-xs-12 col-sm-6 col-md-4">
     <article class="OK-project-card clearfix"> 
-        <!-- list of deployed cities, or country, or global. examples: Kansas City, San Francisco, USA, Global -->
-        <section class="OK-project-card-head" style="background:url('{{card.image}}'); background-size: cover; background-position:top center;"> 
-            <ul class="list-inline list-unstyled text-center clearfix">
-                <li>{{card.city}}</li>
-            </ul>
-        </section>
         
-        <!-- project description -->           
-        <section class="OK-project-description">
-            <!-- project title and subtitle-->
-            <h4>{{card.title}}<br>
-                <small>{{card.subtitle}}</small>
-            </h4>
-            
-            <!-- project civic category .bg-civic or .bg-CfA -->
-            <p class="OK-project-category OK-tag bg-civic">{{card.category}}</p>
-            
-            <!-- project goals -->
-            <p class="OK-project-goals">{{card.goals}}</p>
-            <p class="OK-link-view-project"><a href="#">view project details</a></p>
-        </section>
-        
-        <!-- project social badges -->
-        <section class="OK-project-badges small clearfix">
-            <ul class="list-inline list-unstyled clearfix">
-                <li title="Project stars on GitHub"><span class="glyphicon glyphicon-star OK-star-gold"></span><span class="badge OK-badge-inverse">{{card.stars}}</span></li>
-                <li title="Project followers on GitHub"><span class="glyphicon glyphicon-eye-open"></span><span class="badge OK-badge-inverse">{{card.followers}}</span></li>
-                <li><a href="#" title="View project comments"><span class="glyphicon glyphicon-comment"></span></a><span class="badge OK-badge-inverse">{{card.comments}}</span></li>
-                <li><span class="glyphicon glyphicon-hand-up" title="Project requested by civic organization"></span></li>
-                <li><span class="glyphicon glyphicon-ok" title="Project validated by research"></span></li>
-            </ul>
-        </section>
-        
-        <!-- project technology and where help is needed -->
-        <section class="OK-project-data small"> <a class="pull-right btn-link disabled">{{card.active}}</a>
-            <p class="OK-tag bg-gray">{{card.platform}}</p>
-            <p title="Technology stack">
-                <span class="OK-tag bg-gray">&lt;/&gt;</span>
-                {{card.techstack}}
-            </p>
-            <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
-            <section class="OK-help-wanted">
-                <p>
-                    <a ng-repeat="issue in card.issues" href="{{card.url}}/issues/{{issue.id}}" title="View issue on GitHub">{{issue.descrip}}</a>
-                </p>
-            </section>
-        </section>
+        <div ng-include="'views/project/preview.html'"></div>
+        <div ng-include="'views/project/description.html'"></div>
+        <div ng-include="'views/project/socialbadges.html'"></div>
+        <div ng-include="'views/project/techandhelp.html'"></div>
         
         <!-- project on hold banner (hidden for active projects ->
                 <p class="OK-project-onhold-message">
                     On Hold<br>
                     Reason: to demonstrate On Hold message
                 </p-->
+        
+        <div ng-include="'views/project/contributers.html'"></div>
 
-        <!-- project contributors -->
-        <section class="OK-project-contributors clearfix">
-            <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
-                <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"><span class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span></li>
-                <li><img src="images/person_thumb_40x40.png" class="img-circle" width="40" height="40" alt="Project contributor"></li>
-            </ul>
-            
-            <!-- number of contributors -->
-            <span class="badge pull-left bg-semitransp">#</span>
-        </section>
+        
     </article>
 </div>
 

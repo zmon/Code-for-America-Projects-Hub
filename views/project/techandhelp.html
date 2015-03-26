@@ -1,0 +1,14 @@
+<!-- project technology and where help is needed -->
+<section class="OK-project-data small"> <a class="pull-right btn-link disabled">{{card.active}}</a>
+    <p class="OK-tag bg-gray">{{card.platform}}</p>
+    <p title="Technology stack">
+        <span class="OK-tag bg-gray">&lt;/&gt;</span>
+        {{card.techstack}}
+    </p>
+    <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
+    <section class="OK-help-wanted">
+        <p>
+            <a ng-repeat="issue in card.issues" href="{{card.url}}/issues/{{issue.id}}" title="View issue on GitHub">{{issue.descrip}}</a>
+        </p>
+    </section>
+</section>

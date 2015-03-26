@@ -1,22 +1,4 @@
-var cfahubControllers = angular.module('cfahubControllers', []);
-
-
-cfahubControllers.controller('CfAideaPageCtrl', ['$scope',
-    function($scope) {
-        
-}]);
-
-cfahubControllers.controller('CfAprojectPageCtrl', ['$scope',
-    function($scope) {
-        
-}]);
-
-cfahubControllers.controller('KCCtrl', ['$scope',
-    function($scope) {
-        
-}]);
-
-cfahubControllers.controller('projectCardCtrl', ['$scope',
+cfahubControllers.controller('projectCtrl', ['$scope',
     function($scope) {
         $scope.cards = [{
                 "image":"images/OK_placeholder_project_image.png",
@@ -60,30 +42,4 @@ cfahubControllers.controller('projectCardCtrl', ['$scope',
                     {"id":"20","descrip":"satellite/earth view/street view"},
                     {"id":"14","descrip":"Add a project detail page"}]
         }];
-}]);
-
-cfahubControllers.controller('HubCtrl', ['$scope',
-    function($scope) {
-        
-}]);
-
-cfahubControllers.controller('GitCtrl', ['$scope', '$http',
-    function($scope, $http) {
-        $scope.items = [];
-        
-        $scope.getItems = function() {
-         $http({method : 'GET',url : 'http://codeforamerica.org/api/organizations/Code-for-Kansas-City/projects'})
-            .success(function(data, status) {
-                $scope.items = data.objects;
-             })
-            .error(function(data, status) {
-                alert("Error");
-            });
-        }
-        
-}]);
-
-cfahubControllers.controller('wrong404Ctrl', ['$scope',
-    function($scope) {
-        
 }]);

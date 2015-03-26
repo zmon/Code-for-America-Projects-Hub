@@ -27,20 +27,20 @@
 <!-- map and filters container  -->
 <div class="container-fluid"> 
     <div class="row">
-        <div ng-include="'views/mapFilter.html'"></div>
+        <div ng-include="'views/map/Filter.html'"></div>
     </div>
 </div>
 
 <!-- map sort and breadcrumb container  -->
 <div class="container-fluid"> 
     <div class="row"> 
-        <div ng-include="'views/mapSort.html'"></div>
+        <div ng-include="'views/map/Sort.html'"></div>
     </div>
 </div>
 
 <!-- main content -->    
 <div class="container-fluid"> 
     <div class="row">
-        <div ng-controller="projectCardCtrl" ng-include="'views/projectCard.html'"></div>
+        <div ng-controller="projectCtrl" ng-include="'views/project/projectCard.html'"></div>
     </div>
 </div>
