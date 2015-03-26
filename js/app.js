@@ -10,24 +10,24 @@ cfahubApp.config(['$routeProvider',
       when('/', {
         redirectTo: '/hub'
       }).
-      when('/idea', {
-        templateUrl: 'views/pages/Idea.htm',
+      when('/ideas', {
+        templateUrl: 'views/pages/ideas.htm',
         controller: 'CfAideaPageCtrl'
       }).
-      when('/project', {
-        templateUrl: 'views/pages/Project.htm',
+      when('/projects', {
+        templateUrl: 'views/pages/projects.htm',
         controller: 'CfAprojectPageCtrl'
       }).
-      when('/project/kc', {
+      when('/projects/kc', {
         templateUrl: 'views/pages/CfAprojectPageCommunityKC.htm',
         controller: 'KCCtrl'
       }).
       when('/hub', {
-        templateUrl: 'views/pages/Hub.htm',
+        templateUrl: 'views/pages/hub.htm',
         controller: 'HubCtrl'
       }).
       when('/git', {
-        templateUrl: 'views/pages/Data.html',
+        templateUrl: 'views/pages/data.html',
         controller: 'GitCtrl'
       }).
       when('/wrong404', {
