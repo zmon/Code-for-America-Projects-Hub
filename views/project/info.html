@@ -3,43 +3,26 @@
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-goals"> 
         <span class="glyphicon glyphicon-send OK-pdcard-glyphicon"></span> 
         <h3>Goals</h3>
-        <p>Help brigade members to find projects to work on. <br>
-    Promote multi-brigade collaboration. <br>
-    New members onboarding. <br>
-    Let public contribute ideas. <br>
-    Karma. <br>
-    Code for America scope view. <br>
-    Provide filtered and sorted card list of projects and ideas for development. <br>
-    The list should be available nation-wide and by city. </p>
+        <p>{{card.goals}}</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-audience"> 
         <span class="glyphicon glyphicon-user OK-pdcard-glyphicon"></span>        
         <h3>Target Audience</h3>
-        <p>1. New brigade members<br>
-                        2. Established brigade members<br>
-                        3. Brigades across the nation<br>
-                        4. Civic-minded public 
-                </p>
+        <p>{{card.targetaudience}}</p>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-project-definition-card-tall OK-pdc-story pull-right"> 
         <span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
         <h3>User Stories</h3>
-        <p>Dave is a member of brigade living in Kansas City. He does not have time to follow the latest developments in the brigade on a daily basis. He would like to choose where he can apply his skills for a few hours during Monday hack night. Dave does not need to see project details, rather where the help is needed. He opens Projects Hub and chooses an active project with relevant Help Wanted issues, where he can contribute.</p>
-        <p>Ashley has a great idea about building up community spaces in Kansas City. She does not know how to build an app for it, and thinks Code for America might help. Ashley opens the Projects Hub, filters Community projects and sees that similar, but not quite the same project is under development in Munich, Germany. She presses the big blue button on the Projects Hub and adds the idea for KC brigade to develop.</p>
-        <p>Kevin, DB admin at MicroBucks, Inc., has found out about Code for America on a date with Ashley. He is curious about Ashley and the idea behind civic coding, and would like to learn more about both. He also would like to improve his JavaScript skills. Kevin opens the ProjectsHub, finds all the projects in Kansas City, where Javascript help is wanted. One of them has Ashley as a contributor. Kevin chooses to work on this project.</p>
-        <p>Jim, is geomapping guru, has been out of work for a few months. He is looking for a challenging project to showcase his skills and to build up his portfolio. He finds one under development in Buenos Aires brigade.</p>
-    </div>
+        {{card.userstories}}
+       </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-maintenance"> 
         <span class="glyphicon glyphicon-wrench OK-pdcard-glyphicon"></span>     
-        <h3>Maintenance Plan</h3> 
-        <p>Project leaders for active projects will be able to keep the the data updated on GitHub, using the usual GitHub tools. Additional requirement for GitHub is making custom set of GitHub repo labels (see <a href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/8">Custom Labels for Repos</a> on GitHub).  </p>
-        <p>
-    Project Definition information can be updated either via Google form, when the project is created, or via Google miniforms, once project is established, or by editing Google spreasheet directly.</p>        
+        <h3>Maintenance Plan</h3>
+        {{card.maintenanceplan}}
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-blockers"> 
         <span class="glyphicon glyphicon-save OK-pdcard-glyphicon OK-rotate-270-clockwise"></span>     
         <h3>Potential Blockers</h3>
-        <p>Maintanence related blockers: The workflow for updating project information in Google spreadsheet is clumsy (Google form does not pull data back from the spreadsheet, if data exists already).</p>
-    <p>The initial effort of creating custom repo labels and then applying them to repo issue, when the issue is created requires some discipline from project leader. </p>
+        {{card.blockers}}
     </div>
 </div>
