@@ -1,7 +1,7 @@
 cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {
         $scope.cards = [{
-                "image":"images/OK_placeholder_project_image.png",
+                "image":"assets/images/OK_placeholder_project_image.png",
                 "city":"Project City",
                 "title":"Project Title",
                 "subtitle":"Project Subtitle",
@@ -20,8 +20,8 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                 "url":"#/",
                 "issues":[{"id":"30","descrip":"links to issues on GitHub where the help is wanted"}],
                 "contributers":[
-                    {"leader":1,"img":"images/person_thumb_40x40.png"},
-                    {"img":"images/person_thumb_40x40.png"},
+                    {"leader":1,"img":"assets/images/person_thumb_40x40.png"},
+                    {"img":"assets/images/person_thumb_40x40.png"},
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
@@ -101,7 +101,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
 cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {
         $scope.cards = [{
-                "image":"images/OK_placeholder_project_image.png",
+                "image":"assets/images/OK_placeholder_project_image.png",
                 "city":"Project City",
                 "title":"Project Idea",
                 "subtitle":"Project Subtitle",
@@ -121,8 +121,8 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                 "url":"#/",
                 "issues":[{"id":"30","descrip":"links to issues on GitHub where the help is wanted"}],
                 "contributers":[
-                    {"leader":1,"img":"images/person_thumb_40x40.png"},
-                    {"img":"images/person_thumb_40x40.png"},
+                    {"leader":1,"img":"assets/images/person_thumb_40x40.png"},
+                    {"img":"assets/images/person_thumb_40x40.png"},
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
