@@ -19,11 +19,11 @@ cfahubApp.config(['$routeProvider',
         controller: 'projectCtrl'
       }).
       when('/hub', {
-        templateUrl: 'views/pages/hub.htm',
+        templateUrl: 'views/pages/Hub.htm',
         controller: 'HubCtrl'
       }).
       when('/git', {
-        templateUrl: 'views/pages/data.html',
+        templateUrl: 'views/pages/Data.html',
         controller: 'GitCtrl'
       }).
       when('/wrong404', {
