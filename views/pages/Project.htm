@@ -1,31 +1,37 @@
-<ul class="list-unstyled OK-btn-edit-project">
-   <li><a href="https://docs.google.com/forms/d/1e1Ne69Dw7Pooicb9dTOEH49KvjQv1_x2F9q8tr27loI/viewform">Edit Project Description</a></li>
-</ul>
-<header class="container">
-    <div class="row">
-        <div ng-include="'views/static/cfahub.html'"></div>
-        <div class="col-xs-9 col-lg-6">
-            <h1>{{card.title}}<br/>
-                <small>{{card.subtitle}}</small>
-            </h1>
-            <ul class="list-inline list-unstyled">
-                <!-- project metadata -->
-              <li class="OK-tag bg-CfA" title="Civic category">{{card.category}}</li>
-              <li class="OK-tag bg-gray" title="Platform">{{card.platform}}</li>
-              <li class="OK-tag bg-lightgray" title="Link to online product">Online: <a target="_blank" href="{{card.url}}">{{card.active}}</a></li>
-            </ul>  
+<div class="OK-project-page-wrapper">
+    <ul class="list-unstyled OK-btn-edit-project">
+       <li><a href="https://docs.google.com/forms/d/1e1Ne69Dw7Pooicb9dTOEH49KvjQv1_x2F9q8tr27loI/viewform">Edit Project Description</a></li>
+    </ul>
+    <header class="container">
+        <div class="row">
+            <div class="col-xs-3 col-lg-6"> 
+                <img class="OK-logo" src="assets/images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America ">
+                <br><br>
+                <button type="button" onClick="location.href='index.html'" class="btn btn-primary btn-xs">Back to Projects Hub</button>
+            </div>
+            <div class="col-xs-9 col-lg-6">
+                <h1>{{card.title}}<br/>
+                    <small>{{card.subtitle}}</small>
+                </h1>
+                <ul class="list-inline list-unstyled">
+                    <!-- project metadata -->
+                  <li class="OK-tag bg-CfA" title="Civic category">{{card.category}}</li>
+                  <li class="OK-tag bg-gray" title="Platform">{{card.platform}}</li>
+                  <li class="OK-tag bg-lightgray" title="Link to online product">Online: <a target="_blank" href="{{card.url}}">{{card.active}}</a></li>
+                </ul>  
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<div ng-include="'views/project/preview.html'"></div>
-<div ng-include="'views/project/socialbadges.html'"></div>
-<div class="container">
-    <div ng-include="'views/project/info.html'"></div>
-    <div ng-include="'views/project/development.html'"></div>
-</div>
-<div class="row">
-    <footer class="container">
-        <div ng-include="'views/static/cfahub.html'"></div>
-    </footer>
+    <div ng-include="'views/project/preview.html'"></div>
+    <div ng-include="'views/project/socialbadges.html'"></div>
+    <div class="container">
+        <div ng-include="'views/project/info.html'"></div>
+        <div ng-include="'views/project/development.html'"></div>
+    </div>
+    <div class="row">
+        <footer class="container">
+            <div ng-include="'views/static/cfahub.html'"></div>
+        </footer>
+    </div>
 </div>
