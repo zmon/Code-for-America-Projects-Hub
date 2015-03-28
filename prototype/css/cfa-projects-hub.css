@@ -21,9 +21,15 @@ a.disabled:hover {
 label {
 	font-weight:normal; /* bold in Bootstrap */
 }
+<<<<<<< HEAD
+select { 
+	color:#000;
+} 
+=======
 select {
 	color:#000;
 }
+>>>>>>> origin/gh-pages
 .OK-no-padding { /* remove padding from Bootstrap column */
 	padding:0;
 }
@@ -56,6 +62,12 @@ select {
 	color:#fff;
 	background:#ce263f;
 }
+<<<<<<< HEAD
+.glyphicon-plus-sign {
+	color:#3a9ed7;
+}
+=======
+>>>>>>> origin/gh-pages
 .bg-civic {
 	color:#fff;
 	background:#3a9ed7;
@@ -111,6 +123,7 @@ h1 small {
 	font-size:18px;
 	color:#ccc;
 	background:#777;
+<<<<<<< HEAD
 }
 /* Add Idea link  */
 .OK-banner span.OK-banner-message {
@@ -151,6 +164,48 @@ h1 small {
 	border:0;  
 }
 }
+=======
+}
+/* Add Idea link  */
+.OK-banner span.OK-banner-message {
+	display:inline-block;
+	margin:0;
+	padding:3px 15px 0px;
+	height:40px;
+	vertical-align:middle;
+	line-height:2;	
+	letter-spacing:.1em;
+} 
+.OK-banner a {
+	display:inline-block;
+	margin:0;
+	padding:3px 15px 0px;
+	height:40px;
+	vertical-align:middle;
+	line-height:2;
+	color:#777;
+	background:#ccc;
+}
+.OK-banner a:hover {
+	text-decoration:none;
+	background: #EBEBEB;
+}
+/* project map iframe */
+.OK-project-map {
+	display:block;
+	margin:0 auto;
+	width:90%; 
+	height:250px;
+	border:0;
+}
+@media (min-width: 992px) {
+.OK-project-map {
+ 	width:100%; 
+	height:370px;
+	border:0;  
+}
+}
+>>>>>>> origin/gh-pages
 .OK-map-controls {
 	padding-left:5%;
 }
@@ -206,6 +261,7 @@ h5 {
 }
 .OK-filter-CfA .OK-filter-section-title {
 	color:#ce263f;	
+<<<<<<< HEAD
 }
 .OK-filter-help .OK-filter-section-title {
 	font-weight:bold;
@@ -215,6 +271,17 @@ h5 {
 .OK-filter-help-section-title {
 	color:#FC6;
 }
+=======
+}
+.OK-filter-help .OK-filter-section-title {
+	font-weight:bold;
+	color:#FC6;
+	background:#777;	
+}
+.OK-filter-help-section-title {
+	color:#FC6;
+}
+>>>>>>> origin/gh-pages
 div.checkbox-inline {
 	margin:1px 0;
 	padding:4px 7px 0px 27px;
