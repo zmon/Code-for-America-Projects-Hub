@@ -1,0 +1,116 @@
+/*
+    Base Layout
+*/
+body {
+	min-width:640px;
+	background: #D2D6E3; 
+}
+a{
+	cursor:pointer;
+	-webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+       transition: all .2s ease-in-out;
+}
+a.disabled {
+	color: #777;
+  	cursor: default;
+}
+a.disabled:hover {
+	color: #777;	
+	text-decoration:none;
+}
+label{
+	font-weight:normal; /* bold in Bootstrap */
+}
+select{ 
+	color:#000;
+}
+header, footer {
+	padding:100px 0 50px;
+	background:rgba(0,0,0,0.8);
+}
+h1 {
+	padding:0;
+	font-weight:bold;
+	letter-spacing:.03em;
+	line-height:.74em;
+	color:#CCC;
+}
+h1 small {
+	letter-spacing:.01em;	
+}
+/*
+    Colors
+*/
+.bg-gray {
+	color: #fff;
+	background-color:#777;
+}
+.bg-lightgray {
+	background-color:#ccc;
+}
+.bg-white {
+	background-color:#fff;
+}
+.bg-darkyellow {
+	color:#FFF;
+	background:#F90;
+}
+.bg-yellow {
+	background: #FC6;
+}
+
+
+
+
+header button.btn, footer button.btn {
+	font-size: 14px;
+	font-weight:bold;
+}
+
+
+
+
+/*
+    Base Styling
+*/
+
+
+
+.OK-tag, 
+.OK-tag-wide {
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+}
+.OK-tag {
+  display: inline-block;
+}
+.OK-tag-wide {
+  display: block;
+}
+.OK-filter-help-subcategory  {
+	margin-left:8px;
+	color: #FC6;
+	background-color:#777;
+}
+.bg-CfA {
+	color:#fff;
+	background:#ce263f;
+}
+.glyphicon-plus-sign {
+	color:#3a9ed7;
+}
+.bg-civic {
+	color:#fff;
+	background:#3a9ed7;
+}
+.bg-semitransp {
+	color:rgba(255,255,255,.7);
+	background:rgba(0,0,0,.1);
+}

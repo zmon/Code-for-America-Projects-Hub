@@ -73,7 +73,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                 "stars":"2",
                 "followers":"8",
                 "comments":"1",
-                "active":"Prototype",
+                "active":"Idea",
                 "platform":"Web App",
                 "techstack":"HTML, CSS",
                 "url":"http://codeforkc.org/Code-for-America-Projects-Hub/",
@@ -93,15 +93,9 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars3.githubusercontent.com/u/3280502?v=3&s=460"},
                     {"img":"https://avatars0.githubusercontent.com/u/2244915?v=3&s=460"}]
         }];
-        $scope.card = $scope.cards[$routeParams.pid];
-}]);
-
-
-
-cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
-    function($scope, $routeParams) {
-        $scope.cards = [{
-                "image":"assets/images/OK_placeholder_project_image.png",
+        
+        $scope.ideas = [{
+                "image":"assets/images/OK_lightbulb.png",
                 "city":"Project City",
                 "title":"Project Idea",
                 "subtitle":"Project Subtitle",
@@ -115,7 +109,7 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                 "stars":"#",
                 "followers":"#",
                 "comments":"#",
-                "active":"Not online yet",
+                "active":"Idea",
                 "platform":"platform",
                 "techstack":"technology stack",
                 "url":"#/",
@@ -126,7 +120,7 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
-                "image":"https://cloud.githubusercontent.com/assets/10410203/6736267/bd3309ac-ce31-11e4-905b-aef21486975f.png",
+                "image":"assets/images/OK_lightbulb.png",
                 "city":"Kansas City",
                 "title":"Epic Idea",
                 "subtitle":"sort government data",
@@ -140,7 +134,7 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                 "stars":"1",
                 "followers":"7",
                 "comments":"0",
-                "active":"Online",
+                "active":"Idea",
                 "platform":"Web App",
                 "techstack":"JavaScript, HTML, CSS",
                 "url":"http://codeforkc.org/civic-project-mapping/",
@@ -162,7 +156,7 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars2.githubusercontent.com/u/5474002?v=3&s=460"}]
         },
     {
-                "image":"https://cloud.githubusercontent.com/assets/10410203/6722567/201f8f32-cdaa-11e4-9fc4-01b66f0d1a95.png",
+                "image":"assets/images/OK_lightbulb.png",
                 "city":"Kansas City",
                 "title":"One type of Idea",
                 "subtitle":"this idea is helpful",
@@ -176,7 +170,7 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                 "stars":"2",
                 "followers":"8",
                 "comments":"1",
-                "active":"Prototype",
+                "active":"Idea",
                 "platform":"Web App",
                 "techstack":"HTML, CSS",
                 "url":"http://codeforkc.org/Code-for-America-Projects-Hub/",
@@ -196,5 +190,9 @@ cfahubControllers.controller('ideaCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars3.githubusercontent.com/u/3280502?v=3&s=460"},
                     {"img":"https://avatars0.githubusercontent.com/u/2244915?v=3&s=460"}]
         }];
-        $scope.card = $scope.cards[$routeParams.iid];
+        console.log($routeParams);
+        if($routeParams.pid != undefined)
+            $scope.card = $scope.cards[$routeParams.pid];
+        else
+            $scope.card = $scope.ideas[$routeParams.iid];
 }]);
