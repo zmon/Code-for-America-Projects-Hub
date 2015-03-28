@@ -8,8 +8,6 @@
     </p>
     <span title="Help needed" class="OK-tag bg-darkyellow">Help Wanted:</span> 
     <section class="OK-help-wanted">
-        <p ng-repeat="issue in card.issues">
-            <a href="{{card.url}}/issues/{{issue.id}}" title="View issue on GitHub">{{issue.descrip}}</a>
-        </p>
+        <div ng-include="'views/project/issues.html'"></div>
     </section>
 </section>
