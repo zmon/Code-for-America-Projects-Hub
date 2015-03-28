@@ -12,7 +12,7 @@ cfahubApp.config(['$routeProvider',
       }).
       when('/ideas/:iid', {
         templateUrl: 'views/pages/Idea.htm',
-        controller: 'ideaCtrl'
+        controller: 'projectCtrl'
       }).
       when('/projects/:pid', {
         templateUrl: 'views/pages/Project.htm',
