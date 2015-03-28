@@ -1,6 +1,7 @@
 cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {
         $scope.cards = [{
+                "projecttype":"project",
                 "image":"assets/images/OK_placeholder_project_image.png",
                 "city":"Project City",
                 "title":"Project Title",
@@ -25,6 +26,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
+                "projecttype":"project",
                 "image":"https://cloud.githubusercontent.com/assets/10410203/6736267/bd3309ac-ce31-11e4-905b-aef21486975f.png",
                 "city":"Kansas City",
                 "title":"Community KC",
@@ -60,6 +62,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars2.githubusercontent.com/u/5474002?v=3&s=460"}]
         },
     {
+                "projecttype":"project",
                 "image":"https://cloud.githubusercontent.com/assets/10410203/6722567/201f8f32-cdaa-11e4-9fc4-01b66f0d1a95.png",
                 "city":"Kansas City",
                 "title":"Code for America Projects Hub",
@@ -95,6 +98,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
         }];
         
         $scope.ideas = [{
+                "projecttype":"idea",
                 "image":"assets/images/OK_lightbulb.png",
                 "city":"Project City",
                 "title":"Project Idea",
@@ -120,6 +124,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars3.githubusercontent.com/u/10410203?v=3&s=460"}]
         },
     {
+                "projecttype":"idea",
                 "image":"assets/images/OK_lightbulb.png",
                 "city":"Kansas City",
                 "title":"Epic Idea",
@@ -156,6 +161,7 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars2.githubusercontent.com/u/5474002?v=3&s=460"}]
         },
     {
+                "projecttype":"idea",
                 "image":"assets/images/OK_lightbulb.png",
                 "city":"Kansas City",
                 "title":"One type of Idea",
@@ -191,8 +197,11 @@ cfahubControllers.controller('projectCtrl', ['$scope', '$routeParams',
                     {"img":"https://avatars0.githubusercontent.com/u/2244915?v=3&s=460"}]
         }];
         console.log($routeParams);
-        if($routeParams.pid != undefined)
+        if($routeParams.pid != undefined){
             $scope.card = $scope.cards[$routeParams.pid];
-        else
+            $scope.projecttype = "views/project/project.html";
+        }else{
             $scope.card = $scope.ideas[$routeParams.iid];
+            $scope.projecttype = "views/project/idea.html";
+        }
 }]);

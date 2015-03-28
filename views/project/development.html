@@ -4,7 +4,6 @@
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-progress"> 
     	<span class="glyphicon glyphicon-tasks OK-pdcard-glyphicon OK-rotate-180-clockwise"></span>        
      	<h3>Progress</h3>
-
               <p><span class="OK-tag bg-gray">Definition</span> 
                   <span class="bg-white">research</span> 
                   <span class="bg-white">workflow</span>
@@ -14,8 +13,7 @@
                   <span class="bg-yellow">prototype</span> 
                </p>
                <p><span class="OK-tag bg-gray">Code</span> 
-                  <span class="bg-yellow">HTML/CSS</span>
-                  <span class="bg-yellow">Javascript</span>  
+                  <span class="bg-yellow">{{card.techstack}}</span>  
                </p>
                <p><span class="OK-tag bg-gray">Data</span> 
                   <span class="bg-yellow">data entry</span> 
@@ -23,7 +21,7 @@
                <p><span class="OK-tag bg-gray">Analysis</span> 
                   <span class="bg-yellow">usability</span> 
               </p>
-              <hr />
+              <hr>
               <p><span class="bg-white">done</span> <span class="bg-yellow">in the works</span></p>
 <!-- project on hold banner (hidden for active projects
 		<p class="OK-project-onhold-message">On Hold<br>
@@ -33,20 +31,13 @@
     
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-help"> 
     	<span class="glyphicon glyphicon-fire OK-pdcard-glyphicon"></span>        
-     	<h3>Help Wanted</h3> 
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/17">Projects Hub filter. Where does the data come from?</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/16">Script to display entered project data from Google spreadsheet in Google form to edit the data</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/11">Add infinite scroll to the hub</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/7">Usability evaluation</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/9">Project card data. Where does the data come from?</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/6">Coding projects filter</a></p>
-        <p><a title="View issue on GitHub" href="https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/4">Map geolocation filter</a></p>
+     	<h3>Help Wanted</h3>
+        <div ng-include="'views/project/issues.html'"></div>
     </div>
     
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-pdc-code"> 
     	<span class="glyphicon  OK-pdcard-glyphicon">&lt;/&gt;</span>        
      	<h3>Code used so far</h3>
-        <p>HTML/CSS, Javascript, Bootstrap        
-		</p>
+        <p>{{card.techstack}}</p>
     </div>    
 </div>

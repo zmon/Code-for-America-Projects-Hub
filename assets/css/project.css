@@ -18,7 +18,7 @@
 /*
     logo
 */
-.OK-project .OK-logo {
+.OK-project-page-wrapper .OK-logo {
     margin-top:19px;
 }
 .OK-project .badge, .OK-project .OK-tag {
@@ -28,7 +28,7 @@
 	padding:0;
 }
 /*
-    Btn
+    Edit Project Btn
 */
 .OK-project .OK-btn-edit-project {
 	position:fixed;
@@ -62,33 +62,7 @@
   	font-size: 14px;
   	border-radius: 20px;
 }
-/* cover image for project page */
-.OK-project .OK-project-page-cover-img {
-	position:relative;
-	width:100%;
-	height:400px;
-	border:solid 12px #fff;
-	box-shadow: 0 1px 15px #000;
-}
-/* project city */
-.OK-project .OK-project-page-cover-img ul {
-	position:absolute;
-	bottom:0px;
-	left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-}
-.OK-project .OK-project-page-cover-img ul li {
-	padding:.3em 1em;
-	font-size:16px;
-	font-weight:bold;
-	color:#fff;
- 	background: rgba(0,0,0,.8)
-}
-.OK-project .OK-project-page-cover-img ul li:first-child {
- 	background: rgba(0,0,0,.5)
-}
+
 /* project badges */
 .OK-project .OK-project-badges {
 	padding:8px 8px 0;
@@ -100,19 +74,6 @@
 }
 .OK-project .OK-project-badges .glyphicon {
 	vertical-align: baseline;
-}
-/* project contributors */
-.OK-project .OK-project-contributors {
-	color:rgba(255,255,255,1);
-	font-size:14px;
-	font-weight:bold; 
-	padding:20px 20px;
-	background:#777;
-}
-.OK-project .OK-project-contributors-thumbs {
-	width:100%;
-	height:50px; 
-	overflow:inherit;
 }
 /* grid for project definition cards */
 .OK-project .OK-project-definition-card {
@@ -277,24 +238,20 @@
 	position:relative;
 	width:100%;
 	padding:0;
-	margin-bottom:20px;
-	background:#fbfbfb;
+	background-color:#D2D6E3;
     -webkit-transition: all .3s ease-in-out;
        -o-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-.OK-project:hover {
-	background:#fff;
-}
 /* idea card */
 .OK-project.idea {
-	background:#fbfbfb;
+	background-color:#fbfbfb;
     -webkit-transition: all .3s ease-in-out;
        -o-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
 .OK-project.idea:hover {
-	background:#fff;
+	background-color:#fff;
 }
 .OK-project.idea .OK-project-goals {
 	text-align:left;
@@ -303,14 +260,16 @@
 .OK-project .OK-project-card-head {
 	position:relative;
 	height:150px;
-	margin:15px 15px 0;
+	margin:0px 0px 0px;
 	padding:8px;
         background-position:top center;
+        background-size: cover;
 }
 /* idea card head image */
 .OK-project.idea .OK-project-card-head {
     background-repeat: no-repeat;  
     background-position:center center;
+    background-size: initial;
 }
 /* project cities */
 .OK-project .OK-project-card-head ul {
@@ -425,29 +384,12 @@
 	color:#fff;
 	background:#777;
 }
+
 /* project contributors */
-.OK-project .OK-project-contributors {
-	background:#ce263f;
-}
-.OK-project .OK-project-contributors-thumbs {
-	position:relative;
-	padding:10px 0 0 10px;
-	width:90%;
-	height:50px; 
-	overflow:hidden;
-}
-.OK-project .OK-project-contributors-thumbs .OK-project-leader-badge {
-	position:absolute;
-	top:35px;
-	left:40px;
-	padding:3px 2px 3px 4px;
-	border-radius:10px;
-	font-size:9px;
-	color:#fff;
-	background:#ce263f;
-	cursor:default;
-}
-/* number of contributors */
-.OK-project .OK-project-contributors .badge {
-	margin-top:20px;
+.OK-project .OK-project-suggester {
+	color:rgba(255,255,255,1);
+	font-size:14px;
+	font-weight:bold; 
+	padding:20px 20px;
+	background:#777;
 }
