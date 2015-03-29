@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            members = [
+                "bob","jane","chris","john",
+                
+                
+                        "Tom",             //<---replace your name inside the "",
+                
+                
+                "mike","josh","kim",
+            ];
+        </script>
+            
+        <title>New Member Push</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <ol id="members">something is broken</ol>
+        
+        <script type="text/javascript">
+            var results = "", name = "";
+            for(var i=0;i<members.length;i++){
+                if(i==4){
+                    name = members[i];
+                    results += "<li id='NameGoesHere'></li>";
+                }else
+                    results += "<li>"+members[i]+"</li>";
+            }
+            document.getElementById("members").innerHTML = results;
+            document.getElementById("NameGoesHere").innerHTML = 
+                    "<header><span style='font-size:3em;'>HI "+
+                    "<span style='color:rgb(15, 153, 53);'>"+name+
+                    "</span>. </span>this is your first change :)</header>";
+        </script>
+    </body>
+</html>
