@@ -29,6 +29,10 @@ Project card data: https://github.com/codeforkansascity/Code-for-America-Project
 
 Projects Hub filter data: https://github.com/codeforkansascity/Code-for-America-Projects-Hub/issues/17
 
-Hub, Project form and Project page screenshot:
+### Nesting of HTML fragments used in production code
+
+https://github.com/codeforkansascity/Code-for-America-Projects-Hub/wiki/Diagram-of-dynamic-content,-HTML-Views-and-Fragment-Nesting
+
+Hub, Add Idea Form and Project Page screenshots:
 
 ![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
