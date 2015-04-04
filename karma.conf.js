@@ -18,10 +18,10 @@ module.exports = function(config) {
        // 3rd Party Code
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
-
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-route/angular-scenarios.js',
 
       // App
       'js/*.js',
