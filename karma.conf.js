@@ -24,7 +24,7 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-scenarios.js',
 
       // App
-      'js/*.js',
+      'ng/*.js',
 
       // Test files
       'tests/spec/**/*.js'
