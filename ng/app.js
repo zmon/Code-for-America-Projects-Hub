@@ -1,5 +1,6 @@
 var cfahubApp = angular.module('cfahubApp', [
   'ngRoute',
+  'cfahubServices',
   'cfahubControllers',
   'leaflet-directive'
 ]);
