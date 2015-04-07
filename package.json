@@ -1,0 +1,21 @@
+{
+  "name": "CfAHubApp",
+  "namelower": "cfahubapp",
+  "version": "0.0.1",
+  "description": "AngularJS project for Code For America KC Projects Hub.",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/codeforkansascity/Code-for-America-Projects-Hub"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}
