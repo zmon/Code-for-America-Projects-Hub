@@ -40,20 +40,25 @@ Hub, Add Idea Form and Project Page screenshots:
 
 ### Developer notes ###
 
-We're using Bower for package management.
+See the instructions folder for help setting up an editor with Git.
 
-First, install dependencies with npm. The package.json file provides information to npm, identifying the project and managing the project's dependencies. [Documentation](https://docs.npmjs.com/files/package.json) 
+We're using [Bower](http://bower.io) for package management.
+
+First, install dependencies with npm. The [package.json](https://docs.npmjs.com/files/package.json) file provides information to npm, identifying the project and managing the project's dependencies.
 
 `npm install --dev`
 
-This will also run `bower --install` for you, installing all packages configured
-within the bower.json file.
+This will also run `bower --install` for you, installing all packages configured within the bower.json file.
 
-To exclude devDependency packages, use the `-p` (--production) flag. [Documentation](http://bower.io)
+To exclude devDependency packages, use the `-p` (--production) flag.
 `bower install -p`
 
-For running tests, the project includes the karma.conf.js file. With Karma and
-Grunt installed, run Karma.
+#### Dev Dependencies ####
+[Jasmine](http://jasmine.github.io/2.2/introduction.html) 
+is included to help with test-driven development.
+
+[Karma](http://karma-runner.github.io/0.12/intro/installation.html)
+is included For running tests. The project includes a karma.conf.js file. With Karma and Grunt installed, run Karma.
 `karma start`
 
-In your browser, visit the Karma listener address. Karma watches project files and continuously runs your tests as you develop. [Documentation](http://karma-runner.github.io/0.12/intro/installation.html)
+In your browser, visit the Karma listener address. Karma watches project files and continuously runs your tests as you code.
