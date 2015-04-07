@@ -1,7 +1,8 @@
 # Code for America Projects Hub
 ## And how you can help
+Goals:
 
-To help Brigade members find projects to work on. To promote multi-Brigade collaboration. New members onboarding. Let public contribute ideas. Karma. Code for America scope view. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
+Help Brigade members find projects to work on. Promote multi-Brigade collaboration. Onboard new members. Encourage public contribution of ideas. Karma. Visualize scope for Code for America. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
 
 ###Production preview##
 
@@ -36,3 +37,23 @@ https://github.com/codeforkansascity/Code-for-America-Projects-Hub/wiki/Diagram-
 Hub, Add Idea Form and Project Page screenshots:
 
 ![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
+
+### Developer notes ###
+
+We're using Bower for package management.
+
+First, install dependencies with npm. The package.json file provides information to npm, identifying the project and managing the project's dependencies. [Documentation](https://docs.npmjs.com/files/package.json) 
+
+`npm install --dev`
+
+This will also run `bower --install` for you, installing all packages configured
+within the bower.json file.
+
+To exclude devDependency packages, use the `-p` (--production) flag. [Documentation](http://bower.io)
+`bower install -p`
+
+For running tests, the project includes the karma.conf.js file. With Karma and
+Grunt installed, run Karma.
+`karma start`
+
+In your browser, visit the Karma listener address. Karma watches project files and continuously runs your tests as you develop. [Documentation](http://karma-runner.github.io/0.12/intro/installation.html)
