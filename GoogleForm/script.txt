@@ -1,0 +1,253 @@
+/**
+ * AppsScript script to run in a Google Spreadsheet creates geocode lat/lng
+ * If no or bad address is given lat/lng is set to 0,0
+ */
+
+/**
+ * Spread sheet requirements
+ * last two columns are the following
+ *    ADDRESS_COLUMN
+ *    LAT_LNG_COLUMN
+ */
+
+var STREET_ADDRESS_COLUMN;
+var CITY_STATE_COLUMN;
+var ADDRESS_COLUMN;
+var LAT_LNG_COLUMN;
+
+/**
+ * Do-nothing method to trigger the authorization dialog if not already done.
+ */
+function checkAuthorization() {
+}
+
+/**
+ * Run this every hour or so.
+ */
+function updateLocation() {
+    init();
+
+    // Get the data in the spreadsheet and convert it to a dictionary.
+    var sheet = SpreadsheetApp.getActiveSheet();
+    var lastRow = sheet.getLastRow();
+    var lastColumn = sheet.getLastColumn();
+    var spreadsheetData = sheet.getRange(1, 1, lastRow, lastColumn);
+    var spreadsheetValues = spreadsheetData.getValues();
+    var columns = spreadsheetValues[0];
+
+    var x = 0;
+
+    // Build the ADDRESS_COLUMN from street address, city, state, zi
+
+    for (var row_offset in spreadsheetValues) {
+
+        if (row_offset == 0) continue;
+
+        var row = spreadsheetValues[row_offset];
+
+        var full_address = '';
+        var street_address = '';
+        var city_state = '';
+        var geoCodedAddress = '';
+
+        Logger.log('  ');
+        Logger.log('row_offset=' + row_offset);
+
+        for (var col in row) {
+
+            if (columns[col] == STREET_ADDRESS_COLUMN) {
+
+                street_address = row[col];
+
+            } else if (columns[col] == CITY_STATE_COLUMN) {
+
+                city_state = row[col];
+
+            }
+        }
+
+        full_address = street_address + ', ' + city_state;
+        geoCodedAddress = geocode(full_address);
+
+        var saveRow = parseInt(row_offset) + 1;    // getRange() uses a index, and we have a offset
+        var saveCol = parseInt(lastColumn);
+
+        sheet.getRange(saveRow, saveCol).setValue(geoCodedAddress);
+        saveCol = saveCol - 1;                                      // Save in third to last column
+        sheet.getRange(saveRow, saveCol).setValue(full_address);
+    }
+
+}
+
+
+/**
+ * Submits the data to Fusion Tables when the form is submitted.
+ * @param {Object} e The form object.
+ */
+function onFormSubmit(e) {
+
+    Logger.log('onFormSubmit A');
+    if (!e) {
+        // Don't try to do anything when run directly from the script editor
+//    return;
+    }
+
+    init();
+
+    var x = 0;
+
+    // Get the row number of the newly entered data.
+    var sheet = SpreadsheetApp.getActiveSheet();
+
+    var lastRow = sheet.getLastRow();
+    var lastColumn = sheet.getLastColumn();
+    var spreadsheetData = sheet.getRange(1, 1, lastRow, lastColumn);
+    var spreadsheetValues = spreadsheetData.getValues();
+    var columns = spreadsheetValues[0];
+
+    var row = spreadsheetValues[lastRow - 1];
+
+
+    var full_address = '';
+    var street_address = '';
+    var city_state = '';
+    var geoCodedAddress = '';
+    var DisplayOnMap = '';
+
+    Logger.log('  ');
+    Logger.log('lastRow=' + lastRow);
+
+
+    for (var col in row) {
+
+        if (columns[col] == STREET_ADDRESS_COLUMN) {
+
+            street_address = row[col];
+
+        } else if (columns[col] == CITY_STATE_COLUMN) {
+
+            city_state = row[col];
+
+        }
+    }
+
+    DisplayOnMap = 'no';
+
+    full_address = street_address + ', ' + city_state;
+
+    Logger.log('full_address=' + full_address);
+    Logger.log('lastRow=' + lastRow);
+
+
+    geoCodedAddress = geocode(full_address);
+
+    Logger.log('geoCodedAddress=' + geoCodedAddress);
+    Logger.log('DisplayOnMap=' + DisplayOnMap);
+
+    var saveRow = parseInt(lastRow);
+    var saveCol = parseInt(lastColumn);
+
+    Logger.log('saveRow=' + saveRow);
+    Logger.log('saveCol=' + saveCol);
+
+    sheet.getRange(saveRow, saveCol).setValue(geoCodedAddress);
+    saveCol = saveCol - 1;                                      // Save in third to last column
+    sheet.getRange(saveRow, saveCol).setValue(full_address);
+
+
+}
+
+/**
+ * Ensures that if the
+ * address column is set the latlngColumn is also set, and adds a rowid
+ * column to the sheet if it doesn't have one.
+ */
+function init() {
+
+// Update for deprecated ScriptProperties API call
+
+    var docProperties = PropertiesService.getScriptProperties();
+
+    STREET_ADDRESS_COLUMN = docProperties.getProperty('streetAddressColumn');
+    Logger.log('streetAddressColumn is ' + STREET_ADDRESS_COLUMN);
+
+    CITY_STATE_COLUMN = docProperties.getProperty('cityStateColumn');
+    Logger.log('cityStateColumn is ' + CITY_STATE_COLUMN);
+
+    ADDRESS_COLUMN = docProperties.getProperty('addressColumn');
+    Logger.log('Address Column is ' + ADDRESS_COLUMN);
+
+    LAT_LNG_COLUMN = docProperties.getProperty('latlngColumn');
+    Logger.log('latlngColumn is ' + LAT_LNG_COLUMN);
+
+    if (ADDRESS_COLUMN && !LAT_LNG_COLUMN) {
+        throw('Since you added an ADDRESS_COLUMN project property, ' +
+        'you also need to add a latlngColumn property');
+    }
+    var sheet = SpreadsheetApp.getActiveSheet();
+
+}
+
+
+/**
+ * Adds the full address  in the spreadsheet.
+ * @param {string} full address.
+ * @param {number} row The row number to enter the rowid in.
+ */
+function insertAddress(full_address, row) {
+    var sheet = SpreadsheetApp.getActiveSheet();
+    var lastColumn = sheet.getLastColumn();
+    lastColumn--;
+    lastColumn--;
+    lastCell = sheet.getRange(row, lastColumn);
+    lastCell.setValue(full_address);
+}
+
+/**
+ * Adds the LatLng ie Location  in the spreadsheet.
+ * @param {string} gecoded.
+ * @param {number} row The row number to enter the rowid in.
+ */
+function insertLatLng(lat_lng, row) {
+    var sheet = SpreadsheetApp.getActiveSheet();
+    var lastColumn = sheet.getLastColumn();
+    lastColumn--;
+    lastCell = sheet.getRange(row, lastColumn);
+    lastCell.setValue(lat_lng);
+}
+
+/**
+ * Returns the geocoded address.
+ * @param {string} address The user-entered address.
+ * @return {string} The geocoded results as a lat,long pair.
+ */
+function geocode(address) {
+    if (!address) {
+        return '0,0';
+    }
+    var results = Maps.newGeocoder().geocode(address);
+
+    // If all your form responses will be within a given area, you may get better
+    // geocoding results by biasing to that area. Uncomment the code below and set
+    // the desired region, bounding box, or component filter. The example shows
+    // how to indicate that the addresses should be in Spain. For full details, see
+    // https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingRequests
+    //
+    // var results = Maps.newGeocoder().geocode({ address: address, region: 'es' });
+
+    Logger.log('Geocoding: ' + address);
+    if (results.status == 'OK') {
+        var bestResult = results.results[0];
+        var lat = bestResult.geometry.location.lat;
+        var lng = bestResult.geometry.location.lng;
+        var latLng = lat + ',' + lng;
+        Logger.log('Results: ' + latLng);
+        return latLng;
+    } else {
+        Logger.log('Error geocoding: ' + address);
+        Logger.log(results.status);
+        return '0,0';
+    }
+}
+
+
