@@ -1,22 +1,24 @@
-describe('cfahubApp Controllers', function() {
-  
-  describe('projectCtrl', function() {
-  var scope, $controller;
+describe('projectCtrl', function() {
+  var $scope, $controller;
 
-  // Initialization of the AngularJS application before each test case
-    beforeEach(module('cfahubApp'));
+    // Initialize the module before each test case
+    //@TODO Replace including the service here with a mock-up.
+    // http://eclipsesource.com/blogs/2014/03/27/mocks-in-jasmine-tests/
+    beforeEach(module('cfahubServices'));
+    beforeEach(module('cfahubControllers'));
 
     beforeEach(inject(function(_$controller_, $rootScope) {
       scope = $rootScope.$new();
-      $controller = _$controller_;
+      $controller = _$controller_('projectCtrl', {
+        $scope: scope,
+        $routeParams: {id: ''}
+      });
     }));
 
-    
     it('should have scope', function() {
-      var ctrl = $controller('projectCtrl', {$scope:scope});
-      expect($ctrl).toBeDefined();
+      expect(scope).toBeDefined();
     });
-  });
+});
 
 
 //  beforeEach(function() {
@@ -72,4 +74,3 @@ describe('cfahubApp Controllers', function() {
 // 
 //     });
 
-});
