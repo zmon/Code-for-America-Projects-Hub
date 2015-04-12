@@ -1,0 +1,14 @@
+<!-- project contributors -->
+<section class="OK-project-contributors clearfix">
+    <a href="https://github.com/codeforkansascity/civic-project-mapping/graphs/contributors" title="Project contributors">
+        <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
+            <li ng-repeat="person in project.contributors">
+                <img src="{{person.img}}" class="img-circle" width="40" height="40" alt="Project contributor"/>
+                <span ng-show="person.leader" class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span>
+            </li>
+        </ul>
+    </a>
+    <!-- number of contributors -->
+    <span class="badge pull-left bg-semitransp OK-hide-in-project-page-layout">{{project.contributers.length}}</span>
+</section>
+

@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // this file only gets watched and is otherwise ignored
-      //{pattern: 'index.html', included: false, served: false},
+      {pattern: 'index.html', included: false, served: false},
 
        // 3rd Party Code
       'bower_components/jquery/dist/jquery.js',
@@ -27,7 +27,7 @@ module.exports = function(config) {
       // Omit angular-scenarios here because it prevents tests from execution.
 
       // App
-      'ng/*.js',
+      'ng/**/*.js',
 
       // Test files
       'tests/spec/**/*.js'
