@@ -1,10 +1,3 @@
-var cfahubControllers = angular.module('cfahubControllers', []);
-
-cfahubControllers.controller('HubCtrl', ['$scope',
-    function($scope) {
-        
-}]);
-
 cfahubControllers.controller('GitCtrl', ['$scope', '$http',
     function($scope, $http) {
         $scope.items = [];
