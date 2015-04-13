@@ -25,7 +25,7 @@
     <script src="ng/app.js"></script>
     <script src="ng/services/projectService.js"></script>
     <script src="ng/services/projectIdeaService.js"></script>
-    <script src="ng/services/coaApiService.js"></script>
+    <script src="ng/services/cfaApiService.js"></script>
     <script src="ng/services/githubOrgApiService.js"></script>   
     <script src="ng/services/googleDataApiService.js"></script> 
     <script src="ng/controllers/gen.js"></script>     
@@ -60,9 +60,11 @@
 
 <body>
     <!-- temp nav system to get around -->
-    <ul id="univesalnav" class="nav nav-tabs">
-        <li><a href="#/hub">hub</a></li>
-        <li><a href="#/git">cfa api</a></li>
+    <ul id="universalnav" class="nav nav-tabs">
+        <li><a href="#/hub">Hub</a></li>
+        <li><a href="#/cfa">CFA API</a></li>
+        <li><a href="#/git">Github API</a></li>
+        <li><a href="#/googleprojects">Google Sheet API</a></li>
     </ul>
     <div class="OK-main-view" ng-view></div>
 
