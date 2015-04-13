@@ -24,9 +24,9 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/pages/Hub.htm',
         controller: 'HubController'
       }).
-      when('/coa', {
+      when('/cfa', {
         templateUrl: 'views/pages/Data.html',
-        controller: 'CoaController'
+        controller: 'CfaController'
       }).
       when('/git', {
         templateUrl: 'views/pages/Data.html',
@@ -47,3 +47,13 @@ cfahubApp.config(['$routeProvider',
 
 var cfahubControllers = angular.module('cfahubControllers', []);
 var cfahubServices = angular.module('cfahubServices', []);
+
+// After all modules are loaded, watch for route changes,
+// make controller name accessible as $scope.app_location_path.
+cfahubApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
+    $rootScope.$on('$routeChangeSuccess', function(e, current, pre) {
+      $rootScope.app_location_path = $location.path().replace(/^\//, '');
+      // Get all URL parameter
+      // console.log($location.path());
+    });
+}]);

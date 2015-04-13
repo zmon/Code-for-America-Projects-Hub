@@ -1,7 +1,10 @@
-cfahubControllers.controller('CoaController',function($scope,CoaApiService){
-      //$scope.items = CoaApiService.getHttpItems();
+//@TODO This works with the button for testing API results,
+// but probably isn't ideal. Not sure how much we actually
+// need controllers for these APIs anyway.
+cfahubControllers.controller('CfaController',function($scope,CfaApiService){
+      //$scope.items = CfaApiService.getHttpItems();
       $scope.getItems = function() {
-        $scope.items = CoaApiService.getHttpItems();
+        $scope.items = CfaApiService.getHttpItems();
       }
 });
 
