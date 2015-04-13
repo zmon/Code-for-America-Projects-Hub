@@ -6,3 +6,7 @@ cfahubControllers.controller('HubController',
     $scope.cards.ideas = ProjectIdeaService.list();
 }]);
 
+cfahubControllers.controller('wrong404Ctrl', ['$scope',
+    function($scope) {
+        
+}]);

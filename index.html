@@ -22,20 +22,21 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="ng/app.js"></script>
-    <script src="ng/services/projectService.js"></script>
-    <script src="ng/services/projectIdeaService.js"></script>
-    <script src="ng/services/cfaApiService.js"></script>
-    <script src="ng/services/githubOrgApiService.js"></script>   
-    <script src="ng/services/googleDataApiService.js"></script> 
-    <script src="ng/controllers/gen.js"></script>     
-    <script src="ng/controllers/ProjectController.js"></script>
-    <script src="ng/controllers/ProjectListController.js"></script>
-    <script src="ng/controllers/ProjectIdeaController.js"></script>
-    <script src="ng/controllers/ProjectIdeaListController.js"></script>
-    <script src="ng/controllers/ExternalApiController.js"></script>    
-    <script src="ng/controllers/HubController.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- Pages -->
+    <script src="views/pages/pagesController.js"></script>
+    
+    <!-- Projects Page -->
+    <script src="views/project/ProjectController.js"></script>
+    <script src="views/project/projectService.js"></script>
+    <script src="views/project/projectIdeaService.js"></script>
 
+    <!-- API stuff -->
+    <script src="views/api/cfaApiService.js"></script>
+    <script src="views/api/githubOrgApiService.js"></script>
+    <script src="views/api/googleDataApiService.js"></script> 
+    <script src="views/api/ExternalApiController.js"></script>
 
     <!-- LEAFLET MAP -->
     <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />

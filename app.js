@@ -9,21 +9,25 @@ var cfahubApp = angular.module('cfahubApp', [
 cfahubApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+              // Main landing page, THE HUB
       when('/', {
         redirectTo: '/hub'
-      }).
-      when('/ideas/:iid', {
-        templateUrl: 'views/pages/Idea.htm',
-        controller: 'ProjectIdeaController'
-      }).
-      when('/projects/:pid', {
-        templateUrl: 'views/pages/Project.htm',
-        controller: 'ProjectController'
       }).
       when('/hub', {
         templateUrl: 'views/pages/Hub.htm',
         controller: 'HubController'
       }).
+              // Projects Idea page
+      when('/ideas/:iid', {
+        templateUrl: 'views/pages/Idea.htm',
+        controller: 'ProjectIdeaController'
+      }).
+              // Projects Page
+      when('/projects/:pid', {
+        templateUrl: 'views/pages/Project.htm',
+        controller: 'ProjectController'
+      }).
+              //API Grabbers
       when('/cfa', {
         templateUrl: 'views/pages/Data.html',
         controller: 'CfaController'
@@ -36,6 +40,7 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/pages/Data.html',
         controller: 'GoogleProjectsController'
       }).
+              //wrong page thing
       when('/wrong404', {
         templateUrl: 'views/404.html',
         controller: 'wrong404Ctrl'
