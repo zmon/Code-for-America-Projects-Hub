@@ -3,6 +3,7 @@
 Goals:
 
 Help Brigade members find projects to work on. Promote multi-Brigade collaboration. Onboard new members. Encourage public contribution of ideas. Karma. Visualize scope for Code for America. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
+![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
 
 ###Production preview##
 
@@ -63,8 +64,7 @@ https://docs.google.com/forms/d/1Z6duJDUZ89MkjUY0jFowUvKjMvru6U2BN7_bLERH6s0/vie
 
 https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform
 
-Hub, Add Idea Form and Project Page screenshots:
 
-![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
+
 
 
