@@ -5,6 +5,9 @@ Goals:
 Help Brigade members find projects to work on. Promote multi-Brigade collaboration. Onboard new members. Encourage public contribution of ideas. Karma. Visualize scope for Code for America. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
 ![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
 
+We track and discuss this project in codeforkc group at Slack.com. https://codeforkc.slack.com/messages/project-hub/
+Send email to pbarham@codeforamerica.org to join Slack group.
+
 ###Production preview##
 
 (in progress): http://codeforkc.org/Code-for-America-Projects-Hub/
