@@ -8,7 +8,7 @@ cfahubControllers.controller('ProjectIdeaListController', function($scope, $rout
 });
 
 cfahubControllers.controller('ProjectIdeaController', function($scope, $routeParams, ProjectIdeaService) {
-    var ideaId = $routeParams.iid;
+    var ideaId = $routeParams.id;
     $scope.project = $scope.idea = ProjectIdeaService.getIdea(ideaId);
 });
 
