@@ -20,4 +20,12 @@ cfahubControllers.controller('GoogleProjectsController',function($scope,GooglePr
       $scope.getItems = function() {
         $scope.items = GoogleProjectsApiDaoService.getHttpItems();
       }
+});      
+      
+cfahubControllers.controller('GoogleIdeasController',function($scope,GoogleIdeasApiDaoService){
+      $scope.getItems = function() {
+        $scope.items = GoogleIdeasApiDaoService.getHttpItems();
+        //I think it should be .ideas instead of .items to avoid conflict and readability:
+        //$scope.ideas = GoogleIdeasApiDaoService.getHttpItems();
+      }      
 });
