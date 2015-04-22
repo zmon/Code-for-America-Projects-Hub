@@ -1,5 +1,5 @@
 /*
- * 
+ * /view/project/projectideasService.js 
  */
 cfahubServices.service('ProjectIdeaService', function(){
     var ideas;
@@ -59,7 +59,6 @@ cfahubServices.service('ProjectIdeaService', function(){
         return ideas;
     }//end getHttpItems;
     
-    
 	this.list = function () 
 	{
         return ideas;
@@ -93,28 +92,20 @@ cfahubServices.service('ProjectIdeaService', function(){
         }
     }//end getIdea
     
-    
-    this.pagedList = function(startingIndex, pageSize)
+    this.pagedList = function(pageNumber)
     {
-    	var endIndex = startingIndex + pageSize;
-    	var loopCount = pageSize;
-    	if(endIndex < count)
+    	var pageSize = 6;
+    	var ideasIndex = pageNumber * pageSize;
+    	var endIndex = ideasIndex + pageSize;
+    	var records=[];
+    	var recordsIndex = 0;
+    	while(index < endIndex)
 		{
-    		var loopCount = count - endIndex;
-		}//end if
-    	var maxRecord = loopCount + startingIndex; 
-    	var records[];
-    	var x=0;
-    	for(i = startingIndex; i < maxRecord; i++ )
-    	{
-    		record[x] = ideas[i];
-    		x++;
-    		i++;
-    	}//end for
+    		record[recordsIndex] = ideas[ideasIndex];
+    		index++;
+    		recordsIndex++;
+		}
     	return records;
     }//end pagedList
-    
-    
-    
     
 });
