@@ -1,11 +1,11 @@
 /***
 Data Access Object Model for fetching Google Spreadsheet api data
 ***/
-//@TODO Feed returns XML, so replace this with Tabletop, etc.
+//added 'alt=json.  It now returns json with no need for tabletop
 cfahubServices.factory('GoogleProjectsApiDaoService',function($http){
     var factory = {};
     var items;
-    $http({method : 'GET',url : 'https://spreadsheets.google.com/feeds/worksheets/1tnW2fTcPEQG93oebrCfvjZw4Vjtn6vkzvqyovxebKlI/public/full'})
+    $http({method : 'GET',url : 'https://spreadsheets.google.com/feeds/worksheets/1tnW2fTcPEQG93oebrCfvjZw4Vjtn6vkzvqyovxebKlI/public/full?alt=json'})
        .success(function(data, status) {
            items = data.objects;
         })
