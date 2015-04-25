@@ -1,7 +1,7 @@
 /*
  * /view/project/projectideasService.js 
  */
-cfahubServices.service('ProjectIdeaService', function(){
+cfahubServices.service('ProjectIdeaService', function($http){
     var ideas;
     var count;
     $http({method : 'GET',url : 'https://spreadsheets.google.com/feeds/list/1PGM2P9o0bkJ_xCkoH2ps_Dp5xnBDrPxmIB-jnJWAwhE/1/public/values?alt=json'})
@@ -13,7 +13,7 @@ cfahubServices.service('ProjectIdeaService', function(){
     	    *Second it lets us loop throught the items and convert the timestamp to 
     	    *float which we use as an PK in memory in the app.
     	    */
-           var tempIdeas = data.feeed.entry;
+           var tempIdeas = data.feed.entry;
            count = tempIdeas.length;
            var ideasJson = "{\"App.Model.Project\":["; 
            for (i = 0; i < tempIdeas.length; i++) {
@@ -50,7 +50,7 @@ cfahubServices.service('ProjectIdeaService', function(){
        .error(function(data, status) {
            alert("HTTP Error");
        });
-    
+    var factory = {};
     factory.getHttpItems = function()
     {
     	/*This is used to initially load the ideas and then 
