@@ -27,21 +27,24 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/pages/Project.htm',
         controller: 'ProjectController'
       }).
-              //API Grabbers
+      when('/data', {
+        redirectTo: '/cfa'
+      }).
+              //Sample API Data
       when('/cfa', {
-        templateUrl: 'views/pages/Data.html',
+        templateUrl: 'app/data/Data.html',
         controller: 'CfaController'
       }).
       when('/git', {
-        templateUrl: 'views/pages/Data.html',
+        templateUrl: 'app/data/Data.html',
         controller: 'GithubController'
       }).
       when('/googleprojects', {
-        templateUrl: 'views/pages/Data.html',
+        templateUrl: 'app/data/Data.html',
         controller: 'GoogleProjectsController'
       }).
       when('/googleprojectideas', {
-        templateUrl: 'views/pages/Data.html',
+        templateUrl: 'vapp/data/Data.html',
         controller: 'GoogleIdeasController'
       }).
               //wrong page thing
