@@ -40,6 +40,10 @@ cfahubApp.config(['$routeProvider',
         templateUrl: 'views/pages/Data.html',
         controller: 'GoogleProjectsController'
       }).
+      when('/googleprojectideas', {
+        templateUrl: 'views/pages/Data.html',
+        controller: 'GoogleIdeasController'
+      }).
               //wrong page thing
       when('/wrong404', {
         templateUrl: 'views/404.html',
