@@ -3,9 +3,9 @@
  */
 cfahubServices.factory('ProjectIdeaService', ProjectIdeaService);
 
-ProjectIdeaService.$inject = ['GoogleProjectIdeasDaoService'];
+ProjectIdeaService.$inject = ['GoogleProjectIdeasService'];
 
-function ProjectIdeaService(GoogleProjectIdeasDaoService) {
+function ProjectIdeaService(GoogleProjectIdeasService) {
   return {
     getIdeas: getIdeas,
     getIdea: getIdea,

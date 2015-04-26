@@ -1,7 +1,7 @@
 /***
-GithubApiDaoService is a Data Access Object Model for fetching Github api data
+GithubProjectsService is a Data Access Object Model for fetching Github api data
 ***/
-cfahubServices.factory('CfaApiService',function($http){
+cfahubServices.factory('CFAProjectsService',function($http){
     var factory = {};
     var items;
     $http({method : 'GET',url : 'http://codeforamerica.org/api/organizations/Code-for-Kansas-City/projects'})
