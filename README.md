@@ -16,6 +16,8 @@ Send email to pbarham@codeforamerica.org to join Slack group.
 
 See Getting Started wiki for help setting up an editor with Git https://github.com/codeforkansascity/Code-for-America-Projects-Hub/wiki/Getting-an-Environment-Started .
 
+See [the Angular Style Guide](https://github.com/johnpapa/angular-styleguide) for code structure (by feature) and "best" practice for writing services, factories, etc.
+
 We're using [Bower](http://bower.io) for package management.
 
 First, install dependencies with npm. The [package.json](https://docs.npmjs.com/files/package.json) file provides information to npm, identifying the project and managing the project's dependencies.
