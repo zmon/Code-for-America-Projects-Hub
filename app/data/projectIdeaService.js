@@ -32,7 +32,7 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
        * Ask the data service for the data and wait
        * for the promise
        */
-    return GoogleProjectIdeasService.getSubmittedIdeas()
+    GoogleProjectIdeasService.getSubmittedIdeas()
       .then(function(data) {
         /** Set the data and resolve the promise **/
         ideas = transformIdeas(data.data.feed.entry);
@@ -40,9 +40,8 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
       });
     
     function transformIdeas(tempIdeas) {
-    console.log(tempIdeas);
     count = tempIdeas.length;
-    var ideasJson = "{\"App.Model.Project\":["; 
+    var ideasJson = "{\"App.Model.ProjectIdea\":["; 
     for (i = 0; i < tempIdeas.length; i++) {
     if(i==0)
 	   {
@@ -71,9 +70,8 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
         	   
     	}
       ideasJson += "]}";
-      console.log(ideasJson);
-      ideas = JSON.parse(ideasJson);
 
+      ideas = JSON.parse(ideasJson);
       return ideas;
     }
   }
@@ -84,9 +82,9 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
 		var recordCount = getIdeas.length;
 		for(i =0; i < recordCount; i++)
 		{
-        	if(ideas['App.Model.Project'][i]['title'].toLower().contains(searchCriteria.toLower()))
+        	if(ideas['App.Model.ProjectIdea'][i]['title'].toLower().contains(searchCriteria.toLower()))
       		{
-      			foundRecords[foundRecordCount] = ['App.Model.Project'][i];
+      			foundRecords[foundRecordCount] = ['App.Model.ProjectIdea'][i];
       			foundRecordCount++;
       		}
 		}
@@ -96,7 +94,7 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
     function getIdea(ideaId) {
       for(i=0;i<count;i++) {
         	//I think we have to do it like this...
-        	if(ideas['App.Model.Project'][i]['id']==ideaId)
+        	if(ideas['App.Model.ProjectIdea'][i]['id']==ideaId)
       		{
       			return ideas[i];
       		}
