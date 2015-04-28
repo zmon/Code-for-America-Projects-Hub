@@ -16,21 +16,20 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
   function getIdeas() {
     var ideas, count, mypromise;
     /*
-    *Because ideas have no PK we need to create a hack to work around it.
-    *We create an array to loop through which does 2 things.  First of all it removes
-    *excess crap from google's json feed.
-    *Second it lets us loop throught the items and convert the timestamp to
-    *float which we use as an PK in memory in the app.
+    *A hack to add primary keys to rows from a Google Sheet.
+    *We create an array to loop while:
+    *  1.  Renaming attributes in the JSON feed.
+    *  2.  Converting the timestamp to a float that 
+    *      we use as PK in memory.
     */
 
-    /** This is an example of the recommended pattern for calling services that
+    /** This is the recommended pattern for calling services that
      *  return a promise, i.e. take advantage of the promise.
      *  based on https://github.com/johnpapa/angular-styleguide#factories.
      */
 
     /**
-       * Ask the data service for the data and wait
-       * for the promise
+       * Request data from the service and wait for the promise
        */
      return GoogleProjectIdeasService.getSubmittedIdeas()
       .then(function(data) {
