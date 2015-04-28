@@ -1,7 +1,7 @@
 /***
 Data Access Object Model for fetching Google Spreadsheet api data
 ***/
-/** Recommended pattern for defining services, 
+/** Recommended pattern for defining services,
  *  based on https://github.com/johnpapa/angular-styleguide#factories.
  */
 cfahubServices.factory('GoogleProjectsService', GoogleProjectsService);
@@ -26,8 +26,8 @@ function GoogleProjectsService($http) {
         function getApprovedProjectsError(data, status, statusText) {
            return alert(statusText);
            //@TODO: add logger
-           //console.log(status); 
-           
+           //console.log(status);
+
         }
     }
 }

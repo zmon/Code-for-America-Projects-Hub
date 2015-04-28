@@ -1,7 +1,7 @@
 /***
 Data Access Object Model for fetching Google Spreadsheet api data
 ***/
-/** This is the recommended pattern for defining services, 
+/** This is the recommended pattern for defining services,
  *  based on https://github.com/johnpapa/angular-styleguide#factories.
  */
 cfahubServices.factory('GoogleProjectIdeasService', GoogleProjectIdeasService);
@@ -26,8 +26,8 @@ function GoogleProjectIdeasService($http) {
         function getSubmittedIdeasError(data, status, statusText) {
            return alert(statusText);
            //@TODO: add logger
-           //console.log(status); 
-           
+           //console.log(status);
+
         }
     }
 }
