@@ -13,6 +13,6 @@ cfahubServices.factory('CFAProjectsService',function($http){
        });
     factory.getHttpItems = function(){
         return items;
-    }
+    };
     return factory;
 });
