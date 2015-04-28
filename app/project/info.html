@@ -1,0 +1,28 @@
+<!-- project definition -->
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-goals"> 
+        <span class="glyphicon glyphicon-send OK-pdcard-glyphicon"></span> 
+        <h3>Goals</h3>
+        <p>{{project.goals}}</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-audience"> 
+        <span class="glyphicon glyphicon-user OK-pdcard-glyphicon"></span>        
+        <h3>Target Audience</h3>
+        <p>{{project.targetaudience}}</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-project-definition-card-tall OK-pdc-story pull-right"> 
+        <span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
+        <h3>User Stories</h3>
+        {{project.userstories}}
+       </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-maintenance"> 
+        <span class="glyphicon glyphicon-wrench OK-pdcard-glyphicon"></span>     
+        <h3>Maintenance Plan</h3>
+        {{project.maintenanceplan}}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-blockers"> 
+        <span class="glyphicon glyphicon-save OK-pdcard-glyphicon OK-rotate-270-clockwise"></span>     
+        <h3>Potential Blockers</h3>
+        {{project.blockers}}
+    </div>
+</div>
