@@ -17,7 +17,6 @@ function projectservice(CFAProjectsService) {
    function getProjectsComplete(response) {
       // return response.data.results;
       mp = new mockProjects;
-      console.log(mp.projects)
       return mp.projects;
    }
 

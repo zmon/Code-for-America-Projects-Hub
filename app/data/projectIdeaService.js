@@ -14,7 +14,7 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
   };
 
   function getIdeas() {
-    var ideas, count, mypromise;
+    var ideas, count;
     /*
     *A hack to add primary keys to rows from a Google Sheet.
     *We create an array to loop while:
@@ -35,7 +35,6 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
       .then(function(data) {
         /** Set the data and resolve the promise **/
         ideas = transformIdeas(data.data.feed.entry);
-        console.log(ideas);
         return ideas;
       });
 
