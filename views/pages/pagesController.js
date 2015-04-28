@@ -3,7 +3,12 @@ cfahubControllers.controller('HubController',
       function($scope, ProjectService, ProjectIdeaService) {
     $scope.cards = {};
     $scope.cards.projects = ProjectService.list();
-    $scope.cards.ideas = ProjectIdeaService.getIdeas();
+    
+    ProjectIdeaService.getIdeas()
+        .then(function(data) {
+            $scope.cards.ideas = data["App.Model.ProjectIdea"];
+            return $scope.cards.ideas;
+    });
 }]);
 
 cfahubControllers.controller('wrong404Ctrl', ['$scope',
