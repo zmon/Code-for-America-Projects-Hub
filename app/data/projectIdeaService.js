@@ -14,7 +14,7 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
   };
   
   function getIdeas() {
-    var ideas, count;
+    var ideas, count, mypromise;
     /*
     *Because ideas have no PK we need to create a hack to work around it.
     *We create an array to loop through which does 2 things.  First of all it removes 
@@ -32,10 +32,11 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
        * Ask the data service for the data and wait
        * for the promise
        */
-    GoogleProjectIdeasService.getSubmittedIdeas()
+     return GoogleProjectIdeasService.getSubmittedIdeas()
       .then(function(data) {
         /** Set the data and resolve the promise **/
         ideas = transformIdeas(data.data.feed.entry);
+        console.log(ideas);
         return ideas;
       });
     
@@ -70,7 +71,6 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
         	   
     	}
       ideasJson += "]}";
-
       ideas = JSON.parse(ideasJson);
       return ideas;
     }
