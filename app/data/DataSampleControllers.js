@@ -2,8 +2,9 @@
 // need controllers for these APIs.
 
 cfahubControllers.controller('CfaController',function($scope, CFAProjectsService) {
-      $scope.getItems = function() {
-        $scope.items = CFAProjectsService.getHttpItems();
+      $scope.getItems = function() { 
+        return CFAProjectsService.getProjects()
+        .then(function(response){$scope.items = response.data.objects})
       };
 });
 

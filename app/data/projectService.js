@@ -1,5 +1,41 @@
-cfahubServices.service('ProjectService', function(){
-   var projects = [{
+cfahubServices.factory('ProjectService', projectservice);
+
+projectservice.$inject = ['CFAProjectsService'];
+
+function projectservice(CFAProjectsService) {
+   return {
+      getProjects: getProjects
+      //getProject: getProject(projectId)
+    };
+
+   function getProjects() {
+      return CFAProjectsService.getProjects()
+        .then(getProjectsComplete)
+        .catch(getProjectsFailed);
+   }
+
+   function getProjectsComplete(response) {
+      // return response.data.results;
+      mp = new mockProjects;
+      console.log(mp.projects)
+      return mp.projects;
+   }
+
+   function getProjectsFailed(error) {
+     //log an error
+   }
+
+   // function getProject(projectId) {
+   //    var projects = getProjects;
+   //    for(i=0;i < projects.length;i++) {
+   //       if(projects()[i].id == projectId) {
+   //          return projects()[i];
+   //       }
+   //    }
+   // }
+
+   function mockProjects() {
+       this.projects = [{
                 "id":"0",
                 "projecttype":"project",
                 "image":"assets/images/OK_placeholder_project_image.png",
@@ -98,14 +134,5 @@ cfahubServices.service('ProjectService', function(){
                     {"img":"https://avatars3.githubusercontent.com/u/3280502?v=3&s=460"},
                     {"img":"https://avatars0.githubusercontent.com/u/2244915?v=3&s=460"}]
         }];
-    this.list = function () {
-        return projects;
-    }
-    this.getProject = function(projectId){
-            for(i=0;i<projects.length;i++){
-                if(projects[i].id == projectId){
-                    return projects[i];
-                }
-            }
-        }
-});
+   }
+};

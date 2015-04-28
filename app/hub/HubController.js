@@ -2,7 +2,12 @@ cfahubControllers.controller('HubController',
     ['$scope', 'ProjectService', 'ProjectIdeaService',
       function($scope, ProjectService, ProjectIdeaService) {
     $scope.cards = {};
-    $scope.cards.projects = ProjectService.list();
+
+    ProjectService.getProjects()
+        .then(function(data) {
+            $scope.cards.projects = data;
+            return $scope.cards.projects;
+    });
     
     ProjectIdeaService.getIdeas()
         .then(function(data) {

@@ -44,16 +44,16 @@
             <!-- project card template  -->
             <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in cards.projects track by $index">
                 <article class="OK-project clearfix"> 
-                    <div ng-include="'views/project/preview.html'"></div>
-                    <div ng-include="'views/project/description.html'"></div>
-                    <div ng-include="'views/project/socialbadges.html'"></div>
-                    <div ng-include="'views/project/techandhelp.html'"></div>
+                    <div ng-include="'app/project/preview.html'"></div>
+                    <div ng-include="'app/project/description.html'"></div>
+                    <div ng-include="'app/project/socialbadges.html'"></div>
+                    <div ng-include="'app/project/techandhelp.html'"></div>
                     <!-- project on hold banner (hidden for active projects ->
                             <p class="OK-project-onhold-message">
                                 On Hold<br/>
                                 Reason: to demonstrate On Hold message
                             </p-->
-                    <div ng-include="'views/project/contributors.html'"></div>
+                    <div ng-include="'app/project/contributors.html'"></div>
                 </article>
             </div>
         </div>
@@ -61,7 +61,7 @@
             <!-- idea card-->
             <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in cards.ideas track by $index" >
                 <article class="OK-project idea clearfix">
-                    <div ng-include="'views/project/preview.html'"></div>
+                    <div ng-include="'app/project/preview.html'"></div>
                     
                     <!-- project description -->           
                     <section class="OK-project-description">
