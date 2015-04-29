@@ -1,25 +1,25 @@
 describe("ProjectIdeaService", function() {
-  var $projectIdeas;
+  var ProjectIdeasService, $httpBackend;
+
   // Initialize the module before each test case
-  beforeEach(module('cfahubServices', function($provide) {
-    gsApi = {};
-    // Add some mock data from Google Spreadsheet API
-    gsApi.projects = [];
-    gsApi.projects[0] = {};
-    gsApi.projects[0].title = "Project Title";
-    $provide.value('gsApi', gsApi);
+  beforeEach(module('cfahubServices'));
+  // beforeEach(module(function($provide) {
+  //   $provide.value('GoogleProjectIdeasService', GoogleProjectIdeasService);
+  // }));
+
+  beforeEach(inject(function(_ProjectIdeaService_, _$httpBackend_) {
+    ProjectIdeaService = _ProjectIdeaService_;
+    $httpBackend = _$httpBackend_;
   }));
 
-  beforeEach(inject(function(ProjectIdeaService) {
-    $projectIdeas = ProjectIdeaService;
-  }));
+  it("should get ProjectIdeas", function() {
+    $httpBackend.whenGET("https://spreadsheets.google.com/feeds/list/1PGM2P9o0bkJ_xCkoH2ps_Dp5xnBDrPxmIB-jnJWAwhE/1/public/values?alt=json").respond({
+        data: {
+        // Idea data
+        }
+    });
 
-  it("should list ProjectIdeas", function() {
-    var cards = $projectIdeas.list();
-    expect(cards[0].projecttype).toEqual("idea");
-  });
-
-  it("should get an idea from gsApi", function() {
-
+    // var cards = $projectIdeas.getIdeas();
+    // expect(cards.length).toBeGreaterThan 1;
   });
 });

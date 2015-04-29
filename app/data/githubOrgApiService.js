@@ -13,6 +13,6 @@ cfahubServices.factory('GithubProjectsService',function($http){
        });
     factory.getHttpItems = function(){
         return items;
-    }
+    };
     return factory;
 });

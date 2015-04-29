@@ -22,12 +22,14 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
       // Omit angular-scenarios here because it prevents tests from execution.
 
       // App
-      'ng/**/*.js',
+      'app/app.module.js',
+      'app/**/*.js',
+      'views/**/*.js',
 
       // Test files
       'tests/spec/**/*.js'

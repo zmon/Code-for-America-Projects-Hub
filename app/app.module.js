@@ -14,17 +14,17 @@ cfahubApp.config(['$routeProvider',
         redirectTo: '/hub'
       }).
       when('/hub', {
-        templateUrl: 'views/pages/Hub.htm',
+        templateUrl: 'app/hub/Hub.htm',
         controller: 'HubController'
       }).
               // Projects Idea page
       when('/ideas/:iid', {
-        templateUrl: 'views/pages/Idea.htm',
+        templateUrl: 'app/idea/Idea.htm',
         controller: 'ProjectIdeaController'
       }).
               // Projects Page
       when('/projects/:pid', {
-        templateUrl: 'views/pages/Project.htm',
+        templateUrl: 'app/project/Project.htm',
         controller: 'ProjectController'
       }).
       when('/data', {
@@ -49,7 +49,7 @@ cfahubApp.config(['$routeProvider',
       }).
               //wrong page thing
       when('/wrong404', {
-        templateUrl: 'views/404.html',
+        templateUrl: 'app/static/404.html',
         controller: 'wrong404Ctrl'
       }).
       otherwise({
@@ -65,7 +65,5 @@ var cfahubServices = angular.module('cfahubServices', []);
 cfahubApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
     $rootScope.$on('$routeChangeSuccess', function(e, current, pre) {
       $rootScope.app_location_path = $location.path().replace(/^\//, '');
-      // Get all URL parameter
-      // console.log($location.path());
     });
 }]);

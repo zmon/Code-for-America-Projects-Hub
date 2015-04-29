@@ -1,18 +1,26 @@
-/***
-GithubProjectsService is a Data Access Object Model for fetching Github api data
-***/
-cfahubServices.factory('CFAProjectsService',function($http){
-    var factory = {};
-    var items;
-    $http({method : 'GET',url : 'http://codeforamerica.org/api/organizations/Code-for-Kansas-City/projects'})
-       .success(function(data, status) {
-           items = data.objects;
-        })
-       .error(function(data, status) {
-           alert("HTTP Error");
-       });
-    factory.getHttpItems = function(){
-        return items;
+cfahubServices.factory('CFAProjectsService', CFAProjectsService);
+
+CFAProjectsService.$inject = ['$http'];
+
+function CFAProjectsService($http) {
+    return {
+      getProjects: getProjects
+    };
+
+    function getProjects() {
+      return $http.get('http://codeforamerica.org/api/organizations/Code-for-Kansas-City/projects')
+       .success(getProjectsComplete)
+       .error(getProjectsError);
+
+       function getProjectsComplete(data, status) {
+           return data.objects;
+        }
+
+        function getProjectsError(data, status, statusText) {
+           return alert(statusText);
+           //@TODO: add logger
+           //console.log(status);
+
+        }
     }
-    return factory;
-});
+}
