@@ -90,14 +90,17 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
 	}//end search
 
   function getIdea(ideaId) {
-    for(i=0;i<count;i++) {
-     	//I think we have to do it like this...
-     	if(ideas['App.Model.ProjectIdea'][i]['id']==ideaId)
-   		{
-   			return ideas[i];
-   		}
-    }
-    return null;
+    var ideas, idea;
+    return getIdeas().then(function(data) {
+        ideas = data['App.Model.ProjectIdea'];
+        for (i = 0; i < ideas.length; i++) {
+          idea = ideas[i];
+          if(idea['id'] == ideaId) {
+            return idea;
+          }
+        }
+        return idea;
+      });
   }//end getIdea
 
   function pageIdeas(pageNumber) {
