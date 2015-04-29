@@ -20,7 +20,7 @@ function GoogleProjectsService($http) {
 
        function getApprovedProjectsComplete(data, status) {
            // Multiple spreadsheet rows in a single Atom <entry>
-           return data;
+           return data.objects;
         }
 
         function getApprovedProjectsError(data, status, statusText) {
