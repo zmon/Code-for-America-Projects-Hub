@@ -14,6 +14,8 @@ cfahubControllers.controller('GithubController',function($scope, GithubProjectsS
       };
 });
 
+
+/**
 cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleProjectsService) {
       $scope.getItems = function() {
         $scope.items = GoogleProjectsService.getApprovedProjects();
@@ -23,5 +25,19 @@ cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleP
 cfahubControllers.controller('GoogleIdeasController',function($scope, GoogleProjectIdeasService) {
       $scope.getItems = function() {
         $scope.items = GoogleProjectIdeasService.getSubmittedIdeas();
+      };
+});
+**/
+
+cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleSheetProjectService) {
+      $scope.getItems = function() {
+        $scope.items = GoogleSheetProjectService.getHttpItems();
+      };
+});
+
+
+cfahubControllers.controller('GoogleIdeasController',function($scope, GoogleSheetProjectIdeaService) {
+      $scope.getItems = function() {
+        $scope.items = GoogleSheetProjectIdeaService.getHttpItems();
       };
 });
