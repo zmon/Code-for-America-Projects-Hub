@@ -2,7 +2,7 @@
 // need controllers for these APIs.
 
 cfahubControllers.controller('CfaController',function($scope, CFAProjectsService) {
-      $scope.getItems = function() { 
+      $scope.getItems = function() {
         return CFAProjectsService.getProjects()
         .then(function(response){$scope.items = response.data.objects})
       };
@@ -16,7 +16,8 @@ cfahubControllers.controller('GithubController',function($scope, GithubProjectsS
 
 cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleProjectsService) {
       $scope.getItems = function() {
-        $scope.items = GoogleProjectsService.getApprovedProjects();
+        return GoogleProjectsService.getApprovedProjects()
+        .then(function(response){$scope.items = response.data.objects})
       };
 });
 
