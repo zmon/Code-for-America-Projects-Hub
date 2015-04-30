@@ -1,5 +1,4 @@
-//@TODO Not sure how much we actually
-// need controllers for these APIs.
+// Controllers for displaying sample results from external REST APIs
 
 cfahubControllers.controller('CfaController',function($scope, CFAProjectsService) {
       $scope.getItems = function() { 
@@ -10,34 +9,21 @@ cfahubControllers.controller('CfaController',function($scope, CFAProjectsService
 
 cfahubControllers.controller('GithubController',function($scope, GithubProjectsService) {
       $scope.getItems = function() {
-        $scope.items = GithubProjectsService.getHttpItems();
+        return GithubProjectsService.getProjects()
+        .then(function(response){$scope.items = response.data})
       };
 });
 
-
-/**
 cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleProjectsService) {
       $scope.getItems = function() {
-        $scope.items = GoogleProjectsService.getApprovedProjects();
+        return GoogleProjectsService.getApprovedProjects()
+        .then(function(response){$scope.items = response.data})
       };
 });
 
-cfahubControllers.controller('GoogleIdeasController',function($scope, GoogleProjectIdeasService) {
+cfahubControllers.controller('GoogleProjectIdeasController',function($scope, GoogleProjectIdeasService) {
       $scope.getItems = function() {
-        $scope.items = GoogleProjectIdeasService.getSubmittedIdeas();
-      };
-});
-**/
-
-cfahubControllers.controller('GoogleProjectsController',function($scope, GoogleSheetProjectService) {
-      $scope.getItems = function() {
-        $scope.items = GoogleSheetProjectService.getHttpItems();
-      };
-});
-
-
-cfahubControllers.controller('GoogleIdeasController',function($scope, GoogleSheetProjectIdeaService) {
-      $scope.getItems = function() {
-        $scope.items = GoogleSheetProjectIdeaService.getHttpItems();
+        return GoogleProjectIdeasService.getSubmittedIdeas()
+        .then(function(response){$scope.items = response.data})
       };
 });

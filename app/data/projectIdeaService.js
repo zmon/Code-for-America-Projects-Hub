@@ -74,6 +74,7 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
     }
   }
 
+  //@TODO Is this necessary? Angular has built-in filters for searching.
 	function searchIdeas(searchCriteria) {
 		var foundRecords = [];
 		var foundRecordCount = 0;
