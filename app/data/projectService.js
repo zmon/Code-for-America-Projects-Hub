@@ -1,20 +1,35 @@
-cfahubServices.factory('ProjectService', projectservice);
+cfahubServices.factory('ProjectService', ProjectService);
 
-projectservice.$inject = ['CFAProjectsService'];
+ProjectService.$inject = ['CFAProjectsService', 'GithubProjectsService'];
 
-function projectservice(CFAProjectsService) {
+function ProjectService(CFAProjectsService, GithubProjectsService) {
     return {
       getProjects: getProjects,
       getProject: getProject
     };
 
     function getProjects() {
-        return CFAProjectsService.getProjects()
-        .then(getProjectsComplete)
-        .catch(getProjectsFailed);
-    
-        function mergeProjectSources() {
-          // Merge external API objects into unified model
+      var projects = [];
+      return CFAProjectsService.getProjects()
+        .then(function(data) {
+          projects.push(data.data.objects);
+          return GithubProjectsService.getProjects();
+        })
+        .then(function(data) {
+          projects.push(data.data);
+          mergeProjectsOnUrl(projects[0], projects[1]);
+          console.log(projects);
+          return projects[0];
+        });
+
+        function mergeProjectsOnUrl(x, y) {
+           for (var i = x.length - 1; i >= 0; i--) {
+              angular.forEach(y, function(value, key) {
+                if(x[i]['code_url'] == (value['html_url']).replace('.github.io')) {
+                  return merged = angular.extend(x[i], key = value);
+                }
+              });
+            }
         }
     }
 
@@ -31,16 +46,6 @@ function projectservice(CFAProjectsService) {
             return project;
         });
     }
-
-    function getProjectsComplete(response) {
-        // return response.data.results;
-        mp = new mockProjects;
-        return mp.projects;
-    }
-
-   function getProjectsFailed(error) {
-     //log an error
-   }
 
    function mockProjects() {
        this.projects = [{

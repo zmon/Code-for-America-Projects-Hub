@@ -6,12 +6,12 @@
             <button type="button" onClick="location.href='index.html'" class="btn btn-primary btn-xs">Back to Projects Hub</button>
         </div>
         <div class="col-xs-9 col-lg-6">
-            <h1>{{project.title}}<br/>
+            <h1>{{project.title}} {{project.name}}<br/>
                 <small>{{project.subtitle}}</small>
             </h1>
             <ul class="list-inline list-unstyled">
                 <!-- project metadata -->
-              <li class="OK-tag bg-CfA" title="Civic category">{{project.category}}</li>
+              <li class="OK-tag bg-CfA" title="Civic category">{{project.categories}}</li>
               <li ng-hide="'{{project.active}}'=='Idea'" class="OK-tag bg-gray" title="Platform">{{project.platform}}</li>
               <li ng-hide="'{{project.active}}'=='Idea'" class="OK-tag bg-lightgray" title="Link to online product">
                   Online: <a target="_blank" href="{{project.url}}">{{project.active}}</a>
