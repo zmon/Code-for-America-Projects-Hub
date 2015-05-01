@@ -13,6 +13,16 @@ function projectservice(CFAProjectsService) {
         .then(getProjectsComplete)
         .catch(getProjectsFailed);
     
+        function getProjectsComplete(response) {
+          // return response.data.results;
+          mp = new mockProjects;
+          return mp.projects;
+        }
+
+        function getProjectsFailed(error) {
+         //log an error
+        }
+        
         function mergeProjectSources() {
           // Merge external API objects into unified model
         }
@@ -31,16 +41,6 @@ function projectservice(CFAProjectsService) {
             return project;
         });
     }
-
-    function getProjectsComplete(response) {
-        // return response.data.results;
-        mp = new mockProjects;
-        return mp.projects;
-    }
-
-   function getProjectsFailed(error) {
-     //log an error
-   }
 
    function mockProjects() {
        this.projects = [{
