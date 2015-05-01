@@ -5,12 +5,14 @@
         <li><a href="#/googleprojectideas">Google Sheet Project Ideas API</a></li>
 </ul>
 <button type="button" ng-click="getItems()">View {{app_location_path | uppercase}} data</button>
-<h2>Fields (first result)</h2>
-	<span ng-repeat="item in items | limitTo : 1">
+<h2>Fields</h2>
+<label>Search: <input ng-model="searchText"></label>
+<div id="searchTextResults">
+	<span ng-repeat="item in items | filter:searchText">
 		<ul>
-          <li ng-repeat="(key, value) in item"> {{key}}: {{value}}
-          </li>
-        </ul>
-     </span>
-<h2>Raw data</h2>
+      <li ng-repeat="(key, value) in item"> {{key}}: {{value}}</li>
+    </ul>
+  </span>
+</div>
+<h2>Raw data (all items)</h2>
 {{items}}
