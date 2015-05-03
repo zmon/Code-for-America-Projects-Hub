@@ -51,7 +51,7 @@ function GoogleProjectsService($http) {
   };
 
   function getApprovedProjects() {
-    return $http.get('https://spreadsheets.google.com/feeds/worksheets/1tnW2fTcPEQG93oebrCfvjZw4Vjtn6vkzvqyovxebKlI/public/full?alt=json')
+    return $http.get('https://spreadsheets.google.com/feeds/list/1tnW2fTcPEQG93oebrCfvjZw4Vjtn6vkzvqyovxebKlI/1/public/values?alt=json')
       .success(getFeedItems)
       .error(serviceError);
   }
