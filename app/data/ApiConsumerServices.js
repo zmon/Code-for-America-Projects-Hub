@@ -47,10 +47,20 @@ GoogleProjectsService.$inject = ['$http'];
 
 function GoogleProjectsService($http) {
   return {
-    getApprovedProjects: getApprovedProjects
+    getApprovedProjects: getApprovedProjects,
+    getRawApprovedProjects: getRawApprovedProjects
   };
 
   function getApprovedProjects() {
+    return getRawApprovedProjects()
+      .then(function(data, status){
+        console.log(data)
+        data.data = googleProjectsToSchema().getItems(data);
+        return data;
+      })
+  }
+
+  function getRawApprovedProjects() {
     return $http.get('https://spreadsheets.google.com/feeds/list/1tnW2fTcPEQG93oebrCfvjZw4Vjtn6vkzvqyovxebKlI/1/public/values?alt=json')
       .success(getFeedItems)
       .error(serviceError);
@@ -80,4 +90,55 @@ function getFeedItems(data, status) {
 
 function serviceError(data, status, statusText) {
   return alert(statusText);
+}
+
+function googleProjectsToSchema(data) {
+  return {
+    getSchema: getSchema,
+    getItems: getItems
+  }
+
+  function getSchema() {
+    return schema = {
+      "category": "category",
+      "content": "content",
+      "gsx$areaofcivicengagementdescribingtheproject": "category",
+      "gsx$cityandstate": "city",
+      "gsx$civicrequest": "civic",
+      "gsx$fulladdress": "full_address",
+      "gsx$liveproducturl": "",
+      "gsx$location": "location",
+      "gsx$maintenanceplan": "maintainence_plan",
+      "gsx$non-standardtechnologies": "techstack",
+      "gsx$potentialblockers": "potential_blockers",
+      "gsx$projectplatform": "platform",
+      "gsx$projectsubtitle": "subtitle",
+      "gsx$projecttitle": "title",
+      "gsx$projecturlongithub": "github_html_url",
+      "gsx$street": "",
+      "gsx$targetaudience": "target_audience",
+      "gsx$timestamp:": "",
+      "gsx$userstory": "user_stories",
+      "id": "id",
+      "link": "link",
+      "title": "title",
+      "updated": "updated_at"
+    };
+  }
+
+  function getItems(data) {
+    // Entry is an array of row objects.
+    entry = data.data.feed.entry;
+    console.log(entry)
+    var schema = getSchema();
+    angular.forEach(entry, function(row, rowkey) {
+      angular.forEach(row, function(field, fieldkey) {
+        if(schema[fieldkey]) {
+          // Add a new object property with the value from schema as key.
+          (entry[rowkey])[schema[fieldkey]] = field;
+        }
+      });
+    });
+    return entry;
+  }
 }
