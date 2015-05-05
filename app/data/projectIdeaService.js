@@ -73,22 +73,8 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
       return ideas;
     }
   }
-
-  //@TODO Is this necessary? Angular has built-in filters for searching.
-	function searchIdeas(searchCriteria) {
-		var foundRecords = [];
-		var foundRecordCount = 0;
-		var recordCount = getIdeas.length;
-		for(i =0; i < recordCount; i++)
-		{
-        	if(ideas['App.Model.ProjectIdea'][i]['title'].toLower().contains(searchCriteria.toLower()))
-      		{
-      			foundRecords[foundRecordCount] = ['App.Model.ProjectIdea'][i];
-      			foundRecordCount++;
-      		}
-		}
-		return foundRecords;
-	}//end search
+  
+  //Removed search since Angular has it built in. -Al
 
   function getIdea(ideaId) {
     var ideas, idea;
