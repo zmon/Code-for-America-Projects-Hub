@@ -1,8 +1,8 @@
 cfahubServices.factory('ProjectService', ProjectService);
 
-ProjectService.$inject = ['CFAProjectsService', 'GithubProjectsService'];
+ProjectService.$inject = ['CFAProjectsService', 'GithubProjectsService', 'GoogleProjectsService'];
 
-function ProjectService(CFAProjectsService, GithubProjectsService) {
+function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProjectsService) {
     return {
       getProjects: getProjects,
       getProject: getProject
@@ -10,26 +10,37 @@ function ProjectService(CFAProjectsService, GithubProjectsService) {
 
     function getProjects() {
       var projects = [];
-      return CFAProjectsService.getProjects()
+
+      return GoogleProjectsService.getApprovedProjects()
+        .then(function(data) {
+          projects.push(data.data);
+          return CFAProjectsService.getProjects();
+        })
         .then(function(data) {
           projects.push(data.data.objects);
+          projects = [mergeServices(projects, 'github_html_url', 'code_url')]
           return GithubProjectsService.getProjects();
         })
         .then(function(data) {
-          projects.push(data.data);
-          mergeProjectsOnUrl(projects[0], projects[1]);
-          console.log(projects);
-          return projects[0];
+            projects.push(data.data);
+            projects = mergeServices(projects, 'github_html_url', 'html_url');
+            return projects;
         });
 
-        function mergeProjectsOnUrl(x, y) {
-           for (var i = x.length - 1; i >= 0; i--) {
-              angular.forEach(y, function(value, key) {
-                if(x[i]['code_url'] == (value['html_url']).replace('.github.io')) {
-                  return merged = angular.extend(x[i], key = value);
+        function mergeServices(data, xkey, ykey) {
+           projects = [];
+           angular.forEach(data[0], function(v, k) {
+              // v = object
+              angular.forEach(data[1], function(value, key) {
+                // value = object
+                if(v[xkey] == (value[ykey]).replace('.github.io')) {
+                  // merge on keys
+                  merged = angular.extend(v, key = value);
+                  projects.push(merged);
                 }
               });
-            }
+            });
+            return projects;
         }
     }
 
