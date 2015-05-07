@@ -99,6 +99,9 @@ function googleProjectsToSchema(data) {
   }
 
   function getSchema() {
+    /** Key-value mapping from Google Spreadsheet fields
+     * in the Projects worksheet to fields in the Hub Project cards.
+    **/
     return schema = {
       "category": "category",
       "content": "content",
@@ -131,11 +134,12 @@ function googleProjectsToSchema(data) {
     entry = data.data.feed.entry;
     console.log(entry)
     var schema = getSchema();
+    // For each row, match the field name to the schema.
     angular.forEach(entry, function(row, rowkey) {
       angular.forEach(row, function(field, fieldkey) {
         if(schema[fieldkey]) {
           // Add a new object property with the value from schema as key.
-          (entry[rowkey])[schema[fieldkey]] = field;
+          (entry[rowkey])[schema[fieldkey]] = field['$t'];
         }
       });
     });
