@@ -1,0 +1,43 @@
+digraph G {
+    overlap=false;
+    splines=true;
+    node [fontname="Helvetica",fontsize=9];
+    edge [fontname="Helvetica",fontsize=8];
+    ranksep=0.1;
+    nodesep=0.1;
+    _schema_info [shape="plaintext", label="2011", fontname="Helvetica",fontsize=8];
+    "index.html" [label="{index.html}" shape="record"];
+    "app.module.js" [label="{app.module.js|cfahubApp\ncfahubApp.config\ncfahubControllers\ncfahubServices\ncfahubApp.run\n}" shape="record"];
+    "app/data/DataSampleControllers.js" [label="{app/data/\nDataSampleControllers.js|CfaController\nGithubController\nGoogleProjectsController\nGoogleProjectIdeasController\n}" shape="record"];
+    "app/hub/HubController.js" [label="{app/hub/\nHubController.js|HubController\nwrong404Ctrl\n}" shape="record"];
+    "app/idea/ProjectIdeaController.js" [label="{app/idea/\nProjectIdeaController.js|ProjectIdeaListController\nProjectIdeaController\n}" shape="record"];
+    "app/project/ProjectController.js" [label="{app/project/\nProjectController.js|ProjectController\nProjectListController\n}" shape="record"];
+
+    "app/data/projectIdeaService.js" [label="{app/data/\nprojectIdeaService.js|ProjectIdeaService\n}" color="blue" shape="record"];
+    "app/data/projectService.js" [label="{app/data/\nprojectService.js|ProjectService\n}" color="blue" shape="record"];
+    "app/data/ApiConsumerServices.js" [label="{app/data/\nApiConsumerServices.js|CFAProjectsService\nGithubProjectsService\nGoogleProjectsService\nGoogleProjectIdeasService\n}" color="blue" shape="record"];
+
+    "index.html" -> "app.module.js" [label="ng-app"]
+
+    "app.module.js" -> "app/hub/HubController.js" [label="cfahubControllers.controller"]
+    "app.module.js" -> "app/project/ProjectController.js" [label="cfahubControllers.controller"]
+    "app.module.js" -> "app/idea/ProjectIdeaController.js" [label="cfahubControllers.controller"]
+
+#    "app.module.js" -> "app/data/projectIdeaService.js" [label="cfahubServices.factory"]
+#    "app.module.js" -> "app/data/projectService.js" [label="cfahubServices.factory"]
+
+
+    "app.module.js" -> "app/data/DataSampleControllers.js" [label="cfahubControllers.controller"]
+#    "app.module.js" -> "app/data/ApiConsumerServices.js" [label="cfahubServices.factory"]
+
+    "app/hub/HubController.js" -> "app/data/projectService.js" [label=""]
+    "app/project/ProjectController.js" -> "app/data/projectService.js" [label=""]
+
+    "app/hub/HubController.js" -> "app/data/projectIdeaService.js" [label=""]
+    "app/idea/ProjectIdeaController.js" -> "app/data/projectIdeaService.js" [label=""]
+
+    "app/data/DataSampleControllers.js" -> "app/data/ApiConsumerServices.js" [label=""]
+    "app/data/projectService.js" -> "app/data/ApiConsumerServices.js" [label="GoogleProjectsService\nCFAProjectsService\nGithubProjectsService\n"]
+
+    "app/data/projectIdeaService.js" -> "app/data/ApiConsumerServices.js" [label="GoogleProjectIdeasService\n"]
+}
