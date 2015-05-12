@@ -127,6 +127,24 @@ function googleProjectsToSchema(data) {
       "updated": "updated_at"
     };
   }
+  
+  function getIdeaSchema() {
+	  return schema = {
+		  "gsx$timestamp":"timestamp",
+		  "gsx$giveyourideaatitle":"title",
+		  "gsx$giveyourideaasubtitle":"subtitle",
+		  "gsx$location":"location",
+		  "gsx$whatisyouremailaddress":"email_address",
+		  "gsx$whatareaofcivicengagementdescribesyourideathebest":"civic_engagement_area",
+		  "gsx$civicrequest":"civic_request",
+		  "gsx$nameoftheorganization":"organization_name",
+		  "gsx$heyihaveaprojectrepoongithubalreadyhereisthelink":"github_url",
+		  "gsx$targetaudience":"target_audiences",
+		  "gsx$userstory":"user_stories",
+		  "gsx$maintenanceplan":"maintenance_plan",
+		  "gsx$potentialblockers":"potential_blockers"			  
+	  };
+  }
 
   function getItems(data) {
     // Entry is an array of row objects.
@@ -143,4 +161,35 @@ function googleProjectsToSchema(data) {
     });
     return entry;
   }
+  
+  function getById(data, id) {
+	    var returnValue;
+	    var temp;
+        for (i = 0; i < data.length; i++) {
+        	temp = data[i];
+        	if(temp['id'] == id) {
+        		return idea;
+        	}
+	    });
+	  }//end getIdea
+
+  
+  function getPagedData(data, pageNumber, pageSize){
+	  	var startIndex = pageNumber * pageSize;
+	  	var endIndex = startIndex + pageSize;
+	  	var records=[];
+	  	var recordsIndex = 0;
+	  	while(startIndex < endIndex) {
+	  		record[recordsIndex] = ideas[startIndex];
+	  		startIndex++;
+	  		recordsIndex++;
+	    }
+	    return records;
+  }//end getPagedData
+  
+  
+  
+  
+  
+  
 }

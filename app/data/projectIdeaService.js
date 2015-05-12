@@ -9,7 +9,6 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
   return {
     getIdeas: getIdeas,
     getIdea: getIdea,
-    searchIdeas: searchIdeas,
     pageIdeas: pageIdeas
   };
 
@@ -73,48 +72,8 @@ function ProjectIdeaService(GoogleProjectIdeasService) {
       return ideas;
     }
   }
-
-  //@TODO Is this necessary? Angular has built-in filters for searching.
-	function searchIdeas(searchCriteria) {
-		var foundRecords = [];
-		var foundRecordCount = 0;
-		var recordCount = getIdeas.length;
-		for(i =0; i < recordCount; i++)
-		{
-        	if(ideas['App.Model.ProjectIdea'][i]['title'].toLower().contains(searchCriteria.toLower()))
-      		{
-      			foundRecords[foundRecordCount] = ['App.Model.ProjectIdea'][i];
-      			foundRecordCount++;
-      		}
-		}
-		return foundRecords;
-	}//end search
-
-  function getIdea(ideaId) {
-    var ideas, idea;
-    return getIdeas().then(function(data) {
-        ideas = data['App.Model.ProjectIdea'];
-        for (i = 0; i < ideas.length; i++) {
-          idea = ideas[i];
-          if(idea['id'] == ideaId) {
-            return idea;
-          }
-        }
-        return idea;
-      });
-  }//end getIdea
-
-  function pageIdeas(pageNumber) {
-  	var pageSize = 6;
-  	var ideasIndex = pageNumber * pageSize;
-  	var endIndex = ideasIndex + pageSize;
-  	var records=[];
-  	var recordsIndex = 0;
-  	while(index < endIndex) {
-  		record[recordsIndex] = ideas[ideasIndex];
-  		index++;
-  		recordsIndex++;
-    }
-    return records;
-  }//end pagedList
+  
+  //Removed search since Angular has it built in. -Al
+  
+  //Removed get by id and paging methods and added generic versions into the ApiConsumerService
 }
