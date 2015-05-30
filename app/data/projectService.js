@@ -16,31 +16,58 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
           projects.push(data.data);
           return CFAProjectsService.getProjects();
         })
+
+          .then(function(data) {
+              projects.push(data.data.objects);
+              projects = [mergeServices(projects, 'github_html_url', 'code_url')];
+              return projects[0];
+          })
+          /*
         .then(function(data) {
           projects.push(data.data.objects);
+              console.log('b');
+              console.dir(data.data.objects)
           projects = [mergeServices(projects, 'github_html_url', 'code_url')]
           return GithubProjectsService.getProjects();
         })
         .then(function(data) {
             projects.push(data.data);
+              console.log('c');
+              console.dir(data.data);
             projects = mergeServices(projects, 'github_html_url', 'html_url');
             return projects;
         });
+*/
+        function mergeServices(data, ikey, kkey) {
 
-        function mergeServices(data, xkey, ykey) {
-           projects = [];
-           angular.forEach(data[0], function(v, k) {
-              // v = object
-              angular.forEach(data[1], function(value, key) {
-                // value = object
-                if(v[xkey] == (value[ykey]).replace('.github.io')) {
-                  // merge on keys
-                  merged = angular.extend(v, key = value);
-                  projects.push(merged);
+            console.log('=='+ikey+'|'+kkey);
+            console.dir(data);
+            console.log('----');
+
+
+            for (var i=0, iLen=data[0].length; i<iLen; i++) {       // For each of the newones
+
+                var value = data[0][i][ikey];
+
+                console.log("Looking for " + value);
+
+
+                for (var k=0, kLen=data[1].length; k<kLen; k++) {
+
+console.log(data[1][k][kkey]);
+
+                    if (data[1][k][kkey] == value) {
+console.log('add');
+                        data[0][i] = angular.extend({}, data[0][i],data[1][k]);
+                        k = kLen;
+                        break;
+                    }
                 }
-              });
-            });
-            return projects;
+
+            }
+
+            return data[0];
+
         }
     }
 
