@@ -25,6 +25,7 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
             .then(function (data) {
                 projects.push(data.data);
                 projects = mergeServices(projects, 'github_html_url', 'html_url');
+
                 return projects;
             });
 
@@ -39,9 +40,12 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
                     if (data[1][k][kkey] == value) {                                    // If it is found, then merge the data
                         data[0][i] = angular.extend({}, data[0][i], data[1][k]);
                         k = kLen;
+
                         break;
                     }
                 }
+
+                data[0][i].id = i + 1;
 
             }
             return data[0];
@@ -61,5 +65,5 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
             return project;
         });
     }
-    
+
 };
