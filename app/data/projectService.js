@@ -3,12 +3,14 @@ cfahubServices.factory('ProjectService', ProjectService);
 ProjectService.$inject = ['CFAProjectsService', 'GithubProjectsService', 'GoogleProjectsService'];
 
 function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProjectsService) {
+
     return {
         getProjects: getProjects,
         getProject: getProject
     };
 
     function getProjects() {
+
         var projects = [];
 
         return GoogleProjectsService.getApprovedProjects()
@@ -16,7 +18,6 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
                 projects.push(data.data);
                 return CFAProjectsService.getProjects();
             })
-
             .then(function (data) {
                 projects.push(data.data.objects);
                 projects = [mergeServices(projects, 'github_html_url', 'code_url')];
@@ -25,7 +26,6 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
             .then(function (data) {
                 projects.push(data.data);
                 projects = mergeServices(projects, 'github_html_url', 'html_url');
-
                 return projects;
             });
 
@@ -35,12 +35,9 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
 
                 var value = data[0][i][ikey];
 
-                for (var k = 0, kLen = data[1].length; k < kLen; k++) {                 // See if it is in the data to merge
-
-                    if (data[1][k][kkey] == value) {                                    // If it is found, then merge the data
+                for (var k = 0, kLen = data[1].length; k < kLen; k++) {                 // See if it is in the new data
+                    if (data[1][k][kkey] == value) {                                    // If it is found, then merge the new data
                         data[0][i] = angular.extend({}, data[0][i], data[1][k]);
-                        k = kLen;
-
                         break;
                     }
                 }
@@ -53,7 +50,9 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
     }
 
     function getProject(projectId) {
+
         var projects, project;
+
         return getProjects().then(function (data) {
             projects = data;
             for (i = 0; i < projects.length; i++) {
