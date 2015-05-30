@@ -20,38 +20,23 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
             .then(function (data) {
                 projects.push(data.data.objects);
                 projects = [mergeServices(projects, 'github_html_url', 'code_url')];
-                console.log('----');
-                console.dir(projects);
                 return GithubProjectsService.getProjects();
             })
             .then(function (data) {
                 projects.push(data.data);
                 projects = mergeServices(projects, 'github_html_url', 'html_url');
-                console.log('-2222---');
-                console.dir(projects);
                 return projects;
             });
 
         function mergeServices(data, ikey, kkey) {
 
-            //console.log('==' + ikey + '|' + kkey);
-            //console.dir(data);
-            //console.log('----');
-
-
-            for (var i = 0, iLen = data[0].length; i < iLen; i++) {       // For each of the newones
+            for (var i = 0, iLen = data[0].length; i < iLen; i++) {                     // For each of the projects to display
 
                 var value = data[0][i][ikey];
 
-//                console.log("Looking for " + value);
+                for (var k = 0, kLen = data[1].length; k < kLen; k++) {                 // See if it is in the data to merge
 
-
-                for (var k = 0, kLen = data[1].length; k < kLen; k++) {
-
-//console.log(data[1][k][kkey]);
-
-                    if (data[1][k][kkey] == value) {
-//console.log('merge');
+                    if (data[1][k][kkey] == value) {                                    // If it is found, then merge the data
                         data[0][i] = angular.extend({}, data[0][i], data[1][k]);
                         k = kLen;
                         break;
@@ -59,9 +44,7 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
                 }
 
             }
-
             return data[0];
-
         }
     }
 
