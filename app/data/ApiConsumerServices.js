@@ -123,6 +123,7 @@ function googleProjectsToSchema(data) {
       "gsx$userstory": "user_stories",
       "gsx$leadname": "lead_name",
       "gsx$leadimage": "lead_image",
+      "gsx$projectpageimage": "project_page_image",
       "id": "id",
       "link": "link",
       "title": "title",
