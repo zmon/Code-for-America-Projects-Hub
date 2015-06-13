@@ -1,4 +1,4 @@
-<!-- project description -->           
+<!-- project description -->
 <section class="OK-project-description">
     <!-- project title and subtitle-->
     <h4>{{project.title}}<br/>
@@ -6,9 +6,27 @@
     </h4>
 
     <!-- project civic category .bg-civic or .bg-CfA -->
-    <p class="OK-project-category OK-tag bg-civic">{{project.categories}}</p>
+    <span ng-switch on="project.category">
+        <p ng-switch-when="Budget" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Community" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Culture" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Education" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Health" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Housing" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Infrastructure" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Politics" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Policing and Safety" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Recreation" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Social Issue" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Sustainability" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Transparency" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Transportation" class="OK-project-category OK-tag bg-civic">{{project.category}}</p>
+        <p ng-switch-when="Code for America" class="OK-project-category OK-tag bg-CfA">{{project.category}}</p>
+        <p ng-switch-when="Brigade tool" class="OK-project-category OK-tag bg-CfA">{{project.category}}</p>
+    </span>
 
     <!-- project goals -->
     <p class="OK-project-goals">{{project.goals}}</p>
+
     <p class="OK-link-view-project"><a href="#/projects/{{project.id}}">view project details</a></p>
 </section>

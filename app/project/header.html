@@ -1,22 +1,54 @@
-<header class="container">
-    <div class="row">
-        <div class="col-xs-3 col-lg-3"> 
-            <img class="OK-logo" src="assets/images/CfA_logo_132x53.png" width="132" height="53" alt="Code for America "/>
+<header title="{{project.category}}" class="container">
+    <div title="{{project.category}}" class="row">
+        <div title="{{project.category}}" class="col-xs-3 col-lg-3">
+            <img title="{{project.category}}" class="OK-logo" src="assets/images/CfA_logo_132x53.png" width="132"
+                 height="53" alt="Code for America "/>
             <br/><br/>
-            <button type="button" onClick="location.href='index.html'" class="btn btn-primary btn-xs">Back to Projects Hub</button>
+            <button type="button" onClick="location.href='index.html'" title="{{project.category}}"
+                    class="btn btn-primary btn-xs">Back to Projects Hub
+            </button>
         </div>
-        <div class="col-xs-9 col-lg-6">
-            <h1>{{project.title}} {{project.name}}<br/>
+        <div title="{{project.category}}" class="col-xs-9 col-lg-6">
+            <h1>{{project.title}}<br/>
                 <small>{{project.subtitle}}</small>
             </h1>
-            <ul class="list-inline list-unstyled">
+            <ul title="{{project.category}}" class="list-inline list-unstyled">
                 <!-- project metadata -->
-              <li class="OK-tag bg-CfA" title="Civic category">{{project.categories}}</li>
-              <li ng-hide="'{{project.active}}'=='Idea'" class="OK-tag bg-gray" title="Platform">{{project.platform}}</li>
-              <li ng-hide="'{{project.active}}'=='Idea'" class="OK-tag bg-lightgray" title="Link to online product">
-                  Online: <a target="_blank" href="{{project.url}}">{{project.active}}</a>
-              </li>
-            </ul>  
+
+                <span ng-switch on="project.category">
+                    <li ng-switch-when="Budget" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Community" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Culture" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Education" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Health" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Housing" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Infrastructure" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}
+                    </li>
+                    <li ng-switch-when="Politics" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Policing and Safety" title="{{project.category}}" class="OK-tag bg-civic">
+                        {{project.category}}
+                    </li>
+                    <li ng-switch-when="Recreation" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Social Issue" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Sustainability" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}
+                    </li>
+                    <li ng-switch-when="Transparency" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}</li>
+                    <li ng-switch-when="Transportation" title="{{project.category}}" class="OK-tag bg-civic">{{project.category}}
+                    </li>
+                    <li ng-switch-when="Code for America" title="{{project.category}}" class="OK-tag bg-CfA">{{project.category}}
+                    </li>
+                    <li ng-switch-when="Brigade tool" title="{{project.category}}" class="OK-tag bg-CfA">{{project.category}}</li>
+                </span>
+
+
+                <li ng-hide="'{{project.active}}'=='Idea'" title="{{project.category}}" class="OK-tag bg-gray"
+                    title="Platform">{{project.platform}}
+                </li>
+                <li ng-hide="'{{project.active}}'=='Idea'" title="{{project.category}}" class="OK-tag bg-lightgray"
+                    title="Link to online product">
+                    Online: <a target="_blank" href="{{project.url}}">{{project.active}}</a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
