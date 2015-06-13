@@ -121,6 +121,8 @@ function googleProjectsToSchema(data) {
       "gsx$targetaudience": "target_audience",
       "gsx$timestamp:": "",
       "gsx$userstory": "user_stories",
+      "gsx$leadname": "lead_name",
+      "gsx$leadimage": "lead_image",
       "id": "id",
       "link": "link",
       "title": "title",

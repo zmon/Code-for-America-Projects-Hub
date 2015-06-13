@@ -2,9 +2,9 @@
 <section class="OK-project-contributors clearfix">
     <a href="https://github.com/codeforkansascity/civic-project-mapping/graphs/contributors" title="Project contributors">
         <ul class="list-inline list-unstyled OK-project-contributors-thumbs pull-left">
-            <li ng-repeat="person in project.contributors">
-                <img src="{{person.img}}" class="img-circle" width="40" height="40" alt="Project contributor"/>
-                <span ng-show="person.leader" class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader"></span>
+            <li>
+                <img ng-show="project.lead_image" src="{{project.lead_image}}" class="img-circle" width="40" height="40" alt="Project contributor"/>
+                <span ng-show="project.lead_name" class="glyphicon glyphicon-flag OK-project-leader-badge" title="Project leader {{project.lead_name}}"></span>
             </li>
         </ul>
     </a>
