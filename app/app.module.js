@@ -3,8 +3,7 @@ var cfahubApp = angular.module('cfahubApp', [
   'ngSanitize',
   'cfahubServices',
   'cfahubControllers',
-  'leaflet-directive',
-  'markdown'
+  'leaflet-directive'
 ]);
 
 cfahubApp.config(['$routeProvider',
