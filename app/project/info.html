@@ -3,26 +3,26 @@
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-goals"> 
         <span class="glyphicon glyphicon-send OK-pdcard-glyphicon"></span> 
         <h3>Goals</h3>
-        <p ng-bind-html="project.description | markdown"></p>
+        <div ng-bind-html="project.description | markdown"></div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-audience">
         <span class="glyphicon glyphicon-user OK-pdcard-glyphicon"></span>        
         <h3>Target Audience</h3>
-        <p ng-bind-html="project.target_audience | markdown"></p>
+        <div ng-bind-html="project.target_audience | markdown"></div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 OK-project-definition-card OK-project-definition-card-tall OK-pdc-story pull-right"> 
         <span class="glyphicon glyphicon-list-alt OK-pdcard-glyphicon"></span>        
         <h3>User Stories</h3>
-        <p ng-bind-html="project.user_stories | markdown"></p>
+        <div ng-bind-html="project.user_stories | markdown"></div>
        </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-maintenance"> 
         <span class="glyphicon glyphicon-wrench OK-pdcard-glyphicon"></span>     
         <h3>Maintenance Plan</h3>
-        <p ng-bind-html="project.maintainence_plan | markdown"></p>
+        <div ng-bind-html="project.maintainence_plan | markdown"></div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 OK-project-definition-card OK-pdc-blockers"> 
         <span class="glyphicon glyphicon-save OK-pdcard-glyphicon OK-rotate-270-clockwise"></span>     
         <h3>Potential Blockers</h3>
-        <p ng-bind-html="project.potential_blockers | markdown"></p>
+        <div ng-bind-html="project.potential_blockers | markdown"></div>
     </div>
 </div>
