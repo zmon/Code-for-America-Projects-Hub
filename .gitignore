@@ -2,3 +2,5 @@
 nbproject
 node_modules
 *.tern-port
+.idea/
+_site/
