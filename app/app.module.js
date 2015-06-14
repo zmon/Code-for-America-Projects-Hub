@@ -4,7 +4,6 @@ var cfahubApp = angular.module('cfahubApp', [
   'cfahubServices',
   'cfahubControllers',
   'leaflet-directive',
-  'ngSanitize',
   'markdown'
 ]);
 
