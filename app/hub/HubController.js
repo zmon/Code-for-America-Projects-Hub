@@ -6,7 +6,6 @@ cfahubControllers.controller('HubController',
             ProjectService.getProjects()
                 .then(function (data) {
                     $scope.cards.projects = data;
-                    console.dir(data);
                     return $scope.cards.projects;
                 });
 

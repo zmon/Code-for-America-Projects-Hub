@@ -10,7 +10,6 @@ cfahubControllers.controller('ProjectIdeaController', function($scope, $routePar
     var ideaId = $routeParams.id;
       return ProjectIdeaService.getIdea(ideaId)
           .then(function(data) {
-          	console.log(data)
               $scope.project = $scope.idea = data;
               return $scope.project;
       });
