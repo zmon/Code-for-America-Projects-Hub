@@ -15,32 +15,17 @@ function ProjectService(CFAProjectsService, GithubProjectsService, GoogleProject
 
         return GoogleProjectsService.getApprovedProjects()
             .then(function (data) {
-                console.log('a');
-                console.dir(data.data);
                 projects.push(data.data);
-                console.dir(projects);
                 return CFAProjectsService.getProjects();
             })
             .then(function (data) {
-                console.log('b');
-                console.dir(data.data.objects);
                 projects.push(data.data.objects);
-                console.dir(projects);
                 projects = [mergeServices(projects, 'github_html_url', 'code_url')];
-                console.dir(projects);
                 return GithubProjectsService.getProjects();
             })
             .then(function (data) {
-                console.log('c');
-                console.dir(projects);
-                console.log('c-1');
-                console.dir(data.data);
                 projects.push(data.data);
-                console.log('c-2');
-                console.dir(projects);
-                projects = [mergeServices(projects, 'github_html_url', 'html_url')];
-                console.log('c-3');
-                console.dir(projects);
+                projects = mergeServices(projects, 'github_html_url', 'html_url');
                 return projects;
             });
 
