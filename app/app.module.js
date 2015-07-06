@@ -2,7 +2,8 @@ var cfahubApp = angular.module('cfahubApp', [
   'ngRoute',
   'cfahubServices',
   'cfahubControllers',
-  'leaflet-directive'
+  'leaflet-directive',
+  'ngSanitize'
 ]);
 
 cfahubApp.config(['$routeProvider',
