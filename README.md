@@ -1,6 +1,5 @@
 # Code for America Projects Hub
 ## And how you can help
-Goals:
 
 Help Brigade members find projects to work on. Promote multi-Brigade collaboration. Onboard new members. Encourage public contribution of ideas. Karma. Visualize scope for Code for America. Provide filtered and sorted card list of projects and ideas for development. The list should be available nation-wide and by city.  
 ![alt tag] (https://cloud.githubusercontent.com/assets/10410203/6722601/93e5bc5c-cdaa-11e4-9011-58be0c02923a.png?raw=true)
@@ -8,9 +7,29 @@ Help Brigade members find projects to work on. Promote multi-Brigade collaborati
 We track and discuss this project in codeforkc group at Slack.com. https://codeforkc.slack.com/messages/project-hub/
 Send email to pbarham@codeforamerica.org to join Slack group.
 
-###Production preview##
+###Production Preview##
 
 (in progress): http://codeforkc.org/Code-for-America-Projects-Hub/
+
+###Project/Code Status
+
+Need Angular expert.
+
+###HTML/CSS Prototype (for reference)
+
+Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/
+
+Project page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm
+
+Idea page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAideaPage.htm
+
+###A form to add project data missing on GitHub
+
+https://docs.google.com/forms/d/1Z6duJDUZ89MkjUY0jFowUvKjMvru6U2BN7_bLERH6s0/viewform
+
+###A form to submit civic project idea
+
+https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform
 
 ### Developer notes ###
 
@@ -53,21 +72,7 @@ Projects Hub filter data: https://github.com/codeforkansascity/Code-for-America-
 
 https://github.com/codeforkansascity/Code-for-America-Projects-Hub/wiki/Diagram-of-dynamic-content,-HTML-Views-and-Fragment-Nesting
 
-###HTML/CSS prototype (for layout reference)
 
-Projects Hub prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/
-
-Project page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAprojectPage.htm
-
-Idea page prototype: http://codeforkc.org/Code-for-America-Projects-Hub/prototype/CfAideaPage.htm
-
-###A form to add project data missing on GitHub
-
-https://docs.google.com/forms/d/1Z6duJDUZ89MkjUY0jFowUvKjMvru6U2BN7_bLERH6s0/viewform
-
-###A form to submit civic project idea
-
-https://docs.google.com/forms/d/1H62GmD35j1kwHYcX7r8jT8Gwj3dm8d-SZBVV_H9oz9s/viewform
 
 
 
